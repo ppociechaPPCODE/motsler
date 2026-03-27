@@ -14,8 +14,8 @@
     $offerDpfImgPlus = public_path('images/offer/slr-premium-plus.jpg');
 @endphp
 <div class="space-y-0">
-    <section>
-        <div class="relative min-h-[min(72vh,820px)] overflow-hidden">
+    <section class="flex flex-col">
+        <div class="relative min-h-dvh overflow-hidden">
             <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
                 <iframe
                     class="pointer-events-none absolute left-1/2 top-1/2 h-[56.25vw] min-h-[125%] w-[177.77vh] min-w-[125%] -translate-x-1/2 -translate-y-1/2 border-0"
@@ -31,7 +31,7 @@
                 <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/95 sm:text-xl">{{ __('offer_dpf.hero_subtitle') }}</p>
             </div>-->
         </div>
-        <div class="bg-white px-6 py-14 sm:px-10">
+        <div class="flex min-h-dvh flex-col justify-center bg-white px-6 py-14 sm:px-10">
             <div class="mx-auto w-full max-w-[900px] space-y-6 text-lg leading-8 text-[#003174]">
                 <p>{{ __('offer_dpf.s1_p1') }}</p>
                 <p>{{ __('offer_dpf.s1_p2') }}</p>
@@ -39,7 +39,7 @@
             </div>
         </div>
     </section>
-    <section class="relative overflow-hidden bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
+    <section class="relative flex min-h-dvh flex-col justify-center overflow-hidden bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
         <div class="pointer-events-none absolute -left-24 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-[#244396]/15 blur-3xl"></div>
         <div class="pointer-events-none absolute -right-16 bottom-0 h-56 w-56 rounded-full bg-[#ffad03]/10 blur-3xl"></div>
         <div class="relative mx-auto grid max-w-[1650px] gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
@@ -62,7 +62,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-white px-6 pb-0 pt-14 sm:px-10">
+    <section class="min-h-dvh bg-white px-6 pb-0 pt-14 sm:px-10">
         <div class="mx-auto w-full max-w-[1650px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s3_intro') }}</h2>
             <div class="mt-12 grid gap-10 lg:grid-cols-2 lg:gap-12">
@@ -120,7 +120,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-white px-6 py-16 sm:px-10 sm:py-20">
+    <section class="flex min-h-dvh flex-col justify-center bg-white px-6 py-16 sm:px-10 sm:py-20">
         <div class="mx-auto w-full max-w-[1650px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s4_title') }}</h2>
             <p class="mx-auto mt-6 max-w-[900px] text-center text-lg leading-8 text-[#003174]">{{ __('offer_dpf.s4_lead') }}</p>
@@ -134,7 +134,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
+    <section class="flex min-h-dvh flex-col justify-center bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
         <div class="mx-auto w-full max-w-[1650px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s41_title') }}</h2>
             <p class="mx-auto mt-6 max-w-[900px] text-center text-lg leading-8 text-[#003174]">{{ __('offer_dpf.s41_body') }}</p>
@@ -155,7 +155,7 @@
             </div>
         </div>
     </section>
-    <section class="border-t border-[#d8e0ea] bg-[#edf2f7] px-6 py-16 sm:px-10">
+    <section class="flex min-h-dvh flex-col justify-center border-t border-[#d8e0ea] bg-[#edf2f7] px-6 py-16 sm:px-10">
         <div class="mx-auto w-full max-w-[1650px]">
             <div class="mb-10 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                 <div>
@@ -189,7 +189,7 @@
             </div>
         </div>
     </section>
-    <section class="border-y border-[#e2e8f0] bg-white px-6 py-12 sm:px-10">
+    <section class="flex min-h-dvh flex-col justify-center border-y border-[#e2e8f0] bg-white px-6 py-12 sm:px-10">
         <div class="mx-auto w-full max-w-[1650px]">
             <h2 class="mb-8 text-center text-xl font-semibold text-[#001348]">{{ __('offer_dpf.s5_logos_title') }}</h2>
             <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
@@ -199,8 +199,8 @@
             </div>
         </div>
     </section>
-    <section class="bg-[#00264b] px-6 py-16 text-white sm:px-10">
-        <div class="mx-auto grid w-full max-w-[1650px] gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-12">
+    <section class="flex min-h-dvh flex-col justify-center bg-[#00264b] px-6 py-16 text-white sm:px-10">
+        <div class="mx-auto grid w-full max-w-[1650px] gap-10 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div class="flex flex-col justify-center">
                 <h2 class="text-3xl font-semibold sm:text-4xl">{{ __('offer_dpf.s5_map_title') }}</h2>
                 <p class="mt-4 text-lg text-white/90">{{ __('offer_dpf.s5_map_lead') }}</p>
@@ -208,12 +208,12 @@
                 <p class="mt-2 text-lg text-white/95">{{ __('contact.address_value') }}</p>
                 <a href="{{ $offerDpfMapLink }}" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex w-fit rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10">{{ __('offer_dpf.s5_map_open') }}</a>
             </div>
-            <div class="min-h-[280px] overflow-hidden rounded-[20px] bg-white/10 shadow-xl lg:min-h-[360px]">
-                <iframe class="h-full min-h-[280px] w-full border-0 lg:min-h-[360px]" src="{{ $offerDpfMapEmbed }}" title="{{ __('offer_dpf.s5_map_title') }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="min-h-[280px] overflow-hidden rounded-[20px] bg-white/10 shadow-xl lg:min-h-[min(50dvh,420px)]">
+                <iframe class="h-full min-h-[280px] w-full border-0 lg:min-h-[min(50dvh,420px)]" src="{{ $offerDpfMapEmbed }}" title="{{ __('offer_dpf.s5_map_title') }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
-    <section class="bg-white px-6 py-16 sm:px-10 sm:py-20">
+    <section class="flex min-h-dvh flex-col justify-center bg-white px-6 py-16 sm:px-10 sm:py-20">
         <div class="mx-auto w-full max-w-[900px]">
             <h2 class="text-center text-3xl font-semibold leading-tight text-[#001348] sm:text-4xl">{{ __('offer_dpf.s6_title') }}</h2>
             <p class="mt-6 text-center text-xl font-medium text-[#244396]">{{ __('offer_dpf.s6_lead') }}</p>
@@ -230,7 +230,7 @@
             </div>
         </div>
     </section>
-    <section class="border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
+    <section class="flex min-h-dvh flex-col justify-center border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
         <div class="mx-auto w-full max-w-[960px]">
             @if ($offerDpfStoryVideoId)
                 <div class="aspect-video overflow-hidden rounded-[20px] bg-black shadow-[0_24px_50px_-12px_rgba(36,67,150,.2)]">
@@ -241,7 +241,7 @@
             @endif
         </div>
     </section>
-    <section class="border-t border-[#e2e8f0] bg-white px-6 py-16 sm:px-10 sm:py-20">
+    <section class="min-h-dvh border-t border-[#e2e8f0] bg-white px-6 py-16 sm:px-10 sm:py-20">
         <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s8_title') }}</h2>
             <p class="mx-auto mt-4 max-w-2xl text-center text-lg text-[#003174]">{{ __('offer_dpf.s8_subtitle') }}</p>
@@ -299,7 +299,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
+    <section class="flex min-h-dvh flex-col justify-center bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
         <div class="mx-auto w-full max-w-[1650px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s9_title') }}</h2>
             <p class="mx-auto mt-4 max-w-3xl text-center text-lg text-[#003174]">{{ __('offer_dpf.s9_subtitle') }}</p>
@@ -329,7 +329,7 @@
             </div>
         </div>
     </section>
-    <section class="border-t border-[#e2e8f0] bg-white px-6 py-16 sm:px-10 sm:py-20">
+    <section class="flex min-h-dvh flex-col justify-center border-t border-[#e2e8f0] bg-white px-6 py-16 sm:px-10 sm:py-20">
         <div class="mx-auto w-full max-w-[900px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s10_title') }}</h2>
             <ul class="mt-10 space-y-5 text-lg leading-8 text-[#003174]">
@@ -342,7 +342,7 @@
             </ul>
         </div>
     </section>
-    <section class="border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
+    <section class="min-h-dvh border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
         <div class="mx-auto w-full max-w-[900px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s11_title') }}</h2>
             <div class="mt-10 space-y-3">
@@ -358,12 +358,15 @@
             </div>
         </div>
     </section>
-    <section class="bg-white px-6 py-16 sm:px-10 sm:py-20" id="offer-dpf-form">
+    <section class="flex min-h-dvh flex-col justify-center bg-white px-6 py-16 sm:px-10 sm:py-20" id="offer-dpf-form">
         <div class="mx-auto w-full max-w-[640px] text-center">
             <h2 class="text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s12_title') }}</h2>
             <p class="mt-4 text-lg text-[#003174]">{{ __('offer_dpf.s12_subtitle') }}</p>
             @if (session('contact_sent'))
                 <div class="mt-8 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">{{ __('form.sent') }}</div>
+            @endif
+            @if (session('contact_error'))
+                <div class="mt-8 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">{{ __('contact.mail_failed') }}</div>
             @endif
             <form class="mt-10 space-y-5 text-left" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}">
                 @csrf
@@ -384,7 +387,7 @@
             </form>
         </div>
     </section>
-    <section class="border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
+    <section class="flex min-h-dvh flex-col justify-center border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
         <div class="mx-auto flex w-full max-w-[1100px] flex-col gap-10 lg:flex-row lg:items-center lg:gap-14">
             <div class="mx-auto w-full max-w-[320px] shrink-0 lg:mx-0">
                 @if (file_exists($offerDpfSebastianPhoto))

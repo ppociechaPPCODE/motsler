@@ -37,6 +37,9 @@
                 @if (session('contact_sent'))
                     <div class="mt-6 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">{{ __('form.sent') }}</div>
                 @endif
+                @if (session('contact_error'))
+                    <div class="mt-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">{{ __('contact.mail_failed') }}</div>
+                @endif
                 <form id="contact-form" class="mt-6 space-y-5" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}">
                     @csrf
                     <input class="w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3 text-sm text-[#001348] outline-none focus:border-[#244396]" id="email" name="email" type="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
