@@ -10,6 +10,8 @@
     $l = app()->getLocale();
     $host = parse_url((string) config('app.url'), PHP_URL_HOST) ?: request()->getHost();
     $offerDpfSebastianPhoto = public_path('images/offer/sebastian-tkacz.jpg');
+    $offerDpfImgPremium = public_path('images/offer/slr-premium.jpg');
+    $offerDpfImgPlus = public_path('images/offer/slr-premium-plus.jpg');
 @endphp
 <div class="space-y-0">
     <section>
@@ -230,59 +232,70 @@
     </section>
     <section class="border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
         <div class="mx-auto w-full max-w-[960px]">
-            <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s7_title') }}</h2>
-            <p class="mx-auto mt-4 max-w-2xl text-center text-lg text-[#003174]">{{ __('offer_dpf.s7_lead') }}</p>
-            <div class="mt-10">
-                @if ($offerDpfStoryVideoId)
-                    <div class="aspect-video overflow-hidden rounded-[20px] bg-black shadow-[0_24px_50px_-12px_rgba(36,67,150,.2)]">
-                        <iframe class="h-full w-full border-0" src="https://www.youtube.com/embed/{{ $offerDpfStoryVideoId }}?rel=0&modestbranding=1" title="{{ __('offer_dpf.s7_title') }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                @else
-                    <div class="flex aspect-video items-center justify-center rounded-[20px] border border-dashed border-[#94a3b8] bg-white px-6 text-center text-[#64748b] shadow-sm">{{ __('offer_dpf.s7_video_placeholder') }}</div>
-                @endif
-            </div>
+            @if ($offerDpfStoryVideoId)
+                <div class="aspect-video overflow-hidden rounded-[20px] bg-black shadow-[0_24px_50px_-12px_rgba(36,67,150,.2)]">
+                    <iframe class="h-full w-full border-0" src="https://www.youtube.com/embed/{{ $offerDpfStoryVideoId }}?rel=0&modestbranding=1" title="{{ __('offer_dpf.s7_title') }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            @else
+                <div class="aspect-video rounded-[20px] border border-dashed border-[#94a3b8] bg-white shadow-sm" aria-hidden="true"></div>
+            @endif
         </div>
     </section>
     <section class="border-t border-[#e2e8f0] bg-white px-6 py-16 sm:px-10 sm:py-20">
-        <div class="mx-auto w-full max-w-[960px]">
+        <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s8_title') }}</h2>
             <p class="mx-auto mt-4 max-w-2xl text-center text-lg text-[#003174]">{{ __('offer_dpf.s8_subtitle') }}</p>
-            <div class="mt-10 overflow-x-auto rounded-[20px] border border-[#e2e8f0] shadow-sm">
-                <table class="w-full min-w-[520px] border-collapse text-left text-sm sm:text-base">
+            <div class="mt-10 overflow-x-auto rounded-[20px] border border-[#e2e8f0] shadow-[0_8px_40px_-20px_rgba(36,67,150,.12)]">
+                <table class="w-full min-w-[min(100%,720px)] border-collapse text-left text-sm sm:text-base">
                     <thead>
                         <tr class="bg-[#001348] text-white">
-                            <th class="px-4 py-4 font-semibold sm:px-6">{{ __('offer_dpf.s8_th_feature') }}</th>
-                            <th class="px-4 py-4 font-semibold sm:px-6">{{ __('offer_dpf.s8_th_premium') }}</th>
-                            <th class="px-4 py-4 font-semibold sm:px-6">{{ __('offer_dpf.s8_th_plus') }}</th>
+                            <th class="min-w-[min(40vw,200px)] px-3 py-4 font-semibold sm:px-6">{{ __('offer_dpf.s8_th_feature') }}</th>
+                            <th class="min-w-[min(30vw,220px)] px-3 py-4 font-semibold sm:px-6">{{ __('offer_dpf.s8_th_premium') }}</th>
+                            <th class="min-w-[min(30vw,220px)] px-3 py-4 font-semibold sm:px-6">{{ __('offer_dpf.s8_th_plus') }}</th>
                         </tr>
                     </thead>
                     <tbody class="bg-white text-[#003174]">
-                        <tr class="border-t border-[#e2e8f0]">
-                            <td class="px-4 py-4 font-medium text-[#001348] sm:px-6">{{ __('offer_dpf.s8_row_chamber') }}</td>
-                            <td class="px-4 py-4 sm:px-6">{{ __('offer_dpf.s8_v_p_chamber') }}</td>
-                            <td class="px-4 py-4 font-medium text-[#244396] sm:px-6">{{ __('offer_dpf.s8_v_plus_chamber') }}</td>
+                        <tr class="border-b border-[#e2e8f0] bg-[#f8fafc]">
+                            <td class="align-top bg-[#f8fafc]"></td>
+                            <td class="p-3 align-top sm:p-4 sm:pt-5">
+                                <div class="overflow-hidden rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
+                                    @if (file_exists($offerDpfImgPremium))
+                                        <img class="h-36 w-full object-cover sm:h-44" src="{{ asset('images/offer/slr-premium.jpg') }}" width="400" height="300" alt="{{ __('offer_dpf.s8_img_alt_premium') }}">
+                                    @else
+                                        <div class="flex h-36 w-full items-center justify-center border border-dashed border-[#cbd2d9] bg-[#fafbfc] p-3 text-center text-xs text-[#64748b] sm:h-44 sm:text-sm">{{ __('offer_dpf.s3_img_placeholder') }}</div>
+                                    @endif
+                                </div>
+                            </td>
+                            <td class="p-3 align-top sm:p-4 sm:pt-5">
+                                <div class="overflow-hidden rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
+                                    @if (file_exists($offerDpfImgPlus))
+                                        <img class="h-36 w-full object-cover sm:h-44" src="{{ asset('images/offer/slr-premium-plus.jpg') }}" width="400" height="300" alt="{{ __('offer_dpf.s8_img_alt_plus') }}">
+                                    @else
+                                        <div class="flex h-36 w-full items-center justify-center border border-dashed border-[#cbd2d9] bg-[#fafbfc] p-3 text-center text-xs text-[#64748b] sm:h-44 sm:text-sm">{{ __('offer_dpf.s3_img_placeholder') }}</div>
+                                    @endif
+                                </div>
+                            </td>
                         </tr>
-                        <tr class="border-t border-[#e2e8f0] bg-[#f8fafc]">
-                            <td class="px-4 py-4 font-medium text-[#001348] sm:px-6">{{ __('offer_dpf.s8_row_filters') }}</td>
-                            <td class="px-4 py-4 sm:px-6">{{ __('offer_dpf.s8_v_p_filters') }}</td>
-                            <td class="px-4 py-4 font-medium text-[#244396] sm:px-6">{{ __('offer_dpf.s8_v_plus_filters') }}</td>
-                        </tr>
-                        <tr class="border-t border-[#e2e8f0]">
-                            <td class="px-4 py-4 font-medium text-[#001348] sm:px-6">{{ __('offer_dpf.s8_row_pumps') }}</td>
-                            <td class="px-4 py-4 sm:px-6">{{ __('offer_dpf.s8_v_p_pumps') }}</td>
-                            <td class="px-4 py-4 font-medium text-[#244396] sm:px-6">{{ __('offer_dpf.s8_v_plus_pumps') }}</td>
-                        </tr>
-                        <tr class="border-t border-[#e2e8f0] bg-[#f8fafc]">
-                            <td class="px-4 py-4 font-medium text-[#001348] sm:px-6">{{ __('offer_dpf.s8_row_turbines') }}</td>
-                            <td class="px-4 py-4 sm:px-6">{{ __('offer_dpf.s8_v_p_turbines') }}</td>
-                            <td class="px-4 py-4 font-medium text-[#244396] sm:px-6">{{ __('offer_dpf.s8_v_plus_turbines') }}</td>
-                        </tr>
+                        @for ($r = 1; $r <= 18; $r++)
+                            <tr class="border-t border-[#e2e8f0] {{ $r % 2 === 0 ? 'bg-[#f8fafc]' : 'bg-white' }}">
+                                <td class="px-3 py-3 font-medium text-[#001348] sm:px-6">{{ __('offer_dpf.s8_r'.$r.'_label') }}</td>
+                                <td class="px-3 py-3 align-top sm:px-6">{{ __('offer_dpf.s8_r'.$r.'_p') }}</td>
+                                <td class="px-3 py-3 align-top sm:px-6">{{ __('offer_dpf.s8_r'.$r.'_p') }}</td>
+                            </tr>
+                        @endfor
                     </tbody>
+                    <tfoot>
+                        <tr class="border-t-2 border-[#e2e8f0] bg-[#edf2f7]">
+                            <td class="bg-[#edf2f7]"></td>
+                            <td class="p-3 align-top sm:p-5">
+                                <a href="{{ locale_route('contact', ['locale' => $l]) }}?inquiry=slr-premium#contact-form" class="inline-flex w-full min-w-0 justify-center rounded-full bg-[#244396] px-4 py-3.5 text-center text-xs font-semibold uppercase leading-tight text-white hover:bg-[#001348] sm:px-6 sm:py-4 sm:text-sm">{{ __('offer_dpf.s8_cta_quote') }}</a>
+                            </td>
+                            <td class="p-3 align-top sm:p-5">
+                                <a href="{{ locale_route('contact', ['locale' => $l]) }}?inquiry=slr-premium-plus#contact-form" class="inline-flex w-full min-w-0 justify-center rounded-full bg-[#244396] px-4 py-3.5 text-center text-xs font-semibold uppercase leading-tight text-white hover:bg-[#001348] sm:px-6 sm:py-4 sm:text-sm">{{ __('offer_dpf.s8_cta_quote') }}</a>
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
-            </div>
-            <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <a href="{{ locale_route('contact', ['locale' => $l]) }}#contact-form" class="inline-flex w-full justify-center rounded-full bg-[#244396] px-8 py-4 text-sm font-semibold uppercase text-white hover:bg-[#001348] sm:w-auto">{{ __('offer_dpf.s8_cta_product') }}</a>
-                <a href="{{ locale_route('contact', ['locale' => $l]) }}#contact-form" class="inline-flex w-full justify-center rounded-full border-2 border-[#244396] bg-white px-8 py-4 text-sm font-semibold uppercase text-[#244396] hover:bg-[#f8fafc] sm:w-auto">{{ __('offer_dpf.s8_cta_quote') }}</a>
             </div>
         </div>
     </section>
