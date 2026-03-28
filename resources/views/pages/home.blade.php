@@ -8,7 +8,7 @@
 @endphp
 
 <div class="space-y-0">
-    <section class="overflow-hidden bg-[#001348] text-white" style="background-image:url('https://motsler.pl/wp-content/uploads/2024/12/tlo_www.jpg');background-size:cover;background-position:center;">
+    <section class="overflow-hidden bg-[#001348] text-white" style="background-image:url('{{ asset('media/wp-uploads/2024/12/tlo_www.jpg') }}');background-size:cover;background-position:center;">
         <div class="mx-auto w-full max-w-[1650px]">
         <div class="bg-[#001348]/78 px-6 py-12 sm:px-10 lg:px-14">
             <div class="grid items-center gap-10 lg:grid-cols-2">
@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="flex justify-center lg:justify-end">
-                    <img src="https://motsler.pl/wp-content/uploads/2024/09/1T5A9192AB-1.png" alt="Motsler" class="w-full max-w-[560px]">
+                    <img src="{{ asset('media/wp-uploads/2024/09/1T5A9192AB-1.png') }}" alt="Motsler" class="w-full max-w-[560px]">
                 </div>
             </div>
         </div>
@@ -43,9 +43,9 @@
         <div class="mx-auto w-full max-w-[1650px] px-6 py-12 sm:px-10">
         <h2 class="text-center text-4xl font-semibold text-[#001348]"><strong>Dla jakich branż</strong> produkujemy maszyny?</h2>
         <div class="mt-8 grid gap-6 md:grid-cols-3">
-            <article class="rounded-[20px] bg-white p-6 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2024/12/samochody1.png" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-3xl font-semibold text-[#001348]">Motoryzacja</h3><p class="mt-3 text-base leading-7">Tworzymy zaawansowane urządzenia dla branży motoryzacyjnej, wspierając warsztaty i serwisy samochodowe.</p></article>
-            <article class="rounded-[20px] bg-white p-6 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2024/12/przemysl1.png" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-3xl font-semibold text-[#001348]">Przemysł</h3><p class="mt-3 text-base leading-7">Nasze maszyny znajdują zastosowanie w różnych gałęziach przemysłu, zapewniając niezawodność i efektywność procesów technologicznych.</p></article>
-            <article class="rounded-[20px] bg-white p-6 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2024/12/uslugi.png" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-3xl font-semibold text-[#001348]">Firmy usługowe</h3><p class="mt-3 text-base leading-7">Oferujemy sprzęt dopasowany do firm świadczących szeroki zakres usług, od mycia i czyszczenia po regenerację kluczowych komponentów.</p></article>
+            <article class="rounded-[20px] bg-white p-6 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2024/12/samochody1.png') }}" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-3xl font-semibold text-[#001348]">Motoryzacja</h3><p class="mt-3 text-base leading-7">Tworzymy zaawansowane urządzenia dla branży motoryzacyjnej, wspierając warsztaty i serwisy samochodowe.</p></article>
+            <article class="rounded-[20px] bg-white p-6 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2024/12/przemysl1.png') }}" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-3xl font-semibold text-[#001348]">Przemysł</h3><p class="mt-3 text-base leading-7">Nasze maszyny znajdują zastosowanie w różnych gałęziach przemysłu, zapewniając niezawodność i efektywność procesów technologicznych.</p></article>
+            <article class="rounded-[20px] bg-white p-6 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2024/12/uslugi.png') }}" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-3xl font-semibold text-[#001348]">Firmy usługowe</h3><p class="mt-3 text-base leading-7">Oferujemy sprzęt dopasowany do firm świadczących szeroki zakres usług, od mycia i czyszczenia po regenerację kluczowych komponentów.</p></article>
         </div>
         </div>
     </section>
@@ -55,11 +55,11 @@
         <h2 class="text-center text-4xl font-semibold text-[#001348]">Co znajdziesz <strong>w naszej ofercie?</strong></h2>
         <p class="mt-3 text-center text-lg">Szukasz maszyn, które są gwarantem jakości i niezawodności? <strong>W MOTSLER oferujemy:</strong></p>
         <div class="mt-8 grid gap-5 md:grid-cols-3 xl:grid-cols-5">
-            <a href="{{ locale_route('offer.dpf', ['locale' => $l]) }}" class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2024/12/slr-premium_300px.png" alt="" class="mx-auto h-40 w-auto"><h3 class="mt-3 text-xl font-semibold text-[#001348]">Maszyny do czyszczenia filtrów DPF</h3></a>
-            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2024/12/myjka.png" alt="" class="mx-auto h-40 w-auto"><h3 class="mt-3 text-xl font-semibold text-[#001348]">Myjki warsztatowe</h3></div>
-            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2024/12/no_foto.png" alt="" class="mx-auto h-40 w-auto"><h3 class="mt-3 text-xl font-semibold text-[#001348]">Suszarki do filtrów DPF</h3></div>
-            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2024/12/produkcja_motsler3.png" alt="" class="mx-auto h-40 w-auto"><h3 class="mt-3 text-xl font-semibold text-[#001348]">Maszyny wg. wytycznych klienta</h3></div>
-            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2025/01/GK-530-3.0-200-P-www-1.png" alt="" class="mx-auto h-40 w-auto"><h3 class="mt-3 text-xl font-semibold text-[#001348]">Kompresory powietrza</h3></div>
+            <a href="{{ locale_route('offer.dpf', ['locale' => $l]) }}" class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2024/12/slr-premium_300px.png') }}" alt="" class="mx-auto h-40 w-auto"><h3 class="mt-3 text-xl font-semibold text-[#001348]">Maszyny do czyszczenia filtrów DPF</h3></a>
+            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2024/12/myjka.png') }}" alt="" class="mx-auto h-40 w-auto"><h3 class="mt-3 text-xl font-semibold text-[#001348]">Myjki warsztatowe</h3></div>
+            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2024/12/no_foto.png') }}" alt="" class="mx-auto h-40 w-auto"><h3 class="mt-3 text-xl font-semibold text-[#001348]">Suszarki do filtrów DPF</h3></div>
+            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2024/12/produkcja_motsler3.png') }}" alt="" class="mx-auto h-40 w-auto"><h3 class="mt-3 text-xl font-semibold text-[#001348]">Maszyny wg. wytycznych klienta</h3></div>
+            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2025/01/GK-530-3.0-200-P-www-1.png') }}" alt="" class="mx-auto h-40 w-auto"><h3 class="mt-3 text-xl font-semibold text-[#001348]">Kompresory powietrza</h3></div>
         </div>
         </div>
     </section>
@@ -79,12 +79,12 @@
         </div>
         <p class="mx-auto mt-8 max-w-5xl text-center text-lg leading-8">Zauważyliśmy, że wiele przedsiębiorców zmaga się z trudnością wyboru odpowiednich maszyn. Rynek oferuje ogromną liczbę urządzeń, które często są skomplikowane, niekompatybilne lub obarczone wadami, utrudniając podjęcie właściwej decyzji. Chcieliśmy to zmienić, dlatego stworzyliśmy firmę MOTSLER.<br><br>Naszą misją było zaprojektowanie maszyn, które łączą w sobie wszystko, co najlepsze i najnowocześniejsze, a jednocześnie eliminują wady obecne w innych rozwiązaniach na rynku. Stawiamy na prostotę, niezawodność i możliwość rozbudowy. Dzięki temu każdy klient może dopasować naszą maszynę do swoich unikalnych potrzeb, bez konieczności kompromisów. Nasze maszyny i urządzenia, to wynik dogłębnej analizy rynku i realnych potrzeb użytkowników. Skupiamy się na tworzeniu uniwersalnych rozwiązań, które łączą efektywność, trwałość i łatwość obsługi.<br>Postanowiliśmy wyeliminować chaos wyboru, oferując naszym klientom maszyny, które są nie tylko wszechstronne, ale również niezawodne i proste w użytkowaniu.</p>
         <div class="mx-auto mt-10 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2024/12/przemysl1.png" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-2xl font-semibold text-[#001348]">Maszyny<br><strong>do przemysłu</strong></h3></div>
-            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2025/01/zysk.png" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-2xl font-semibold text-[#001348]">Skupienie<br><strong>na zysku</strong></h3></div>
-            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2025/01/wsparcie.png" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-2xl font-semibold text-[#001348]"><strong>Wsparcie</strong><br>w razie potrzeby</h3></div>
-            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2025/01/24h.png" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-2xl font-semibold text-[#001348]"><strong>Bezawaryjne</strong><br>działanie</h3></div>
-            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2025/01/szkolenie.png" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-2xl font-semibold text-[#001348]">Profesjonalne<br><strong>szkolenie</strong></h3></div>
-            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2025/01/pewnosc.png" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-2xl font-semibold text-[#001348]">Pewność <br><strong>na długie lata</strong></h3></div>
+            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2024/12/przemysl1.png') }}" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-2xl font-semibold text-[#001348]">Maszyny<br><strong>do przemysłu</strong></h3></div>
+            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2025/01/zysk.png') }}" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-2xl font-semibold text-[#001348]">Skupienie<br><strong>na zysku</strong></h3></div>
+            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2025/01/wsparcie.png') }}" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-2xl font-semibold text-[#001348]"><strong>Wsparcie</strong><br>w razie potrzeby</h3></div>
+            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2025/01/24h.png') }}" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-2xl font-semibold text-[#001348]"><strong>Bezawaryjne</strong><br>działanie</h3></div>
+            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2025/01/szkolenie.png') }}" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-2xl font-semibold text-[#001348]">Profesjonalne<br><strong>szkolenie</strong></h3></div>
+            <div class="rounded-[20px] bg-white p-4 text-center shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2025/01/pewnosc.png') }}" alt="" class="mx-auto h-24 w-24 object-contain"><h3 class="mt-4 text-2xl font-semibold text-[#001348]">Pewność <br><strong>na długie lata</strong></h3></div>
         </div>
         </div>
     </section>
@@ -94,8 +94,8 @@
         <h2 class="text-center text-4xl font-semibold text-[#001348]">Technologia <strong>na najwyższym poziomie</strong></h2>
         <p class="mx-auto mt-4 max-w-4xl text-center text-lg">Nasze maszyny są gotowe sprostać nawet <strong>najcięższym wyzwaniom</strong> w codziennej pracy!<br>Współpracujemy tylko z najlepszymi.</p>
         <div class="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-8 border-y border-[#edf2f7] py-8">
-            @foreach ([['https://motsler.pl/wp-content/uploads/2025/01/calpeda_small.png','calpeda'],['https://motsler.pl/wp-content/uploads/2025/01/ebara.png','ebara'],['https://motsler.pl/wp-content/uploads/2025/01/fatek_small.png','fatek'],['https://motsler.pl/wp-content/uploads/2025/01/weintek_small.png','weintek'],['https://motsler.pl/wp-content/uploads/2025/01/wieland_small.png','wieland'],['https://motsler.pl/wp-content/uploads/2025/01/eaton_small.png','eaton'],['https://motsler.pl/wp-content/uploads/2025/01/schneider_small.png','schneider'],['https://motsler.pl/wp-content/uploads/2025/01/siemens_small.png','siemens']] as $logo)
-                <img src="{{ $logo[0] }}" alt="{{ $logo[1] }}" class="h-12 w-auto opacity-70 grayscale">
+            @foreach ([['2025/01/calpeda_small.png','calpeda'],['2025/01/ebara.png','ebara'],['2025/01/fatek_small.png','fatek'],['2025/01/weintek_small.png','weintek'],['2025/01/wieland_small.png','wieland'],['2025/01/eaton_small.png','eaton'],['2025/01/schneider_small.png','schneider'],['2025/01/siemens_small.png','siemens']] as $logo)
+                <img src="{{ asset('media/wp-uploads/'.$logo[0]) }}" alt="{{ $logo[1] }}" class="h-12 w-auto opacity-70 grayscale">
             @endforeach
         </div>
         </div>
@@ -105,12 +105,12 @@
         <div class="mx-auto w-full max-w-[1650px]">
         <div class="mb-8 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
             <h2 class="text-3xl font-semibold text-[#001348] sm:text-4xl"><strong>Poznaj opinie</strong><br>użytkowników naszych maszyn</h2>
-            <img src="https://motsler.pl/wp-content/uploads/2025/01/googl.png" alt="" class="h-10 w-auto md:mt-2">
+            <img src="{{ asset('media/wp-uploads/2025/01/googl.png') }}" alt="" class="h-10 w-auto md:mt-2">
         </div>
         <div class="grid gap-6 lg:grid-cols-3">
-            <article class="rounded-[20px] bg-white p-6 shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2025/01/aiw_200.png" alt="" class="mb-4 h-12 w-auto opacity-60 grayscale"><div class="text-amber-400">★★★★★</div><blockquote class="mt-6 text-sm leading-7 text-[#001348]">Używamy od kilku miesięcy maszynę typu DPF SLR Premium skonfigurowaną i skonstruowaną pod nasze indywidualne wymagania. Cały proces uzgodnień, zamówienia, dostawy i rozruchu technologicznego przebiegł bez najmniejszych problemów. Podczas eksploatacji maszyna doskonale spełnia swoją funkcję i dlatego mogę z czystym sumieniem polecić firmę MOTSLER Sp. z o.o. z Rzeszowa jako kompetentnego i wiarygodnego partnera.</blockquote><div class="mt-6 font-semibold text-[#001348]">Karol Fiołka</div><div class="text-sm text-[#003174]/80">AiW Turbo Mikstat</div></article>
-            <article class="rounded-[20px] bg-white p-6 shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2025/01/auto_bodo_200-1.png" alt="" class="mb-4 h-12 w-auto opacity-60 grayscale"><div class="text-amber-400">★★★★★</div><blockquote class="mt-6 text-sm leading-7 text-[#001348]">Szukaliśmy maszyny do czyszczenia DPF, która byłaby wydajna i przyjazna dla środowiska. Maszyna firmy Motsler spełniła wszystkie nasze oczekiwania. Jest nie tylko skuteczna w usuwaniu sadzy z filtrów DPF, ale również zużywa minimalną ilość wody i chemikaliów. Dodatkowym atutem jest profesjonalna obsługa klienta i dostęp do szkoleń z zakresu obsługi maszyny. Zdecydowanie polecam!</blockquote><div class="mt-6 font-semibold text-[#001348]">Michał Surowiński</div><div class="text-sm text-[#003174]/80">AUTO-BODO Q-Serwis CASTROL Łódź</div></article>
-            <article class="rounded-[20px] bg-white p-6 shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="https://motsler.pl/wp-content/uploads/2025/01/clean_fap_200.png" alt="" class="mb-4 h-12 w-auto opacity-60 grayscale"><div class="text-amber-400">★★★★★</div><blockquote class="mt-6 text-sm leading-7 text-[#001348]">Od jakiegoś czasu myślałem o inwestycji, badałem rynek przez parę miesięcy i ze wszystkich dostępnych maszyn do czyszczenia filtrów DPF to MOTSLER przykuł moją uwagę. Czyszczenie jest szybkie i skuteczne, a filtry wracają jak nowe. Współpraca z firmą jest bez zarzutu – pełen profesjonalizm i ogromna wiedza.</blockquote><div class="mt-6 font-semibold text-[#001348]">Krzysztof Guzda</div><div class="text-sm text-[#003174]/80">CLEANFAP Martigny Szwajcaria</div></article>
+            <article class="rounded-[20px] bg-white p-6 shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2025/01/aiw_200.png') }}" alt="" class="mb-4 h-12 w-auto opacity-60 grayscale"><div class="text-amber-400">★★★★★</div><blockquote class="mt-6 text-sm leading-7 text-[#001348]">Używamy od kilku miesięcy maszynę typu DPF SLR Premium skonfigurowaną i skonstruowaną pod nasze indywidualne wymagania. Cały proces uzgodnień, zamówienia, dostawy i rozruchu technologicznego przebiegł bez najmniejszych problemów. Podczas eksploatacji maszyna doskonale spełnia swoją funkcję i dlatego mogę z czystym sumieniem polecić firmę MOTSLER Sp. z o.o. z Rzeszowa jako kompetentnego i wiarygodnego partnera.</blockquote><div class="mt-6 font-semibold text-[#001348]">Karol Fiołka</div><div class="text-sm text-[#003174]/80">AiW Turbo Mikstat</div></article>
+            <article class="rounded-[20px] bg-white p-6 shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2025/01/auto_bodo_200-1.png') }}" alt="" class="mb-4 h-12 w-auto opacity-60 grayscale"><div class="text-amber-400">★★★★★</div><blockquote class="mt-6 text-sm leading-7 text-[#001348]">Szukaliśmy maszyny do czyszczenia DPF, która byłaby wydajna i przyjazna dla środowiska. Maszyna firmy Motsler spełniła wszystkie nasze oczekiwania. Jest nie tylko skuteczna w usuwaniu sadzy z filtrów DPF, ale również zużywa minimalną ilość wody i chemikaliów. Dodatkowym atutem jest profesjonalna obsługa klienta i dostęp do szkoleń z zakresu obsługi maszyny. Zdecydowanie polecam!</blockquote><div class="mt-6 font-semibold text-[#001348]">Michał Surowiński</div><div class="text-sm text-[#003174]/80">AUTO-BODO Q-Serwis CASTROL Łódź</div></article>
+            <article class="rounded-[20px] bg-white p-6 shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]"><img src="{{ asset('media/wp-uploads/2025/01/clean_fap_200.png') }}" alt="" class="mb-4 h-12 w-auto opacity-60 grayscale"><div class="text-amber-400">★★★★★</div><blockquote class="mt-6 text-sm leading-7 text-[#001348]">Od jakiegoś czasu myślałem o inwestycji, badałem rynek przez parę miesięcy i ze wszystkich dostępnych maszyn do czyszczenia filtrów DPF to MOTSLER przykuł moją uwagę. Czyszczenie jest szybkie i skuteczne, a filtry wracają jak nowe. Współpraca z firmą jest bez zarzutu – pełen profesjonalizm i ogromna wiedza.</blockquote><div class="mt-6 font-semibold text-[#001348]">Krzysztof Guzda</div><div class="text-sm text-[#003174]/80">CLEANFAP Martigny Szwajcaria</div></article>
         </div>
         </div>
     </section>
@@ -119,8 +119,8 @@
         <div class="mx-auto w-full max-w-[1650px]">
         <h2 class="text-center text-3xl font-semibold sm:text-4xl">Nasi <strong>autoryzowani dystrybutorzy</strong></h2>
         <div class="mx-auto mt-10 grid max-w-3xl gap-8 md:grid-cols-2">
-            <div class="flex justify-center"><img src="https://motsler.pl/wp-content/uploads/2025/01/cropped-logo512.jpg" alt="" class="max-h-32 w-auto object-contain"></div>
-            <div class="flex justify-center"><img src="https://motsler.pl/wp-content/uploads/2025/01/mtuning.jpg" alt="" class="max-h-32 w-auto object-contain"></div>
+            <div class="flex justify-center"><img src="{{ asset('media/wp-uploads/2025/01/cropped-logo512.jpg') }}" alt="" class="max-h-32 w-auto object-contain"></div>
+            <div class="flex justify-center"><img src="{{ asset('media/wp-uploads/2025/01/mtuning.jpg') }}" alt="" class="max-h-32 w-auto object-contain"></div>
         </div>
         </div>
     </section>
@@ -138,7 +138,7 @@
         <h2 class="text-center text-4xl font-semibold text-[#001348]"><strong>Wiedza</strong> i Innowacje</h2>
         <div class="mt-10 grid gap-8 md:grid-cols-2">
             <article class="overflow-hidden rounded-[20px] bg-white shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]">
-                <a href="{{ locale_route('blog.show', ['locale' => $l, 'slug' => $blog['post1']]) }}" class="block"><img src="https://motsler.pl/wp-content/uploads/2025/08/Motsler-biznes-768x511.png" alt="" class="h-48 w-full object-cover"></a>
+                <a href="{{ locale_route('blog.show', ['locale' => $l, 'slug' => $blog['post1']]) }}" class="block"><img src="{{ asset('media/wp-uploads/2025/08/Motsler-biznes-768x511.png') }}" alt="" class="h-48 w-full object-cover"></a>
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-[#001348]"><a href="{{ locale_route('blog.show', ['locale' => $l, 'slug' => $blog['post1']]) }}" class="hover:underline">Jak zacząć dochodowy biznes z Motsler?</a></h3>
                     <p class="mt-2 text-sm text-[#003174]/70">6 sierpnia, 2025</p>
@@ -147,7 +147,7 @@
                 </div>
             </article>
             <article class="overflow-hidden rounded-[20px] bg-white shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]">
-                <a href="{{ locale_route('blog.show', ['locale' => $l, 'slug' => $blog['post2']]) }}" class="block"><img src="https://motsler.pl/wp-content/uploads/2025/07/20250718_165157a-768x1024.jpg" alt="" class="h-48 w-full object-cover"></a>
+                <a href="{{ locale_route('blog.show', ['locale' => $l, 'slug' => $blog['post2']]) }}" class="block"><img src="{{ asset('media/wp-uploads/2025/07/20250718_165157a-768x1024.jpg') }}" alt="" class="h-48 w-full object-cover"></a>
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-[#001348]"><a href="{{ locale_route('blog.show', ['locale' => $l, 'slug' => $blog['post2']]) }}" class="hover:underline">DPF CleanX od MOTSLER – Profesjonalne i opłacalne czyszczenie filtrów DPF bez kompromisów</a></h3>
                     <p class="mt-2 text-sm text-[#003174]/70">30 lipca, 2025</p>

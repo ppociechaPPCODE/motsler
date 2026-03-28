@@ -15,7 +15,7 @@
 @endphp
 <div class="space-y-0">
     <section class="flex flex-col">
-        <div class="relative min-h-dvh overflow-hidden">
+        <div class="relative min-h-[calc(100dvh-5.25rem)] overflow-hidden">
             <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
                 <iframe
                     class="pointer-events-none absolute left-1/2 top-1/2 h-[56.25vw] min-h-[125%] w-[177.77vh] min-w-[125%] -translate-x-1/2 -translate-y-1/2 border-0"
@@ -33,6 +33,7 @@
         </div>
         <div class="flex min-h-dvh flex-col justify-center bg-white px-6 py-14 sm:px-10">
             <div class="mx-auto w-full max-w-[900px] space-y-6 text-lg leading-8 text-[#003174]">
+                <img src="{{ asset('media/wp-uploads/2025/01/cropped-logo_www_2025_ciemne.png') }}" alt="{{ __('site.name') }}" class="mx-auto block h-11 w-auto sm:h-14" width="180" height="56">
                 <p>{{ __('offer_dpf.s1_p1') }}</p>
                 <p>{{ __('offer_dpf.s1_p2') }}</p>
                 <p>{{ __('offer_dpf.s1_p3') }}</p>
@@ -54,7 +55,7 @@
                     <div class="absolute -inset-3 rounded-[28px] bg-gradient-to-br from-[#244396]/20 to-[#001348]/10 blur-sm"></div>
                     <figure class="relative overflow-hidden rounded-[24px] border border-white/80 bg-white shadow-[0_24px_50px_-12px_rgba(36,67,150,.25)]">
                         <div class="aspect-[4/3] bg-gradient-to-br from-[#f8fafc] to-[#edf2f7] p-8 sm:p-10">
-                            <img src="https://motsler.pl/wp-content/uploads/2024/12/slr-premium_300px.png" alt="{{ __('offer_dpf.s2_img_alt') }}" class="mx-auto h-full max-h-[320px] w-auto object-contain sm:max-h-[380px]">
+                            <img src="{{ asset('media/wp-uploads/2024/12/slr-premium_300px.png') }}" alt="{{ __('offer_dpf.s2_img_alt') }}" class="mx-auto h-full max-h-[320px] w-auto object-contain sm:max-h-[380px]">
                         </div>
                         <figcaption class="border-t border-[#e2e8f0] bg-white/95 px-4 py-3 text-center text-xs font-medium uppercase tracking-wide text-[#244396]">{{ __('page.offer_dpf') }}</figcaption>
                     </figure>
@@ -70,8 +71,8 @@
                     <h3 class="text-2xl font-bold text-[#001348]">{{ __('offer_dpf.s3_premium_title') }}</h3>
                     <ul class="mt-6 space-y-3 text-[#003174]">
                         @for ($i = 1; $i <= 7; $i++)
-                            <li class="flex gap-3 text-sm leading-7 sm:text-base">
-                                <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#244396]" aria-hidden="true"></span>
+                            <li class="flex items-start gap-3 text-sm leading-7 sm:text-base">
+                                <span class="mt-[calc((1lh-0.5rem)/2)] h-2 w-2 shrink-0 rounded-full bg-[#244396]" aria-hidden="true"></span>
                                 <span>{{ __('offer_dpf.s3_feature_'.$i) }}</span>
                             </li>
                         @endfor
@@ -82,8 +83,8 @@
                     <p class="mt-4 text-sm font-semibold uppercase tracking-wide text-[#244396]">{{ __('offer_dpf.s3_premium_plus_lead') }}</p>
                     <ul class="mt-4 space-y-3 text-[#003174]">
                         @for ($i = 1; $i <= 4; $i++)
-                            <li class="flex gap-3 text-sm leading-7 sm:text-base">
-                                <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#ffad03]" aria-hidden="true"></span>
+                            <li class="flex items-start gap-3 text-sm leading-7 sm:text-base">
+                                <span class="mt-[calc((1lh-0.5rem)/2)] h-2 w-2 shrink-0 rounded-full bg-[#ffad03]" aria-hidden="true"></span>
                                 <span>{{ __('offer_dpf.s3_pp_'.$i) }}</span>
                             </li>
                         @endfor
@@ -162,25 +163,25 @@
                     <h2 class="text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s5_opinions_title') }}</h2>
                     <p class="mt-2 text-lg text-[#003174]">{{ __('offer_dpf.s5_opinions_sub') }}</p>
                 </div>
-                <img src="https://motsler.pl/wp-content/uploads/2025/01/googl.png" alt="" class="h-10 w-auto md:mt-2" width="120" height="40">
+                <img src="{{ asset('media/wp-uploads/2025/01/googl.png') }}" alt="" class="h-auto max-h-10 w-auto max-w-[min(140px,100%)] shrink-0 self-start object-contain object-left md:mt-2" width="120" height="40">
             </div>
             <div class="grid gap-6 lg:grid-cols-3">
                 <article class="rounded-[20px] bg-white p-6 shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]">
-                    <img src="https://motsler.pl/wp-content/uploads/2025/01/aiw_200.png" alt="" class="mb-4 h-12 w-auto opacity-60 grayscale" width="120" height="48">
+                    <img src="{{ asset('media/wp-uploads/2025/01/aiw_200.png') }}" alt="" class="mb-4 h-12 w-auto opacity-60 grayscale" width="120" height="48">
                     <div class="text-amber-400" aria-hidden="true">★★★★★</div>
                     <blockquote class="mt-6 text-sm leading-7 text-[#001348]">{{ __('offer_dpf.s5_t1_quote') }}</blockquote>
                     <div class="mt-6 font-semibold text-[#001348]">{{ __('offer_dpf.s5_t1_name') }}</div>
                     <div class="text-sm text-[#003174]/80">{{ __('offer_dpf.s5_t1_company') }}</div>
                 </article>
                 <article class="rounded-[20px] bg-white p-6 shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]">
-                    <img src="https://motsler.pl/wp-content/uploads/2025/01/auto_bodo_200-1.png" alt="" class="mb-4 h-12 w-auto opacity-60 grayscale" width="120" height="48">
+                    <img src="{{ asset('media/wp-uploads/2025/01/auto_bodo_200-1.png') }}" alt="" class="mb-4 h-12 w-auto opacity-60 grayscale" width="120" height="48">
                     <div class="text-amber-400" aria-hidden="true">★★★★★</div>
                     <blockquote class="mt-6 text-sm leading-7 text-[#001348]">{{ __('offer_dpf.s5_t2_quote') }}</blockquote>
                     <div class="mt-6 font-semibold text-[#001348]">{{ __('offer_dpf.s5_t2_name') }}</div>
                     <div class="text-sm text-[#003174]/80">{{ __('offer_dpf.s5_t2_company') }}</div>
                 </article>
                 <article class="rounded-[20px] bg-white p-6 shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]">
-                    <img src="https://motsler.pl/wp-content/uploads/2025/01/clean_fap_200.png" alt="" class="mb-4 h-12 w-auto opacity-60 grayscale" width="120" height="48">
+                    <img src="{{ asset('media/wp-uploads/2025/01/clean_fap_200.png') }}" alt="" class="mb-4 h-12 w-auto opacity-60 grayscale" width="120" height="48">
                     <div class="text-amber-400" aria-hidden="true">★★★★★</div>
                     <blockquote class="mt-6 text-sm leading-7 text-[#001348]">{{ __('offer_dpf.s5_t3_quote') }}</blockquote>
                     <div class="mt-6 font-semibold text-[#001348]">{{ __('offer_dpf.s5_t3_name') }}</div>
@@ -192,9 +193,9 @@
     <section class="flex min-h-dvh flex-col justify-center border-y border-[#e2e8f0] bg-white px-6 py-12 sm:px-10">
         <div class="mx-auto w-full max-w-[1650px]">
             <h2 class="mb-8 text-center text-xl font-semibold text-[#001348]">{{ __('offer_dpf.s5_logos_title') }}</h2>
-            <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
-                @foreach ([['https://motsler.pl/wp-content/uploads/2025/01/calpeda_small.png','calpeda'],['https://motsler.pl/wp-content/uploads/2025/01/ebara.png','ebara'],['https://motsler.pl/wp-content/uploads/2025/01/fatek_small.png','fatek'],['https://motsler.pl/wp-content/uploads/2025/01/weintek_small.png','weintek'],['https://motsler.pl/wp-content/uploads/2025/01/wieland_small.png','wieland'],['https://motsler.pl/wp-content/uploads/2025/01/eaton_small.png','eaton'],['https://motsler.pl/wp-content/uploads/2025/01/schneider_small.png','schneider'],['https://motsler.pl/wp-content/uploads/2025/01/siemens_small.png','siemens']] as $logo)
-                    <img src="{{ $logo[0] }}" alt="{{ $logo[1] }}" class="h-12 w-auto opacity-70 grayscale" width="120" height="48">
+            <div class="mx-auto grid max-w-[280px] grid-cols-2 place-items-center gap-x-6 gap-y-5 md:mx-0 md:flex md:max-w-none md:flex-wrap md:items-center md:justify-center md:gap-x-10 md:gap-y-8">
+                @foreach ([['2025/01/calpeda_small.png','calpeda'],['2025/01/ebara.png','ebara'],['2025/01/fatek_small.png','fatek'],['2025/01/weintek_small.png','weintek'],['2025/01/wieland_small.png','wieland'],['2025/01/eaton_small.png','eaton'],['2025/01/schneider_small.png','schneider'],['2025/01/siemens_small.png','siemens']] as $logo)
+                    <img src="{{ asset('media/wp-uploads/'.$logo[0]) }}" alt="{{ $logo[1] }}" class="h-9 w-auto max-w-full object-contain opacity-70 grayscale md:h-12" width="120" height="48">
                 @endforeach
             </div>
         </div>
@@ -208,8 +209,8 @@
                 <p class="mt-2 text-lg text-white/95">{{ __('contact.address_value') }}</p>
                 <a href="{{ $offerDpfMapLink }}" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex w-fit rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10">{{ __('offer_dpf.s5_map_open') }}</a>
             </div>
-            <div class="min-h-[280px] overflow-hidden rounded-[20px] bg-white/10 shadow-xl lg:min-h-[min(50dvh,420px)]">
-                <iframe class="h-full min-h-[280px] w-full border-0 lg:min-h-[min(50dvh,420px)]" src="{{ $offerDpfMapEmbed }}" title="{{ __('offer_dpf.s5_map_title') }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="relative aspect-[4/3] w-full overflow-hidden rounded-[20px] bg-white/10 shadow-xl sm:aspect-[16/10] lg:aspect-auto lg:min-h-[min(50dvh,420px)]">
+                <iframe class="absolute inset-0 h-full w-full border-0" src="{{ $offerDpfMapEmbed }}" title="{{ __('offer_dpf.s5_map_title') }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -219,8 +220,8 @@
             <p class="mt-6 text-center text-xl font-medium text-[#244396]">{{ __('offer_dpf.s6_lead') }}</p>
             <ul class="mt-10 space-y-5 text-lg leading-8 text-[#003174]">
                 @for ($b = 1; $b <= 7; $b++)
-                    <li class="flex gap-4">
-                        <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[#ffad03]" aria-hidden="true"></span>
+                    <li class="flex items-start gap-4">
+                        <span class="mt-[calc((1lh-0.625rem)/2)] h-2.5 w-2.5 shrink-0 rounded-full bg-[#ffad03]" aria-hidden="true"></span>
                         <span>{{ __('offer_dpf.s6_b'.$b) }}</span>
                     </li>
                 @endfor
@@ -244,7 +245,6 @@
     <section class="min-h-dvh border-t border-[#e2e8f0] bg-white px-6 py-16 sm:px-10 sm:py-20">
         <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s8_title') }}</h2>
-            <p class="mx-auto mt-4 max-w-2xl text-center text-lg text-[#003174]">{{ __('offer_dpf.s8_subtitle') }}</p>
             <div class="mt-10 overflow-x-auto rounded-[20px] border border-[#e2e8f0] shadow-[0_8px_40px_-20px_rgba(36,67,150,.12)]">
                 <table class="w-full min-w-[min(100%,720px)] border-collapse text-left text-sm sm:text-base">
                     <thead>
@@ -334,8 +334,8 @@
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s10_title') }}</h2>
             <ul class="mt-10 space-y-5 text-lg leading-8 text-[#003174]">
                 @for ($w = 1; $w <= 4; $w++)
-                    <li class="flex gap-4">
-                        <span class="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[#6bd269]" aria-hidden="true"></span>
+                    <li class="flex items-start gap-4">
+                        <span class="mt-[calc((1lh-0.625rem)/2)] h-2.5 w-2.5 shrink-0 rounded-full bg-[#6bd269]" aria-hidden="true"></span>
                         <span>{{ __('offer_dpf.s10_b'.$w) }}</span>
                     </li>
                 @endfor

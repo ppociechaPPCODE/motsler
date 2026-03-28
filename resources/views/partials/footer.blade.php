@@ -1,10 +1,10 @@
-@php
+﻿@php
     $l = app()->getLocale();
 @endphp
 <footer class="bg-[#00264b] text-white">
     <div class="mx-auto grid w-full max-w-[1650px] gap-10 px-6 py-10 text-center sm:px-10 lg:grid-cols-3 lg:items-start lg:text-left">
         <div class="lg:justify-self-start">
-            <img src="https://motsler.pl/wp-content/uploads/2024/02/logo_www_stopka-1.png" alt="{{ __('site.name') }}" class="mx-auto h-12 w-auto lg:mx-0">
+            <img src="{{ asset('media/wp-uploads/2024/02/logo_www_stopka-1.png') }}" alt="{{ __('site.name') }}" class="mx-auto h-12 w-auto lg:mx-0">
             <p class="mt-4 text-sm text-white/90">{{ __('footer.company_line') }}</p>
             <p class="mt-1 text-sm text-white/90">{{ __('contact.address_value') }}</p>
             <div class="mt-5 space-y-2 text-sm">
