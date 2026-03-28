@@ -1,9 +1,22 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="min-h-full bg-[#f1f4f9]">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    @if (! app()->isProduction())
+        <meta name="robots" content="noindex, nofollow">
+    @endif
     <title>@yield('title', __('site.name'))</title>
+    <link rel="canonical" href="{{ canonical_url() }}">
+    @php
+        $hreflangs = hreflang_urls();
+    @endphp
+    @foreach ($hreflangs as $hl => $href)
+        <link rel="alternate" hreflang="{{ $hl }}" href="{{ $href }}">
+    @endforeach
+    @if ($hreflangs !== [])
+        <link rel="alternate" hreflang="x-default" href="{{ $hreflangs['pl'] ?? reset($hreflangs) }}">
+    @endif
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="min-h-screen bg-[#f1f4f9] font-sans text-[#003174] antialiased">

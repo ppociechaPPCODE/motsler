@@ -1,7 +1,7 @@
-﻿@php
+@php
     $l = app()->getLocale();
 @endphp
-<header class="sticky top-0 z-40 border-b border-zinc-200/80 bg-white/90 backdrop-blur">
+<header class="sticky top-0 z-40 w-full border-b border-zinc-200 bg-white shadow-[0_1px_0_0_rgba(15,23,42,.06)]">
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <a href="{{ locale_route('home', ['locale' => $l]) }}" aria-label="{{ __('site.name') }}">
             <img src="{{ asset('media/wp-uploads/2025/01/cropped-logo_www_2025_ciemne.png') }}" alt="{{ __('site.name') }}" class="h-10 w-auto sm:h-12">
