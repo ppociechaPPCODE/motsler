@@ -32,7 +32,7 @@
             </div>-->
         </div>
         <div class="flex min-h-dvh flex-col justify-center bg-white px-6 py-14 sm:px-10">
-            <div class="mx-auto w-full max-w-[900px] space-y-6 text-lg leading-8 text-[#003174]">
+            <div class="mx-auto w-full max-w-[1200px] space-y-6 text-lg leading-8 text-[#003174]">
                 <img src="{{ asset('media/wp-uploads/2025/01/cropped-logo_www_2025_ciemne.png') }}" alt="{{ __('site.name') }}" class="mx-auto block h-11 w-auto sm:h-14" width="180" height="56">
                 <p>{{ __('offer_dpf.s1_p1') }}</p>
                 <p>{{ __('offer_dpf.s1_p2') }}</p>
@@ -43,7 +43,7 @@
     <section class="relative flex min-h-dvh flex-col justify-center overflow-hidden bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
         <div class="pointer-events-none absolute -left-24 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-[#244396]/15 blur-3xl"></div>
         <div class="pointer-events-none absolute -right-16 bottom-0 h-56 w-56 rounded-full bg-[#ffad03]/10 blur-3xl"></div>
-        <div class="relative mx-auto grid max-w-[1650px] gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+        <div class="relative mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
             <div class="order-2 space-y-6 text-lg leading-8 text-[#001348] lg:order-1">
                 <h2 class="text-2xl font-semibold leading-tight text-[#001348] sm:text-3xl">{{ __('offer_dpf.s2_heading') }}</h2>
                 <p>{{ __('offer_dpf.s2_p1') }}</p>
@@ -64,7 +64,7 @@
         </div>
     </section>
     <section class="min-h-dvh bg-white px-6 pb-0 pt-14 sm:px-10">
-        <div class="mx-auto w-full max-w-[1650px]">
+        <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s3_intro') }}</h2>
             <div class="mt-12 grid gap-10 lg:grid-cols-2 lg:gap-12">
                 <div class="rounded-[20px] border border-[#cbd2d9] bg-[#f8fafc] p-8 shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]">
@@ -96,7 +96,7 @@
             </div>
         </div>
         <div class="mt-16 bg-[#00264b] px-6 py-14 text-white sm:px-10">
-            <div class="mx-auto w-full max-w-[1650px]">
+            <div class="mx-auto w-full max-w-[1200px]">
                 <h2 class="text-center text-3xl font-semibold sm:text-4xl">{{ __('offer_dpf.s3_systems_title') }}</h2>
                 <div class="mt-12 grid gap-10 lg:grid-cols-2 lg:gap-12">
                     <div>
@@ -114,7 +114,7 @@
                         <p class="mt-3 text-base leading-7 text-white/90">{{ __('offer_dpf.s3_pfs_desc') }}</p>
                     </div>
                 </div>
-                <div class="mx-auto mt-14 max-w-3xl space-y-4 text-center text-lg leading-8 text-white/95">
+                <div class="mx-auto mt-14 max-w-[1200px] space-y-4 text-center text-lg leading-8 text-white/95">
                     <p>{{ __('offer_dpf.s3_materials') }}</p>
                     <p class="font-semibold text-[#6bd269]">{{ __('offer_dpf.s3_service') }}</p>
                 </div>
@@ -122,9 +122,9 @@
         </div>
     </section>
     <section class="flex min-h-dvh flex-col justify-center bg-white px-6 py-16 sm:px-10 sm:py-20">
-        <div class="mx-auto w-full max-w-[1650px]">
+        <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s4_title') }}</h2>
-            <p class="mx-auto mt-6 max-w-[900px] text-center text-lg leading-8 text-[#003174]">{{ __('offer_dpf.s4_lead') }}</p>
+            <p class="mx-auto mt-6 max-w-[1200px] text-center text-lg leading-8 text-[#003174]">{{ __('offer_dpf.s4_lead') }}</p>
             <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 @for ($i = 1; $i <= 8; $i++)
                     <div class="flex gap-4 rounded-[18px] border border-[#e2e8f0] bg-[#f8fafc] p-5 shadow-sm">
@@ -136,15 +136,15 @@
         </div>
     </section>
     <section class="flex min-h-dvh flex-col justify-center bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
-        <div class="mx-auto w-full max-w-[1650px]">
+        <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s41_title') }}</h2>
-            <p class="mx-auto mt-6 max-w-[900px] text-center text-lg leading-8 text-[#003174]">{{ __('offer_dpf.s41_body') }}</p>
+            <p class="mx-auto mt-6 max-w-[1200px] text-center text-lg leading-8 text-[#003174]">{{ __('offer_dpf.s41_body') }}</p>
             <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 @for ($g = 1; $g <= 4; $g++)
                     <div class="flex aspect-[4/3] items-center justify-center rounded-[20px] border border-dashed border-[#94a3b8] bg-white p-4 text-center text-sm text-[#64748b] shadow-sm">{{ __('offer_dpf.s3_img_placeholder') }}</div>
                 @endfor
             </div>
-            <div class="mx-auto mt-12 max-w-4xl">
+            <div class="mx-auto mt-12 max-w-[1200px]">
                 <p class="mb-4 text-center text-sm font-semibold uppercase tracking-wide text-[#244396]">{{ __('offer_dpf.s41_video_title') }}</p>
                 @if ($offerDpfProofVideoId)
                     <div class="aspect-video overflow-hidden rounded-[20px] bg-black shadow-lg">
@@ -157,7 +157,7 @@
         </div>
     </section>
     <section class="flex min-h-dvh flex-col justify-center border-t border-[#d8e0ea] bg-[#edf2f7] px-6 py-16 sm:px-10">
-        <div class="mx-auto w-full max-w-[1650px]">
+        <div class="mx-auto w-full max-w-[1200px]">
             <div class="mb-10 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                 <div>
                     <h2 class="text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s5_opinions_title') }}</h2>
@@ -191,7 +191,7 @@
         </div>
     </section>
     <section class="flex min-h-dvh flex-col justify-center border-y border-[#e2e8f0] bg-white px-6 py-12 sm:px-10">
-        <div class="mx-auto w-full max-w-[1650px]">
+        <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="mb-8 text-center text-xl font-semibold text-[#001348]">{{ __('offer_dpf.s5_logos_title') }}</h2>
             <div class="mx-auto grid max-w-[280px] grid-cols-2 place-items-center gap-x-6 gap-y-5 md:mx-0 md:flex md:max-w-none md:flex-wrap md:items-center md:justify-center md:gap-x-10 md:gap-y-8">
                 @foreach ([['2025/01/calpeda_small.png','calpeda'],['2025/01/ebara.png','ebara'],['2025/01/fatek_small.png','fatek'],['2025/01/weintek_small.png','weintek'],['2025/01/wieland_small.png','wieland'],['2025/01/eaton_small.png','eaton'],['2025/01/schneider_small.png','schneider'],['2025/01/siemens_small.png','siemens']] as $logo)
@@ -201,7 +201,7 @@
         </div>
     </section>
     <section class="flex min-h-dvh flex-col justify-center bg-[#00264b] px-6 py-16 text-white sm:px-10">
-        <div class="mx-auto grid w-full max-w-[1650px] gap-10 lg:grid-cols-2 lg:items-center lg:gap-12">
+        <div class="mx-auto grid w-full max-w-[1200px] gap-10 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div class="flex flex-col justify-center">
                 <h2 class="text-3xl font-semibold sm:text-4xl">{{ __('offer_dpf.s5_map_title') }}</h2>
                 <p class="mt-4 text-lg text-white/90">{{ __('offer_dpf.s5_map_lead') }}</p>
@@ -215,7 +215,7 @@
         </div>
     </section>
     <section class="flex min-h-dvh flex-col justify-center bg-white px-6 py-16 sm:px-10 sm:py-20">
-        <div class="mx-auto w-full max-w-[900px]">
+        <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="text-center text-3xl font-semibold leading-tight text-[#001348] sm:text-4xl">{{ __('offer_dpf.s6_title') }}</h2>
             <p class="mt-6 text-center text-xl font-medium text-[#244396]">{{ __('offer_dpf.s6_lead') }}</p>
             <ul class="mt-10 space-y-5 text-lg leading-8 text-[#003174]">
@@ -232,7 +232,7 @@
         </div>
     </section>
     <section class="flex min-h-dvh flex-col justify-center border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
-        <div class="mx-auto w-full max-w-[960px]">
+        <div class="mx-auto w-full max-w-[1200px]">
             @if ($offerDpfStoryVideoId)
                 <div class="aspect-video overflow-hidden rounded-[20px] bg-black shadow-[0_24px_50px_-12px_rgba(36,67,150,.2)]">
                     <iframe class="h-full w-full border-0" src="https://www.youtube.com/embed/{{ $offerDpfStoryVideoId }}?rel=0&modestbranding=1" title="{{ __('offer_dpf.s7_title') }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -300,9 +300,9 @@
         </div>
     </section>
     <section class="flex min-h-dvh flex-col justify-center bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
-        <div class="mx-auto w-full max-w-[1650px]">
+        <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s9_title') }}</h2>
-            <p class="mx-auto mt-4 max-w-3xl text-center text-lg text-[#003174]">{{ __('offer_dpf.s9_subtitle') }}</p>
+            <p class="mx-auto mt-4 max-w-[1200px] text-center text-lg text-[#003174]">{{ __('offer_dpf.s9_subtitle') }}</p>
             <div class="mt-12 grid gap-6 lg:grid-cols-2">
                 <article class="flex flex-col rounded-[20px] border border-[#e2e8f0] bg-white p-8 shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]">
                     <span class="text-xs font-bold uppercase tracking-wider text-[#244396]">{{ __('offer_dpf.s9_cs1_tag') }}</span>
@@ -330,7 +330,7 @@
         </div>
     </section>
     <section class="flex min-h-dvh flex-col justify-center border-t border-[#e2e8f0] bg-white px-6 py-16 sm:px-10 sm:py-20">
-        <div class="mx-auto w-full max-w-[900px]">
+        <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s10_title') }}</h2>
             <ul class="mt-10 space-y-5 text-lg leading-8 text-[#003174]">
                 @for ($w = 1; $w <= 4; $w++)
@@ -343,7 +343,7 @@
         </div>
     </section>
     <section class="min-h-dvh border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
-        <div class="mx-auto w-full max-w-[900px]">
+        <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s11_title') }}</h2>
             <div class="mt-10 space-y-3">
                 @foreach (trans('offer_dpf_faq.items') as $faq)
@@ -359,16 +359,16 @@
         </div>
     </section>
     <section class="flex min-h-dvh flex-col justify-center bg-white px-6 py-16 sm:px-10 sm:py-20" id="offer-dpf-form">
-        <div class="mx-auto w-full max-w-[640px] text-center">
+        <div class="mx-auto w-full max-w-[1200px] text-center">
             <h2 class="text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s12_title') }}</h2>
             <p class="mt-4 text-lg text-[#003174]">{{ __('offer_dpf.s12_subtitle') }}</p>
             @if (session('contact_sent'))
-                <div class="mt-8 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">{{ __('form.sent') }}</div>
+                <div class="mx-auto mt-8 max-w-[640px] rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">{{ __('form.sent') }}</div>
             @endif
             @if (session('contact_error'))
-                <div class="mt-8 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">{{ __('contact.mail_failed') }}</div>
+                <div class="mx-auto mt-8 max-w-[640px] rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">{{ __('contact.mail_failed') }}</div>
             @endif
-            <form class="mt-10 space-y-5 text-left" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}">
+            <form class="mx-auto mt-10 w-full max-w-[640px] space-y-5 text-left" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}">
                 @csrf
                 <input class="w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3 text-sm text-[#001348] outline-none focus:border-[#244396]" id="offer-dpf-email" name="email" type="email" value="{{ old('email') }}" required autocomplete="email" placeholder="{{ __('form.email') }}">
                 @error('email')
@@ -388,7 +388,7 @@
         </div>
     </section>
     <section class="flex min-h-dvh flex-col justify-center border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
-        <div class="mx-auto flex w-full max-w-[1100px] flex-col gap-10 lg:flex-row lg:items-center lg:gap-14">
+        <div class="mx-auto flex w-full max-w-[1200px] flex-col gap-10 lg:flex-row lg:items-center lg:gap-14">
             <div class="mx-auto w-full max-w-[320px] shrink-0 lg:mx-0">
                 @if (file_exists($offerDpfSebastianPhoto))
                     <img class="aspect-[4/5] w-full rounded-[20px] object-cover shadow-[0_20px_40px_-20px_rgba(0,19,72,.35)]" src="{{ asset('images/offer/sebastian-tkacz.jpg') }}" width="640" height="800" alt="{{ __('offer_dpf.s13_img_alt') }}">
