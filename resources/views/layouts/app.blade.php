@@ -7,6 +7,7 @@
         <meta name="robots" content="noindex, nofollow">
     @endif
     <title>@yield('title', __('site.name'))</title>
+    @stack('head')
     <link rel="canonical" href="{{ canonical_url() }}">
     @php
         $hreflangs = hreflang_urls();
