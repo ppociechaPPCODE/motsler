@@ -18,7 +18,7 @@
                     <p class="mt-5 max-w-2xl text-base leading-7 text-white/90">Prowadzisz lub chcesz otworzyć firmę? Szukasz sposobów, by zarabiać więcej? Zainwestuj w sprawdzone maszyny i rozwiązania od Motsler. Dzięki nam szybko rozbudujesz portfolio usługowe swojej firmy i pomnożysz zyski.</p>
                     <div class="mt-8 flex flex-wrap gap-4">
                         <a href="{{ locale_route('contact', ['locale' => $l]) }}" class="rounded-full bg-[#ffad03] px-8 py-4 text-sm font-semibold uppercase text-black">{{ __('nav.consultation') }}</a>
-                        <a href="{{ locale_route('offer.dpf', ['locale' => $l]) }}" class="rounded-full bg-[#244396] px-8 py-4 text-sm font-semibold uppercase text-white">maszyny do czyszczenia dpf</a>
+                        <a href="{{ locale_route('offer.dpf', ['locale' => $l]) }}" class="rounded-full border-2 border-[#ffad03] bg-transparent px-8 py-4 text-sm font-semibold uppercase text-white transition hover:bg-[#ffad03]/15">maszyny do czyszczenia dpf</a>
                     </div>
                 </div>
                 <div class="flex justify-center lg:justify-end">
@@ -168,6 +168,10 @@
             </div>
             <form id="contact-form" class="space-y-4" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}">
                 @csrf
+                <input type="text" name="name" value="{{ old('name') }}" required autocomplete="name" maxlength="200" placeholder="{{ __('form.name') }}" class="w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3 text-sm text-[#001348] outline-none focus:border-[#244396]">
+                @error('name')
+                    <p class="text-sm text-red-600">{{ $message }}</p>
+                @enderror
                 <input type="email" name="email" value="{{ old('email') }}" required placeholder="Twój adres e-mail" class="w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3 text-sm text-[#001348] outline-none focus:border-[#244396]">
                 @error('email')
                     <p class="text-sm text-red-600">{{ $message }}</p>
@@ -180,8 +184,14 @@
                 @error('message')
                     <p class="text-sm text-red-600">{{ $message }}</p>
                 @enderror
+                <div class="flex items-start gap-3">
+                    <input class="mt-1 h-4 w-4 shrink-0 rounded border-[#cbd2d9]" id="home-privacy" name="privacy_accept" type="checkbox" value="1" {{ old('privacy_accept') ? 'checked' : '' }} required>
+                    <label class="text-sm text-[#001348]/90" for="home-privacy">{{ __('form.privacy_accept') }}. <a href="{{ locale_route('privacy', ['locale' => $l]) }}" class="text-[#244396] underline">{{ __('footer.privacy') }}</a>.</label>
+                </div>
+                @error('privacy_accept')
+                    <p class="text-sm text-red-600">{{ $message }}</p>
+                @enderror
                 <button type="submit" class="w-full rounded-xl bg-[#244396] px-6 py-4 text-sm font-semibold uppercase text-white hover:bg-[#001348] sm:w-auto">Wyślij wiadomość</button>
-                <p class="text-sm leading-6 text-[#001348]/90">@lang('legal.consent_before', ['host' => $host])<a href="{{ locale_route('privacy', ['locale' => $l]) }}" class="text-[#244396] underline">{{ __('footer.privacy') }}</a>@lang('legal.consent_after')</p>
             </form>
         </div>
         </div>

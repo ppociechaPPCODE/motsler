@@ -3,7 +3,6 @@
 @section('content')
 @php
     $l = app()->getLocale();
-    $host = parse_url((string) config('app.url'), PHP_URL_HOST) ?: request()->getHost();
 @endphp
 <div class="space-y-0">
     <section class="bg-[#001348] px-6 py-14 text-white sm:px-10">
@@ -42,6 +41,10 @@
                 @endif
                 <form id="contact-form" class="mt-6 space-y-5" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}">
                     @csrf
+                    <input class="w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3 text-sm text-[#001348] outline-none focus:border-[#244396]" name="name" type="text" value="{{ old('name') }}" required autocomplete="name" maxlength="200" placeholder="{{ __('form.name') }}">
+                    @error('name')
+                        <p class="text-sm text-red-600">{{ $message }}</p>
+                    @enderror
                     <input class="w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3 text-sm text-[#001348] outline-none focus:border-[#244396]" id="email" name="email" type="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
                     @error('email')
                         <p class="text-sm text-red-600">{{ $message }}</p>
@@ -54,8 +57,14 @@
                     @error('message')
                         <p class="text-sm text-red-600">{{ $message }}</p>
                     @enderror
+                    <div class="flex items-start gap-3">
+                        <input class="mt-1 h-4 w-4 shrink-0 rounded border-[#cbd2d9]" id="contact-privacy" name="privacy_accept" type="checkbox" value="1" {{ old('privacy_accept') ? 'checked' : '' }} required>
+                        <label class="text-sm text-[#003174]" for="contact-privacy">{{ __('form.privacy_accept') }}. <a href="{{ locale_route('privacy', ['locale' => $l]) }}" class="text-[#244396] underline">{{ __('footer.privacy') }}</a>.</label>
+                    </div>
+                    @error('privacy_accept')
+                        <p class="text-sm text-red-600">{{ $message }}</p>
+                    @enderror
                     <button class="inline-flex items-center justify-center rounded-xl bg-[#244396] px-8 py-4 text-sm font-semibold uppercase text-white hover:bg-[#001348]" type="submit">Wyślij wiadomość</button>
-                    <p class="text-sm leading-6 text-[#003174]">@lang('legal.consent_before', ['host' => $host])<a href="{{ locale_route('privacy', ['locale' => $l]) }}" class="text-[#244396] underline">{{ __('footer.privacy') }}</a>@lang('legal.consent_after')</p>
                 </form>
             </div>
         </div>

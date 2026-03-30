@@ -37,11 +37,22 @@
                     <p class="offer-dpf-hero-caption-line">{{ __('offer_dpf.hero_overlay_2') }}</p>
                     <p class="offer-dpf-hero-caption-line">{{ __('offer_dpf.hero_overlay_3') }}</p>
                 </div>
+                <div class="mt-6 flex justify-center gap-2.5" role="group" aria-label="{{ __('offer_dpf.models_icons_group_aria') }}">
+                    <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/35 bg-white/10 text-white" title="{{ __('offer_dpf.models_tip_sws') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7H8M8 7l2.25-2.25M8 7l2.25 2.25"/><path d="M8 17h8M16 17l-2.25-2.25M16 17l-2.25 2.25"/></svg>
+                    </span>
+                    <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/35 bg-white/10 text-white" title="{{ __('offer_dpf.models_tip_pfs') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor" aria-hidden="true"><path d="M12 2.5c-3.5 4.5-7 8.2-7 11.5a7 7 0 1014 0c0-3.3-3.5-7-7-11.5zM8 18h8v2H8v-2z"/></svg>
+                    </span>
+                    <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/35 bg-white/10 text-white" title="{{ __('offer_dpf.models_tip_auto') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor" aria-hidden="true"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4c-.48 0-.89.2-1.18.52l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.6V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9c0 .48.2.89.52 1.18l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06A1.65 1.65 0 0015 14.4a1.65 1.65 0 00-1.51 1H13a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                    </span>
+                </div>
                 <h1 class="mt-8 max-w-5xl text-2xl font-bold leading-snug sm:text-3xl md:text-4xl lg:text-[2.65rem] lg:leading-tight">{{ __('offer_dpf.hero_title') }}</h1>
                 <p class="mx-auto mt-6 max-w-3xl text-base leading-7 text-white/95 sm:text-lg sm:leading-8">{{ __('offer_dpf.hero_subtitle') }}</p>
                 <div class="mt-10 flex w-full max-w-lg flex-col items-center justify-center gap-3 sm:max-w-none">
                     <a href="#offer-dpf-form" class="inline-flex w-full min-h-[3.25rem] max-w-md items-center justify-center rounded-full bg-[#ffad03] px-10 py-4 text-base font-bold uppercase tracking-wide text-[#001348] shadow-lg shadow-black/25 transition hover:bg-[#ffc94d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:min-h-[3.5rem] sm:text-lg">{{ __('offer_dpf.hero_cta_offer') }}</a>
-                    <a href="#offer-dpf-modele" class="inline-flex items-center justify-center rounded-full border border-white/70 bg-transparent px-6 py-2.5 text-sm font-semibold text-white/95 transition hover:border-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:text-base">{{ __('offer_dpf.hero_cta_models') }}</a>
+                    <a href="#offer-dpf-modele" class="inline-flex items-center justify-center rounded-full border-2 border-[#ffad03] bg-transparent px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-[#ffad03]/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffad03] sm:text-base">{{ __('offer_dpf.hero_cta_models') }}</a>
                 </div>
                 <p class="mt-6 max-w-md text-sm leading-6 text-white/75 sm:max-w-lg sm:text-[0.9375rem]">{{ __('offer_dpf.hero_micro') }}</p>
             </div>
@@ -55,7 +66,7 @@
             </div>
         </div>-->
     </section>
-    <section class="relative flex min-h-dvh flex-col justify-center overflow-hidden bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
+    <section class="relative flex min-h-dvh flex-col justify-center overflow-hidden border-t border-[#e2e8f0] bg-white px-6 py-16 sm:px-10 sm:py-20">
         <div class="pointer-events-none absolute -left-24 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-[#244396]/15 blur-3xl"></div>
         <div class="pointer-events-none absolute -right-16 bottom-0 h-56 w-56 rounded-full bg-[#ffad03]/10 blur-3xl"></div>
         <div class="relative mx-auto w-full max-w-[1200px]">
@@ -63,12 +74,7 @@
             <div class="mt-12 grid gap-8 sm:grid-cols-2 xl:grid-cols-4 xl:gap-6">
                 <div class="flex flex-col rounded-[20px] border border-[#e2e8f0] bg-white p-6 shadow-[0_12px_40px_-20px_rgba(36,67,150,.15)] sm:p-7">
                     <div class="mb-5 flex h-[4.5rem] items-center justify-center rounded-2xl bg-[#244396]/10">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="h-14 w-14 shrink-0" fill="none" aria-hidden="true">
-                            <rect x="10" y="8" width="30" height="48" rx="6" stroke="#244396" stroke-width="2.25"/>
-                            <path stroke="#244396" stroke-width="2" stroke-linecap="round" d="M14 18h22M14 26h22M14 34h22"/>
-                            <circle cx="46" cy="44" r="12" fill="#6bd269"/>
-                            <path stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M41 44l3.5 3.5L51 39"/>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-14 w-14 shrink-0" fill="none" stroke="#244396" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7H8M8 7l2.25-2.25M8 7l2.25 2.25"/><path d="M8 17h8M16 17l-2.25-2.25M16 17l-2.25 2.25"/></svg>
                     </div>
                     <h3 class="text-lg font-semibold leading-snug text-[#001348]">{{ __('offer_dpf.s2_c1_title') }}</h3>
                     <p class="mt-3 text-sm leading-7 text-[#003174] sm:text-[0.9375rem]">{{ __('offer_dpf.s2_c1_text') }}</p>
@@ -124,50 +130,86 @@
             </div>
         </div>
     </section>
-    <section class="border-t border-[#e2e8f0] bg-gradient-to-b from-white to-[#f8fafc] px-0 py-16 sm:py-20 sm:px-10">
+    <section class="border-t border-[#e2e8f0] bg-[#edf2f7] px-0 py-16 sm:py-20 sm:px-10">
         <div class="mx-auto w-full max-w-[1200px] px-6 sm:px-0">
             <h2 class="text-center text-3xl font-semibold leading-tight text-[#001348] sm:text-4xl">{{ __('offer_dpf.tech_heading') }}</h2>
             <p class="mx-auto mt-6 max-w-[52rem] text-center text-base leading-7 text-[#003174] sm:text-lg sm:leading-8">{{ __('offer_dpf.tech_intro') }}</p>
         </div>
         <div class="mx-auto mt-12 w-full max-w-[1200px] lg:px-0">
             <div class="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth scroll-pl-6 scroll-pr-6 px-6 pb-4 [scrollbar-width:none] [-ms-overflow-style:none] sm:scroll-pl-10 sm:scroll-pr-10 sm:px-10 lg:mx-auto lg:grid lg:max-w-[1200px] lg:grid-cols-4 lg:gap-6 lg:overflow-visible lg:scroll-pl-0 lg:scroll-pr-0 lg:px-0 lg:pb-0 lg:snap-none [&::-webkit-scrollbar]:hidden">
-                <article class="flex w-[min(100%,calc(100vw-3rem))] max-w-[22rem] shrink-0 snap-center flex-col rounded-[20px] border border-[#e2e8f0] bg-white p-6 shadow-[0_12px_40px_-24px_rgba(36,67,150,.2)] sm:max-w-[20rem] lg:max-w-none lg:w-auto">
-                    <h3 class="text-lg font-semibold leading-snug text-[#001348]">{{ __('offer_dpf.tech_c1_title') }}</h3>
-                    <div class="mt-4 space-y-3 text-sm leading-7 text-[#003174] sm:text-[0.9375rem]">
-                        <p><span class="font-semibold text-[#001348]">{{ __('offer_dpf.tech_label_desc') }}:</span> {{ __('offer_dpf.tech_c1_desc') }}</p>
-                        <p><span class="font-semibold text-[#001348]">{{ __('offer_dpf.tech_label_benefit') }}:</span> {{ __('offer_dpf.tech_c1_benefit') }}</p>
-                    </div>
-                    <p class="mt-4 border-l-4 border-[#ffad03] bg-[#fff9eb] px-3 py-2 text-xs font-medium italic leading-relaxed text-[#5c4a1a] sm:text-sm">{{ __('offer_dpf.tech_c1_micro') }}</p>
-                </article>
-                <article class="flex w-[min(100%,calc(100vw-3rem))] max-w-[22rem] shrink-0 snap-center flex-col rounded-[20px] border border-[#e2e8f0] bg-white p-6 shadow-[0_12px_40px_-24px_rgba(36,67,150,.2)] sm:max-w-[20rem] lg:max-w-none lg:w-auto">
-                    <h3 class="text-lg font-semibold leading-snug text-[#001348]">{{ __('offer_dpf.tech_c2_title') }}</h3>
-                    <div class="mt-4 space-y-3 text-sm leading-7 text-[#003174] sm:text-[0.9375rem]">
-                        <p><span class="font-semibold text-[#001348]">{{ __('offer_dpf.tech_label_desc') }}:</span> {{ __('offer_dpf.tech_c2_desc') }}</p>
-                        <p><span class="font-semibold text-[#001348]">{{ __('offer_dpf.tech_label_benefit') }}:</span> {{ __('offer_dpf.tech_c2_benefit') }}</p>
-                        <p><span class="font-semibold text-[#001348]">{{ __('offer_dpf.tech_label_specs') }}:</span> {{ __('offer_dpf.tech_c2_specs') }}</p>
-                    </div>
-                </article>
-                <article class="flex w-[min(100%,calc(100vw-3rem))] max-w-[22rem] shrink-0 snap-center flex-col rounded-[20px] border border-[#e2e8f0] bg-white p-6 shadow-[0_12px_40px_-24px_rgba(36,67,150,.2)] sm:max-w-[20rem] lg:max-w-none lg:w-auto">
-                    <h3 class="text-lg font-semibold leading-snug text-[#001348]">{{ __('offer_dpf.tech_c3_title') }}</h3>
-                    <div class="mt-4 space-y-3 text-sm leading-7 text-[#003174] sm:text-[0.9375rem]">
-                        <p><span class="font-semibold text-[#001348]">{{ __('offer_dpf.tech_label_desc') }}:</span> {{ __('offer_dpf.tech_c3_desc') }}</p>
-                        <p><span class="font-semibold text-[#001348]">{{ __('offer_dpf.tech_label_benefit') }}:</span> {{ __('offer_dpf.tech_c3_benefit') }}</p>
+                <article class="flex w-[min(100%,calc(100vw-3rem))] max-w-[22rem] shrink-0 snap-center flex-col overflow-hidden rounded-[20px] border border-[#e2e8f0] bg-white shadow-[0_12px_40px_-24px_rgba(36,67,150,.14)] sm:max-w-[20rem] lg:max-w-none lg:w-auto">
+                    <div class="flex flex-1 flex-col p-6">
+                        <div class="text-center">
+                            <h3 class="text-balance text-lg font-semibold leading-snug text-[#001348]">{{ __('offer_dpf.tech_c1_title') }}</h3>
+                        </div>
+                        <div class="mt-2 flex h-9 w-full shrink-0 justify-center" aria-hidden="true">
+                            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#244396]/20 bg-[#244396]/10 text-[#244396]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7H8M8 7l2.25-2.25M8 7l2.25 2.25"/><path d="M8 17h8M16 17l-2.25-2.25M16 17l-2.25 2.25"/></svg>
+                            </span>
+                        </div>
+                        <div class="mt-3 min-h-0 flex-1 space-y-3 text-sm leading-7 text-[#003174] sm:text-[0.9375rem]">
+                            <p><span class="font-semibold text-[#244396]">{{ __('offer_dpf.tech_label_desc') }}:</span> {{ __('offer_dpf.tech_c1_desc') }}</p>
+                            <p><span class="font-semibold text-[#244396]">{{ __('offer_dpf.tech_label_benefit') }}:</span> {{ __('offer_dpf.tech_c1_benefit') }}</p>
+                        </div>
+                        <p class="mt-4 border-l-4 border-[#ffad03] bg-[#fff9eb] px-3 py-2 text-xs font-medium italic leading-relaxed text-[#5c4a1a] sm:text-sm">{{ __('offer_dpf.tech_c1_micro') }}</p>
                     </div>
                 </article>
-                <article class="flex w-[min(100%,calc(100vw-3rem))] max-w-[22rem] shrink-0 snap-center flex-col rounded-[20px] border border-[#e2e8f0] bg-white p-6 shadow-[0_12px_40px_-24px_rgba(36,67,150,.2)] sm:max-w-[20rem] lg:max-w-none lg:w-auto">
-                    <h3 class="text-lg font-semibold leading-snug text-[#001348]">{{ __('offer_dpf.tech_c4_title') }}</h3>
-                    <div class="mt-4 space-y-3 text-sm leading-7 text-[#003174] sm:text-[0.9375rem]">
-                        <p><span class="font-semibold text-[#001348]">{{ __('offer_dpf.tech_label_desc') }}:</span> {{ __('offer_dpf.tech_c4_desc') }}</p>
-                        <p><span class="font-semibold text-[#001348]">{{ __('offer_dpf.tech_label_benefit') }}:</span> {{ __('offer_dpf.tech_c4_benefit') }}</p>
+                <article class="flex w-[min(100%,calc(100vw-3rem))] max-w-[22rem] shrink-0 snap-center flex-col overflow-hidden rounded-[20px] border border-[#e2e8f0] bg-white shadow-[0_12px_40px_-24px_rgba(36,67,150,.14)] sm:max-w-[20rem] lg:max-w-none lg:w-auto">
+                    <div class="flex flex-1 flex-col p-6">
+                        <div class="text-center">
+                            <h3 class="text-balance text-lg font-semibold leading-snug text-[#001348]">{{ __('offer_dpf.tech_c2_title') }}</h3>
+                        </div>
+                        <div class="mt-2 flex h-9 w-full shrink-0 justify-center" aria-hidden="true">
+                            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#244396]/20 bg-[#244396]/10 text-[#244396]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="M12 2.5c-3.5 4.5-7 8.2-7 11.5a7 7 0 1014 0c0-3.3-3.5-7-7-11.5zM8 18h8v2H8v-2z"/></svg>
+                            </span>
+                        </div>
+                        <div class="mt-3 min-h-0 flex-1 space-y-3 text-sm leading-7 text-[#003174] sm:text-[0.9375rem]">
+                            <p><span class="font-semibold text-[#244396]">{{ __('offer_dpf.tech_label_desc') }}:</span> {{ __('offer_dpf.tech_c2_desc') }}</p>
+                            <p><span class="font-semibold text-[#244396]">{{ __('offer_dpf.tech_label_benefit') }}:</span> {{ __('offer_dpf.tech_c2_benefit') }}</p>
+                        </div>
+                        <p class="mt-4 border-l-4 border-[#ffad03] bg-[#fff9eb] px-3 py-2 text-xs font-medium italic leading-relaxed text-[#5c4a1a] sm:text-sm">{{ __('offer_dpf.tech_c2_specs') }}</p>
+                    </div>
+                </article>
+                <article class="flex w-[min(100%,calc(100vw-3rem))] max-w-[22rem] shrink-0 snap-center flex-col overflow-hidden rounded-[20px] border border-[#e2e8f0] bg-white shadow-[0_12px_40px_-24px_rgba(36,67,150,.14)] sm:max-w-[20rem] lg:max-w-none lg:w-auto">
+                    <div class="flex flex-1 flex-col p-6">
+                        <div class="text-center">
+                            <h3 class="text-balance text-lg font-semibold leading-snug text-[#001348]">{{ __('offer_dpf.tech_c3_title') }}</h3>
+                        </div>
+                        <div class="mt-2 flex h-9 w-full shrink-0 justify-center lg:mt-[2.125rem]" aria-hidden="true">
+                            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#244396]/20 bg-[#244396]/10 text-[#244396]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="none" aria-hidden="true"><circle cx="5" cy="6" r="1.5" fill="currentColor" stroke="none"/><circle cx="5" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="5" cy="18" r="1.5" fill="currentColor" stroke="none"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9 6h12M9 12h12M9 18h10"/></svg>
+                            </span>
+                        </div>
+                        <div class="mt-3 min-h-0 flex-1 space-y-3 text-sm leading-7 text-[#003174] sm:text-[0.9375rem]">
+                            <p><span class="font-semibold text-[#244396]">{{ __('offer_dpf.tech_label_desc') }}:</span> {{ __('offer_dpf.tech_c3_desc') }}</p>
+                            <p><span class="font-semibold text-[#244396]">{{ __('offer_dpf.tech_label_benefit') }}:</span> {{ __('offer_dpf.tech_c3_benefit') }}</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="flex w-[min(100%,calc(100vw-3rem))] max-w-[22rem] shrink-0 snap-center flex-col overflow-hidden rounded-[20px] border border-[#e2e8f0] bg-white shadow-[0_12px_40px_-24px_rgba(36,67,150,.14)] sm:max-w-[20rem] lg:max-w-none lg:w-auto">
+                    <div class="flex flex-1 flex-col p-6">
+                        <div class="text-center">
+                            <h3 class="text-balance text-lg font-semibold leading-snug text-[#001348]">{{ __('offer_dpf.tech_c4_title') }}</h3>
+                        </div>
+                        <div class="mt-2 flex h-9 w-full shrink-0 justify-center" aria-hidden="true">
+                            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#244396]/20 bg-[#244396]/10 text-[#244396]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v4H4V5zM4 13h10v6H4v-6zM18 13h2v6h-2v-6z"/><path d="M8 9v4M14 9v8"/></svg>
+                            </span>
+                        </div>
+                        <div class="mt-3 min-h-0 flex-1 space-y-3 text-sm leading-7 text-[#003174] sm:text-[0.9375rem]">
+                            <p><span class="font-semibold text-[#244396]">{{ __('offer_dpf.tech_label_desc') }}:</span> {{ __('offer_dpf.tech_c4_desc') }}</p>
+                            <p><span class="font-semibold text-[#244396]">{{ __('offer_dpf.tech_label_benefit') }}:</span> {{ __('offer_dpf.tech_c4_benefit') }}</p>
+                        </div>
                     </div>
                 </article>
             </div>
         </div>
         <div class="mx-auto mt-12 max-w-[1200px] px-6 text-center sm:px-10 lg:px-6 xl:px-0">
-            <a href="#offer-dpf-modele" class="inline-flex max-w-full items-center justify-center rounded-full bg-[#244396] px-6 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-[#001348] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#244396] sm:px-8 sm:text-base">{{ __('offer_dpf.tech_cta') }}</a>
+            <a href="#offer-dpf-modele" class="inline-flex max-w-full items-center justify-center rounded-full bg-[#ffad03] px-5 py-2.5 text-center text-xs font-bold uppercase tracking-wide text-[#001348] shadow-md transition hover:bg-[#ffc94d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#001348] sm:px-6 sm:py-3 sm:text-sm">{{ __('offer_dpf.tech_cta') }}</a>
         </div>
     </section>
-    <section id="offer-dpf-modele" class="scroll-mt-24 border-t border-[#e2e8f0] bg-[#f1f5f9] px-0 py-16 sm:py-20 sm:px-10">
+    <section id="offer-dpf-modele" class="scroll-mt-24 border-t border-[#e2e8f0] bg-white px-0 py-16 sm:py-20 sm:px-10">
         <div class="mx-auto w-full max-w-[1200px] px-6 sm:px-0">
             <h2 class="text-center text-3xl font-semibold leading-tight text-[#001348] sm:text-4xl">{{ __('offer_dpf.models_heading') }}</h2>
         </div>
@@ -183,7 +225,7 @@
                                 ? (file_exists($offerDpfImgPlus) ? asset('images/offer/slr-premium-plus.jpg') : null)
                                 : (file_exists($offerDpfImgDual) ? asset('images/offer/slr-premium-dual.jpg') : (file_exists($offerDpfImgPlus) ? asset('images/offer/slr-premium-plus.jpg') : null)));
                     @endphp
-                    <article class="flex h-full w-[min(100%,calc(100vw-2.5rem))] max-w-[24rem] shrink-0 snap-center flex-col overflow-hidden rounded-[22px] border bg-white shadow-[0_16px_48px_-28px_rgba(36,67,150,.28)] sm:max-w-[22rem] lg:max-w-none lg:w-auto {{ $isDual ? 'border-[#ffad03] ring-2 ring-[#ffad03]/55 ring-offset-2 ring-offset-[#f1f5f9]' : 'border-[#e2e8f0]' }}">
+                    <article class="flex h-full w-[min(100%,calc(100vw-2.5rem))] max-w-[24rem] shrink-0 snap-center flex-col overflow-hidden rounded-[22px] border bg-white shadow-[0_16px_48px_-28px_rgba(36,67,150,.28)] sm:max-w-[22rem] lg:max-w-none lg:w-auto {{ $isDual ? 'border-[#ffad03] ring-2 ring-[#ffad03]/55 ring-offset-2 ring-offset-white' : 'border-[#e2e8f0]' }}">
                         <div class="relative aspect-[4/3] bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0]">
                             @if ($imgSrc)
                                 <img src="{{ $imgSrc }}" alt="{{ __('offer_dpf.models_m'.$mi.'_img_alt') }}" class="h-full w-full object-cover object-center" width="480" height="360">
@@ -197,7 +239,7 @@
                         <div class="flex min-h-0 flex-1 flex-col p-6 sm:p-7">
                             <div class="flex justify-center gap-2.5" role="group" aria-label="{{ __('offer_dpf.models_icons_group_aria') }}">
                                 <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#244396]/12 text-[#244396]" title="{{ __('offer_dpf.models_tip_sws') }}">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7H8M8 7l2.25-2.25M8 7l2.25 2.25"/><path d="M8 17h8M16 17l-2.25-2.25M16 17l-2.25 2.25"/></svg>
                                 </span>
                                 <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#244396]/12 text-[#244396]" title="{{ __('offer_dpf.models_tip_pfs') }}">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor" aria-hidden="true"><path d="M12 2.5c-3.5 4.5-7 8.2-7 11.5a7 7 0 1014 0c0-3.3-3.5-7-7-11.5zM8 18h8v2H8v-2z"/></svg>
@@ -216,8 +258,8 @@
                             <p class="mt-5 text-xs font-bold uppercase tracking-wide text-[#244396]">{{ __('offer_dpf.models_tech_heading') }}</p>
                             <ul class="mt-3 space-y-2.5 text-sm leading-6 text-[#003174] lg:min-h-[13rem]">
                                 @for ($ti = 1; $ti <= $techN; $ti++)
-                                    <li class="flex items-start gap-2.5">
-                                        <span class="mt-[calc((1lh-0.5rem)/2)] h-2 w-2 shrink-0 rounded-full bg-[#6bd269]" aria-hidden="true"></span>
+                                    <li class="flex items-start gap-2.5 leading-6">
+                                        <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#6bd269]" aria-hidden="true"></span>
                                         <span class="min-w-0">{{ __('offer_dpf.models_m'.$mi.'_tech_'.$ti) }}</span>
                                     </li>
                                 @endfor
@@ -252,11 +294,11 @@
                         <div class="flex flex-col items-center text-center">
                             <div class="relative z-[1] mb-4 flex h-[4.25rem] w-[4.25rem] items-center justify-center rounded-full border-2 border-[#244396] bg-white shadow-md">
                                 @if ($ps === 1 || $ps === 4)
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-9 w-9 text-[#244396]" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path stroke-linecap="round" d="M20 20l-4.2-4.2M8 11h6"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-9 w-9 text-[#244396]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16.5h16"/><path d="M4 16.5v-4M7 16.5v-2M10 16.5v-3.5M13 16.5v-2M16 16.5v-3.5M19 16.5v-2M20 16.5v-4"/></svg>
                                 @elseif ($ps === 2)
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-9 w-9 text-[#244396]" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 3c-2 3-5 5.5-5 9a5 5 0 1010 0c0-3.5-3-6-5-9z"/><path stroke-linecap="round" d="M8 18h8M9 14h6"/></svg>
                                 @elseif ($ps === 3)
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-9 w-9 text-[#244396]" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path stroke-linecap="round" d="M8 16c2 2 6 2 8 0M12 4v10"/><path d="M9 7h6l-1 5h-4L9 7z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-9 w-9 text-[#244396]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="9.5" width="5.5" height="5" rx="1"/><path d="M11.5 11.25h2.4l2.1 1.55v2.4l-2.1 1.55H11.5"/><path d="M16.8 9.25c2.2 1 4.3 1 6.4 0M16.8 12H22M16.8 14.75c2.2-1 4.3-1 6.4 0"/></svg>
                                 @else
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-9 w-9 text-[#244396]" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M7 4h10v16H7V4z"/><path stroke-linecap="round" d="M10 8h4M10 12h4M10 16h3"/><path stroke-linecap="round" d="M14 20l3 2v-6"/></svg>
                                 @endif
@@ -274,11 +316,11 @@
                 <article class="w-[min(100%,calc(100vw-3.5rem))] max-w-[22rem] shrink-0 snap-center rounded-[20px] border border-[#e2e8f0] bg-white p-6 shadow-[0_12px_40px_-24px_rgba(36,67,150,.15)]">
                     <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#244396] bg-[#f8fafc]">
                         @if ($ps === 1 || $ps === 4)
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 text-[#244396]" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path stroke-linecap="round" d="M20 20l-4.2-4.2M8 11h6"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 text-[#244396]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16.5h16"/><path d="M4 16.5v-4M7 16.5v-2M10 16.5v-3.5M13 16.5v-2M16 16.5v-3.5M19 16.5v-2M20 16.5v-4"/></svg>
                         @elseif ($ps === 2)
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 text-[#244396]" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 3c-2 3-5 5.5-5 9a5 5 0 1010 0c0-3.5-3-6-5-9z"/><path stroke-linecap="round" d="M8 18h8M9 14h6"/></svg>
                         @elseif ($ps === 3)
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 text-[#244396]" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path stroke-linecap="round" d="M8 16c2 2 6 2 8 0M12 4v10"/><path d="M9 7h6l-1 5h-4L9 7z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 text-[#244396]" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="9.5" width="5.5" height="5" rx="1"/><path d="M11.5 11.25h2.4l2.1 1.55v2.4l-2.1 1.55H11.5"/><path d="M16.8 9.25c2.2 1 4.3 1 6.4 0M16.8 12H22M16.8 14.75c2.2-1 4.3-1 6.4 0"/></svg>
                         @else
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 text-[#244396]" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M7 4h10v16H7V4z"/><path stroke-linecap="round" d="M10 8h4M10 12h4M10 16h3"/><path stroke-linecap="round" d="M14 20l3 2v-6"/></svg>
                         @endif
@@ -290,8 +332,8 @@
             @endfor
         </div>
         <div class="mx-auto mt-12 flex max-w-[1200px] flex-col items-center justify-center gap-3 px-6 sm:flex-row sm:px-10 lg:px-6 xl:px-0">
-            <a href="#offer-dpf-hero" class="inline-flex w-full max-w-sm items-center justify-center rounded-full bg-[#244396] px-6 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-[#001348] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#244396] sm:w-auto sm:px-8">{{ __('offer_dpf.proc_cta_demo') }}</a>
-            <a href="#offer-dpf-modele" class="inline-flex w-full max-w-sm items-center justify-center rounded-full border-2 border-[#244396] bg-white px-6 py-3.5 text-center text-sm font-semibold text-[#244396] transition hover:bg-[#244396]/5 sm:w-auto sm:px-8">{{ __('offer_dpf.proc_cta_models') }}</a>
+            <a href="#offer-dpf-hero" class="inline-flex w-full max-w-sm items-center justify-center rounded-full bg-[#ffad03] px-6 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-[#001348] shadow-md transition hover:bg-[#ffc94d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#001348] sm:w-auto sm:px-8">{{ __('offer_dpf.proc_cta_demo') }}</a>
+            <a href="#offer-dpf-modele" class="inline-flex w-full max-w-sm items-center justify-center rounded-full border-2 border-[#ffad03] bg-white px-6 py-3.5 text-center text-sm font-semibold text-[#001348] transition hover:bg-[#ffad03]/10 sm:w-auto sm:px-8">{{ __('offer_dpf.proc_cta_models') }}</a>
         </div>
     </section>
     <section class="border-t border-[#e2e8f0] bg-white px-0 py-16 sm:py-20 sm:px-10">
@@ -326,18 +368,18 @@
                                 @endif
                             </span>
                         </div>
-                        <p class="mt-5 text-center text-xs font-bold uppercase tracking-wide text-[#244396]">{{ __('offer_dpf.benefits_c'.$bi.'_sub') }}</p>
-                        <h3 class="mt-2 text-center text-xl font-bold text-[#001348] sm:text-2xl">{{ __('offer_dpf.benefits_c'.$bi.'_title') }}</h3>
+                        <p class="mt-5 text-center text-sm font-bold uppercase tracking-wide text-[#244396]">{{ __('offer_dpf.benefits_c'.$bi.'_sub') }}</p>
+                        
                         <p class="mt-4 text-center text-sm leading-7 text-[#003174] sm:text-[0.9375rem]">{{ __('offer_dpf.benefits_c'.$bi.'_text') }}</p>
                         <div class="mt-6 flex flex-1 flex-col justify-end">
-                            <a href="#offer-dpf-form" class="inline-flex w-full items-center justify-center rounded-full border-2 border-[#244396] bg-white px-5 py-3 text-center text-sm font-semibold text-[#244396] transition hover:bg-[#244396]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#244396]">{{ __('offer_dpf.benefits_cta') }}</a>
+                            <a href="#offer-dpf-form" class="inline-flex w-full items-center justify-center rounded-full bg-[#ffad03] px-5 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-[#001348] shadow-md transition hover:bg-[#ffc94d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#001348]">{{ __('offer_dpf.benefits_cta') }}</a>
                         </div>
                     </article>
                 @endfor
             </div>
         </div>
     </section>
-    <section id="offer-dpf-vs-competitors" class="scroll-mt-24 border-t border-[#e2e8f0] bg-white px-6 py-16 sm:px-10 sm:py-20">
+    <section id="offer-dpf-vs-competitors" class="scroll-mt-24 border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
         <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="text-center text-3xl font-semibold leading-tight text-[#001348] sm:text-4xl">{{ __('offer_dpf.cmp_heading') }}</h2>
             <div class="mt-10 overflow-x-auto rounded-[20px] border border-[#e2e8f0] shadow-[0_12px_48px_-28px_rgba(36,67,150,.15)]">
@@ -356,7 +398,7 @@
                                     <span class="flex items-start gap-3">
                                         @if ($cr === 1)
                                             <span class="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#244396]/12 text-[#244396]" aria-hidden="true">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7H8M8 7l2.25-2.25M8 7l2.25 2.25"/><path d="M8 17h8M16 17l-2.25-2.25M16 17l-2.25 2.25"/></svg>
                                             </span>
                                         @elseif ($cr === 2)
                                             <span class="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#244396]/12 text-[#244396]" aria-hidden="true">
@@ -392,6 +434,230 @@
             </div>
             <div class="mt-10 text-center">
                 <a href="#offer-dpf-modele" class="inline-flex max-w-full items-center justify-center rounded-full bg-[#ffad03] px-6 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-[#001348] shadow-md transition hover:bg-[#ffc94d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#001348] sm:px-10 sm:text-base">{{ __('offer_dpf.cmp_cta') }}</a>
+            </div>
+        </div>
+    </section>
+    <section id="offer-dpf-testimonials" class="scroll-mt-24 border-t border-[#e2e8f0] bg-white px-0 py-16 sm:py-20 sm:px-10" aria-labelledby="offer-dpf-testimonials-heading">
+        <div class="mx-auto w-full max-w-[1200px] px-6 sm:px-0">
+            <div class="relative w-full">
+                <h2 id="offer-dpf-testimonials-heading" class="pr-[5.25rem] text-center text-3xl font-semibold leading-tight text-[#001348] sm:pr-24 sm:text-4xl md:pr-28">{{ __('offer_dpf.testimonials_heading') }}</h2>
+                <div class="absolute bottom-0 right-0 top-0 flex items-center">
+                    <img src="{{ asset('media/wp-uploads/2025/01/googl.png') }}" alt="{{ __('offer_dpf.testimonials_google_alt') }}" class="h-auto max-h-6 w-auto opacity-90 sm:max-h-7" width="96" height="32">
+                </div>
+            </div>
+            <p class="mx-auto mt-4 max-w-[42rem] text-center text-base leading-7 text-[#003174] sm:text-lg sm:leading-8">{{ __('offer_dpf.testimonials_sub') }}</p>
+        </div>
+        <div class="mx-auto mt-12 w-full max-w-[1200px] lg:px-0">
+            <div class="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth scroll-pl-6 scroll-pr-6 px-6 pb-4 pt-1 [scrollbar-width:thin] [scrollbar-color:#94a3b8_transparent] sm:scroll-pl-10 sm:scroll-pr-10 sm:px-10 lg:mx-auto lg:max-w-[1200px] lg:gap-8 lg:overflow-x-auto lg:scroll-pl-6 lg:scroll-pr-6 lg:px-6 xl:scroll-pl-0 xl:scroll-pr-0 xl:px-0 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#cbd5e1]" role="region" aria-roledescription="carousel" aria-label="{{ __('offer_dpf.testimonials_aria') }}" tabindex="0">
+                @foreach (range(1, 5) as $tn)
+                    @php
+                        $logo = match ($tn) {
+                            1 => '2025/01/aiw_200.png',
+                            2 => '2025/01/auto_bodo_200-1.png',
+                            3 => '2025/01/clean_fap_200.png',
+                            default => null,
+                        };
+                        $initials = match ($tn) {
+                            4 => 'AS',
+                            5 => 'SZ',
+                            default => null,
+                        };
+                    @endphp
+                    <article class="flex w-[min(100%,calc(100vw-3rem))] max-w-[24rem] shrink-0 snap-center flex-col rounded-[20px] border border-[#e2e8f0] bg-white p-6 text-left shadow-[0_14px_44px_-28px_rgba(36,67,150,.18)] sm:max-w-[22rem]">
+                        @if ($logo)
+                            <img src="{{ asset('media/wp-uploads/'.$logo) }}" alt="{{ $tn <= 3 ? __('offer_dpf.s5_t'.$tn.'_name') : __('offer_dpf.testimonials_t'.$tn.'_name') }}" class="mb-4 h-12 w-auto object-contain object-left opacity-80 grayscale sm:h-14" width="140" height="56" loading="lazy" decoding="async">
+                        @else
+                            <div class="mb-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#244396]/12 text-sm font-bold tracking-tight text-[#244396] sm:h-14 sm:w-14 sm:text-base" aria-hidden="true">{{ $initials }}</div>
+                        @endif
+                        <div class="text-amber-500" aria-hidden="true">★★★★★</div>
+                        <blockquote class="mt-4 text-sm leading-7 text-[#001348] sm:text-[0.9375rem] sm:leading-7">
+                            <p>“{{ __('offer_dpf.testimonials_q'.$tn) }}”</p>
+                        </blockquote>
+                        <footer class="mt-6 border-t border-[#e2e8f0] pt-4">
+                            @if ($tn <= 3)
+                                <div class="font-semibold text-[#001348]">{{ __('offer_dpf.s5_t'.$tn.'_name') }}</div>
+                                <div class="mt-1 text-sm leading-snug text-[#003174]">{{ __('offer_dpf.s5_t'.$tn.'_company') }}</div>
+                            @else
+                                <div class="font-semibold text-[#001348]">{{ __('offer_dpf.testimonials_t'.$tn.'_name') }}</div>
+                                <div class="mt-1 text-sm leading-snug text-[#003174]">{{ __('offer_dpf.testimonials_t'.$tn.'_company') }}</div>
+                            @endif
+                        </footer>
+                    </article>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    <section id="offer-dpf-successes" class="scroll-mt-24 border-t border-[#e2e8f0] bg-[#edf2f7] px-0 py-16 sm:py-20 sm:px-10" aria-labelledby="offer-dpf-successes-heading">
+        <div class="mx-auto w-full max-w-[1200px] px-6 text-center sm:px-0">
+            <h2 id="offer-dpf-successes-heading" class="text-3xl font-semibold leading-tight text-[#001348] sm:text-4xl">{{ __('offer_dpf.successes_heading') }}</h2>
+            <p class="mx-auto mt-4 max-w-[46rem] text-base leading-7 text-[#003174] sm:text-lg sm:leading-8">{{ __('offer_dpf.successes_sub') }}</p>
+        </div>
+        <div class="mx-auto mt-12 w-full max-w-[1200px] lg:px-0">
+            <div class="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth scroll-pl-6 scroll-pr-6 px-6 pb-4 pt-1 [scrollbar-width:thin] [scrollbar-color:#94a3b8_transparent] sm:scroll-pl-10 sm:scroll-pr-10 sm:px-10 lg:grid lg:grid-cols-3 lg:gap-8 lg:overflow-visible lg:px-6 lg:pb-0 lg:snap-none xl:px-0 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#cbd5e1]" role="region" aria-roledescription="carousel" aria-label="{{ __('offer_dpf.successes_aria') }}" tabindex="0">
+                @foreach (range(1, 3) as $ci)
+                    @php
+                        $successBars = match ($ci) {
+                            1 => [88, 100, 82],
+                            2 => [72, 92, 95],
+                            default => [85, 78, 90],
+                        };
+                    @endphp
+                    <article class="flex w-[min(100%,calc(100vw-3rem))] max-w-[24rem] shrink-0 snap-center flex-col overflow-hidden rounded-[20px] border border-[#e2e8f0] bg-white text-left shadow-[0_14px_44px_-28px_rgba(36,67,150,.15)] sm:max-w-[22rem] lg:max-w-none lg:w-auto">
+                        <div class="h-1 bg-gradient-to-r from-[#244396] via-[#3b5bdb] to-[#ffad03]"></div>
+                        <div class="flex flex-col p-5 sm:p-6">
+                            <span class="inline-flex w-fit rounded-full bg-[#244396]/12 px-2.5 py-0.5 text-[0.6875rem] font-bold uppercase tracking-wide text-[#244396]">{{ __('offer_dpf.s9_cs'.$ci.'_tag') }}</span>
+                            <h3 class="mt-3 text-base font-bold leading-snug text-[#001348] sm:text-lg">{{ __('offer_dpf.success_cs'.$ci.'_h3') }}</h3>
+                            <dl class="mt-4 space-y-3 text-sm leading-snug text-[#003174]">
+                                <div class="rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-3 py-2.5">
+                                    <dt class="flex items-center gap-2 text-[0.6875rem] font-bold uppercase tracking-wide text-[#244396]">
+                                        <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-white text-[#244396] shadow-sm" aria-hidden="true">
+                                            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                                        </span>
+                                        {{ __('offer_dpf.successes_label_client') }}
+                                    </dt>
+                                    <dd class="mt-1.5 pl-8">{{ __('offer_dpf.success_cs'.$ci.'_client') }}</dd>
+                                </div>
+                                <div class="rounded-xl border border-[#e2e8f0] bg-white px-3 py-2.5">
+                                    <dt class="flex items-center gap-2 text-[0.6875rem] font-bold uppercase tracking-wide text-[#244396]">
+                                        <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-[#244396]/10 text-[#244396]" aria-hidden="true">
+                                            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                                        </span>
+                                        {{ __('offer_dpf.successes_label_challenge') }}
+                                    </dt>
+                                    <dd class="mt-1.5 pl-8">{{ __('offer_dpf.success_cs'.$ci.'_challenge') }}</dd>
+                                </div>
+                                <div class="rounded-xl border border-[#e2e8f0] bg-white px-3 py-2.5">
+                                    <dt class="flex items-center gap-2 text-[0.6875rem] font-bold uppercase tracking-wide text-[#244396]">
+                                        <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-[#244396]/10 text-[#244396]" aria-hidden="true">
+                                            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                                        </span>
+                                        {{ __('offer_dpf.successes_label_solution') }}
+                                    </dt>
+                                    <dd class="mt-1.5 pl-8">{{ __('offer_dpf.success_cs'.$ci.'_solution') }}</dd>
+                                </div>
+                                <div class="rounded-xl border border-[#ffad03]/40 bg-[#fff9eb] px-3 py-2.5">
+                                    <dt class="flex items-center gap-2 text-[0.6875rem] font-bold uppercase tracking-wide text-[#b45309]">
+                                        <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-white text-[#b45309] shadow-sm" aria-hidden="true">
+                                            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                                        </span>
+                                        {{ __('offer_dpf.successes_label_result') }}
+                                    </dt>
+                                    <dd class="mt-1.5 pl-8 font-medium text-[#001348]">{{ __('offer_dpf.success_cs'.$ci.'_result') }}</dd>
+                                </div>
+                            </dl>
+                            <div class="mt-5 space-y-2.5 border-t border-[#e2e8f0] pt-5">
+                                @foreach (['M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', 'M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z', 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'] as $ki => $path)
+                                    <div class="rounded-xl bg-[#f1f5f9] px-3 py-2">
+                                        <div class="flex items-center gap-2.5">
+                                            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white text-[#244396] shadow-sm">
+                                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="{{ $path }}"/></svg>
+                                            </span>
+                                            <p class="min-w-0 flex-1 text-xs font-semibold leading-snug text-[#001348]">{{ __('offer_dpf.success_cs'.$ci.'_kpi'.($ki + 1)) }}</p>
+                                        </div>
+                                        <div class="mt-2 h-1.5 overflow-hidden rounded-full bg-white">
+                                            <div class="h-full rounded-full bg-gradient-to-r from-[#244396] to-[#3b5bdb]" style="width: {{ $successBars[$ki] }}%"></div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </article>
+                @endforeach
+            </div>
+        </div>
+    </section>
+    <section id="offer-dpf-form" class="scroll-mt-24 border-t border-[#e2e8f0] bg-white px-0 py-16 sm:py-20 sm:px-10" aria-labelledby="offer-dpf-cta-heading">
+        <div class="mx-auto w-full max-w-[1200px] px-6 lg:px-6 xl:px-0">
+            <h2 id="offer-dpf-cta-heading" class="text-center text-3xl font-semibold leading-tight text-[#001348] sm:text-4xl">{{ __('offer_dpf.cta_h2') }}</h2>
+            <div class="mt-6 w-full space-y-4 text-center text-base leading-7 text-[#003174] sm:text-lg sm:leading-8">
+                <p>{{ __('offer_dpf.cta_intro_p1') }}</p>
+                <p>{{ __('offer_dpf.cta_intro_p2') }}</p>
+                <p>{{ __('offer_dpf.cta_intro_p3') }}</p>
+            </div>
+            @if (session('contact_sent'))
+                <div class="mt-8 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-center text-sm text-emerald-900">{{ __('form.sent') }}</div>
+            @endif
+            @if (session('contact_error'))
+                <div class="mt-8 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-center text-sm text-red-900">{{ __('contact.mail_failed') }}</div>
+            @endif
+            <form class="mx-auto mt-10 w-full max-w-[52rem] space-y-4 text-left" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}">
+                @csrf
+                <label class="sr-only" for="offer-dpf-name">{{ __('form.name') }}</label>
+                <input class="w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3.5 text-sm text-[#001348] outline-none focus:border-[#244396] focus:ring-2 focus:ring-[#244396]/20" id="offer-dpf-name" name="name" type="text" value="{{ old('name') }}" required autocomplete="name" maxlength="200" placeholder="{{ __('form.name') }}">
+                @error('name')
+                    <p class="text-sm text-red-600">{{ $message }}</p>
+                @enderror
+                <label class="sr-only" for="offer-dpf-email">{{ __('form.email') }}</label>
+                <input class="w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3.5 text-sm text-[#001348] outline-none focus:border-[#244396] focus:ring-2 focus:ring-[#244396]/20" id="offer-dpf-email" name="email" type="email" value="{{ old('email') }}" required autocomplete="email" placeholder="{{ __('form.email') }}">
+                @error('email')
+                    <p class="text-sm text-red-600">{{ $message }}</p>
+                @enderror
+                <label class="sr-only" for="offer-dpf-phone">{{ __('offer_dpf.s12_phone_placeholder') }}</label>
+                <input class="w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3.5 text-sm text-[#001348] outline-none focus:border-[#244396] focus:ring-2 focus:ring-[#244396]/20" id="offer-dpf-phone" name="phone" type="tel" value="{{ old('phone') }}" autocomplete="tel" placeholder="{{ __('offer_dpf.s12_phone_placeholder') }}">
+                @error('phone')
+                    <p class="text-sm text-red-600">{{ $message }}</p>
+                @enderror
+                <label class="sr-only" for="offer-dpf-message">{{ __('offer_dpf.cta_message_placeholder') }}</label>
+                <textarea class="min-h-[8rem] w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3.5 text-sm text-[#001348] outline-none focus:border-[#244396] focus:ring-2 focus:ring-[#244396]/20" id="offer-dpf-message" name="message" required maxlength="5000" placeholder="{{ __('offer_dpf.cta_message_placeholder') }}">{{ old('message') }}</textarea>
+                @error('message')
+                    <p class="text-sm text-red-600">{{ $message }}</p>
+                @enderror
+                <div class="flex items-start gap-3 rounded-lg border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3">
+                    <input class="mt-1 h-4 w-4 shrink-0 rounded border-[#cbd2d9] text-[#244396] focus:ring-[#244396]" id="offer-dpf-privacy" name="privacy_accept" type="checkbox" value="1" {{ old('privacy_accept') ? 'checked' : '' }} required>
+                    <label class="text-sm leading-snug text-[#003174]" for="offer-dpf-privacy">{{ __('form.privacy_accept') }}. <span class="text-[#64748b]">{{ __('offer_dpf.cta_consent_hint') }}</span> <a href="{{ locale_route('privacy', ['locale' => $l]) }}" class="font-medium text-[#244396] underline">{{ __('footer.privacy') }}</a>.</label>
+                </div>
+                @error('privacy_accept')
+                    <p class="text-sm text-red-600">{{ $message }}</p>
+                @enderror
+                <button class="inline-flex w-full min-h-[3.25rem] items-center justify-center rounded-full bg-[#ffad03] px-8 py-4 text-base font-bold uppercase tracking-wide text-[#001348] shadow-lg shadow-black/15 transition hover:bg-[#ffc94d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#001348] sm:min-h-[3.5rem] sm:text-lg" type="submit" aria-label="{{ __('offer_dpf.cta_submit_aria') }}">{{ __('offer_dpf.cta_submit') }}</button>
+                <p class="text-center text-sm text-[#003174]">{{ __('offer_dpf.cta_or_call') }} <a href="tel:{{ __('offer_dpf.cta_phone_href') }}" class="font-semibold text-[#244396] underline decoration-[#244396]/40 hover:decoration-[#244396]">{{ __('offer_dpf.cta_phone_display') }}</a></p>
+            </form>
+            <ul class="mx-auto mt-8 w-full max-w-[52rem] space-y-2 text-left text-sm text-[#003174]">
+                @foreach (range(1, 3) as $cb)
+                    <li class="flex gap-3">
+                        <span class="flex h-6 w-4 shrink-0 items-center justify-center" aria-hidden="true"><span class="block h-1.5 w-1.5 rounded-full bg-[#6bd269]"></span></span>
+                        <span class="min-w-0 flex-1 leading-6">{{ __('offer_dpf.cta_bullet_'.$cb) }}</span>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+    </section>
+    <section id="offer-dpf-expert" class="scroll-mt-24 border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-14 sm:px-10 sm:py-20" aria-labelledby="offer-dpf-expert-heading">
+        <div class="mx-auto grid w-full max-w-[1100px] gap-8 sm:gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
+            <div class="mx-auto w-full max-w-[220px] sm:max-w-[260px] lg:col-span-4 lg:mx-0 lg:max-w-[280px] lg:justify-self-start">
+                <figure class="w-full overflow-hidden rounded-[18px] border border-[#e2e8f0] bg-white shadow-[0_14px_40px_-28px_rgba(36,67,150,.22)]">
+                @if (file_exists($offerDpfSebastianPhoto))
+                    <img class="aspect-[3/4] w-full object-cover object-center" src="{{ asset('images/offer/sebastian-tkacz.jpg') }}" width="520" height="693" alt="{{ __('offer_dpf.s13_img_alt') }}" loading="lazy" decoding="async">
+                @else
+                    <div class="flex aspect-[3/4] w-full items-center justify-center bg-[#f8fafc] p-5 text-center text-xs leading-snug text-[#64748b] sm:text-sm">{{ __('offer_dpf.s13_photo_placeholder') }}</div>
+                @endif
+                </figure>
+            </div>
+            <div class="min-w-0 max-w-[40rem] lg:col-span-8 lg:max-w-none">
+                <h2 id="offer-dpf-expert-heading" class="text-balance text-2xl font-semibold leading-tight text-[#001348] sm:text-3xl">{{ __('offer_dpf.s13_title') }}</h2>
+                <p class="mt-2 text-sm font-medium uppercase tracking-wide text-[#244396]">{{ __('offer_dpf.s13_role') }}</p>
+                <p class="mt-6 text-base leading-7 text-[#003174] sm:text-lg sm:leading-8">{{ __('offer_dpf.s13_body') }}</p>
+                <h3 class="mt-8 text-lg font-semibold text-[#001348]">{{ __('offer_dpf.s13_stats_h3') }}</h3>
+                <ul class="mt-4 space-y-3 text-sm leading-6 text-[#003174] sm:text-base sm:leading-7">
+                    @foreach (range(1, 3) as $si)
+                        <li class="flex gap-3">
+                            <span class="flex h-6 w-6 shrink-0 items-center justify-center text-base leading-none" aria-hidden="true">✅</span>
+                            <span class="min-w-0 flex-1">{{ __('offer_dpf.s13_stat_'.$si) }}</span>
+                        </li>
+                    @endforeach
+                </ul>
+                <h3 class="mt-8 text-lg font-semibold text-[#001348]">{{ __('offer_dpf.s13_approach_h3') }}</h3>
+                <ul class="mt-4 space-y-3 text-sm leading-6 text-[#003174] sm:text-base sm:leading-7">
+                    @foreach (range(1, 4) as $ai)
+                        <li class="flex gap-3">
+                            <span class="flex h-6 w-6 shrink-0 items-center justify-center text-base leading-none" aria-hidden="true">💡</span>
+                            <span class="min-w-0 flex-1">{{ __('offer_dpf.s13_approach_'.$ai) }}</span>
+                        </li>
+                    @endforeach
+                </ul>
+                <h3 class="mt-8 text-lg font-semibold text-[#001348]">{{ __('offer_dpf.s13_why_h3') }}</h3>
+                <p class="mt-4 text-base leading-7 text-[#003174] sm:text-lg sm:leading-8">{{ __('offer_dpf.s13_why_body') }}</p>
+                <a href="#offer-dpf-form" class="mt-8 inline-flex w-full min-h-[3.25rem] items-center justify-center rounded-full bg-[#ffad03] px-8 py-4 text-center text-sm font-bold uppercase tracking-wide text-[#001348] shadow-lg shadow-black/15 transition hover:bg-[#ffc94d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#001348] sm:w-auto sm:min-h-[3.5rem] sm:text-base" aria-label="{{ __('offer_dpf.s13_cta_aria') }}">{{ __('offer_dpf.s13_cta') }}</a>
             </div>
         </div>
     </section>
@@ -720,19 +986,42 @@
             </form>
         </div>
     </section>
-    <section class="flex min-h-dvh flex-col justify-center border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
-        <div class="mx-auto flex w-full max-w-[1200px] flex-col gap-10 lg:flex-row lg:items-center lg:gap-14">
-            <div class="mx-auto w-full max-w-[320px] shrink-0 lg:mx-0">
+    <section class="flex min-h-dvh flex-col justify-center border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-14 sm:px-10 sm:py-20">
+        <div class="mx-auto grid w-full max-w-[1100px] gap-8 sm:gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
+            <div class="mx-auto w-full max-w-[220px] sm:max-w-[260px] lg:col-span-4 lg:mx-0 lg:max-w-[280px] lg:justify-self-start">
+                <figure class="w-full overflow-hidden rounded-[18px] border border-[#e2e8f0] bg-white shadow-[0_14px_40px_-28px_rgba(36,67,150,.22)]">
                 @if (file_exists($offerDpfSebastianPhoto))
-                    <img class="aspect-[4/5] w-full rounded-[20px] object-cover shadow-[0_20px_40px_-20px_rgba(0,19,72,.35)]" src="{{ asset('images/offer/sebastian-tkacz.jpg') }}" width="640" height="800" alt="{{ __('offer_dpf.s13_img_alt') }}">
+                    <img class="aspect-[3/4] w-full object-cover object-center" src="{{ asset('images/offer/sebastian-tkacz.jpg') }}" width="520" height="693" alt="{{ __('offer_dpf.s13_img_alt') }}">
                 @else
-                    <div class="flex aspect-[4/5] w-full items-center justify-center rounded-[20px] border border-dashed border-[#cbd2d9] bg-[#f8fafc] p-6 text-center text-sm text-[#64748b]">{{ __('offer_dpf.s13_photo_placeholder') }}</div>
+                    <div class="flex aspect-[3/4] w-full items-center justify-center bg-[#f8fafc] p-5 text-center text-xs leading-snug text-[#64748b] sm:text-sm">{{ __('offer_dpf.s13_photo_placeholder') }}</div>
                 @endif
+                </figure>
             </div>
-            <div class="min-w-0 flex-1">
-                <h2 class="text-2xl font-semibold text-[#001348] sm:text-3xl">{{ __('offer_dpf.s13_title') }}</h2>
+            <div class="min-w-0 max-w-[40rem] lg:col-span-8 lg:max-w-none">
+                <h2 class="text-balance text-2xl font-semibold leading-tight text-[#001348] sm:text-3xl">{{ __('offer_dpf.s13_title') }}</h2>
                 <p class="mt-2 text-sm font-medium uppercase tracking-wide text-[#244396]">{{ __('offer_dpf.s13_role') }}</p>
-                <p class="mt-6 text-sm leading-7 text-[#003174] sm:text-base sm:leading-8">{{ __('offer_dpf.s13_body') }}</p>
+                <p class="mt-6 text-base leading-7 text-[#003174] sm:text-lg sm:leading-8">{{ __('offer_dpf.s13_body') }}</p>
+                <h3 class="mt-8 text-lg font-semibold text-[#001348]">{{ __('offer_dpf.s13_stats_h3') }}</h3>
+                <ul class="mt-4 space-y-3 text-sm leading-6 text-[#003174] sm:text-base sm:leading-7">
+                    @foreach (range(1, 3) as $si)
+                        <li class="flex gap-3">
+                            <span class="flex h-6 w-6 shrink-0 items-center justify-center text-base leading-none" aria-hidden="true">✅</span>
+                            <span class="min-w-0 flex-1">{{ __('offer_dpf.s13_stat_'.$si) }}</span>
+                        </li>
+                    @endforeach
+                </ul>
+                <h3 class="mt-8 text-lg font-semibold text-[#001348]">{{ __('offer_dpf.s13_approach_h3') }}</h3>
+                <ul class="mt-4 space-y-3 text-sm leading-6 text-[#003174] sm:text-base sm:leading-7">
+                    @foreach (range(1, 4) as $ai)
+                        <li class="flex gap-3">
+                            <span class="flex h-6 w-6 shrink-0 items-center justify-center text-base leading-none" aria-hidden="true">💡</span>
+                            <span class="min-w-0 flex-1">{{ __('offer_dpf.s13_approach_'.$ai) }}</span>
+                        </li>
+                    @endforeach
+                </ul>
+                <h3 class="mt-8 text-lg font-semibold text-[#001348]">{{ __('offer_dpf.s13_why_h3') }}</h3>
+                <p class="mt-4 text-base leading-7 text-[#003174] sm:text-lg sm:leading-8">{{ __('offer_dpf.s13_why_body') }}</p>
+                <a href="#offer-dpf-form" class="mt-8 inline-flex w-full min-h-[3.25rem] items-center justify-center rounded-full bg-[#ffad03] px-8 py-4 text-center text-sm font-bold uppercase tracking-wide text-[#001348] shadow-lg shadow-black/15 transition hover:bg-[#ffc94d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#001348] sm:w-auto sm:min-h-[3.5rem] sm:text-base" aria-label="{{ __('offer_dpf.s13_cta_aria') }}">{{ __('offer_dpf.s13_cta') }}</a>
             </div>
         </div>
     </section>-->

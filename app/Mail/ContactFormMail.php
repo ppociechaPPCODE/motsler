@@ -14,6 +14,7 @@ class ContactFormMail extends Mailable
     use Queueable, SerializesModels;
 
     public function __construct(
+        public string $name,
         public string $replyEmail,
         public ?string $phone,
         public string $messageBody,
