@@ -30,31 +30,18 @@
                 ></iframe>
             </div>
             <div class="absolute inset-0 bg-gradient-to-b from-[#001348]/90 via-[#001348]/82 to-[#001348]/92"></div>
-            <div class="relative z-10 flex min-h-[min(72vh,820px)] flex-col items-center justify-center px-6 py-16 text-center text-white sm:px-10">
-                
-                <div class="offer-dpf-hero-caption-track mt-3 text-white drop-shadow-[0_2px_12px_rgba(0,0,0,.35)]" aria-hidden="true">
-                    <p class="offer-dpf-hero-caption-line">{{ __('offer_dpf.hero_overlay_1') }}</p>
-                    <p class="offer-dpf-hero-caption-line">{{ __('offer_dpf.hero_overlay_2') }}</p>
-                    <p class="offer-dpf-hero-caption-line">{{ __('offer_dpf.hero_overlay_3') }}</p>
+            <div class="relative z-10 flex min-h-[min(72vh,820px)] flex-col items-center justify-center gap-4 px-5 py-16 text-center text-white md:gap-6 sm:px-10">
+                <p class="max-w-[50rem] text-sm font-semibold leading-snug text-white/90 sm:text-base">{{ __('offer_dpf.hero_kicker') }}</p>
+                <h1 class="max-w-[48rem] text-[1.75rem] font-bold leading-[1.15] sm:text-[2.125rem] lg:text-[2.5rem] lg:leading-[1.15] xl:text-[3rem]">
+                    <span class="block">{{ __('offer_dpf.hero_title_l1') }}</span>
+                    <span class="block">{{ __('offer_dpf.hero_title_l2') }}</span>
+                </h1>
+                <p class="mx-auto max-w-[50rem] text-pretty text-base leading-snug text-white/95 sm:text-lg">{{ __('offer_dpf.hero_subtitle') }}</p>
+                <div class="flex w-full max-w-2xl flex-col gap-3 md:max-w-3xl md:flex-row md:justify-center md:gap-4">
+                    <a href="#offer-dpf-form" class="inline-flex w-full min-h-[3.25rem] flex-1 items-center justify-center rounded-full bg-[#ffad03] px-8 py-4 text-center text-base font-bold uppercase tracking-wide text-[#001348] shadow-lg shadow-black/25 transition hover:bg-[#ffc94d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:min-h-[3.5rem] md:max-w-xs md:px-10 md:text-lg">{{ __('offer_dpf.hero_cta_offer') }}</a>
+                    <a href="#offer-dpf-modele" class="inline-flex w-full min-h-[3.25rem] flex-1 items-center justify-center rounded-full border-2 border-[#ffad03] bg-transparent px-8 py-4 text-center text-base font-semibold text-white transition hover:bg-[#ffad03]/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffad03] md:min-h-[3.5rem] md:max-w-xs">{{ __('offer_dpf.hero_cta_models') }}</a>
                 </div>
-                <div class="mt-6 flex justify-center gap-2.5" role="group" aria-label="{{ __('offer_dpf.models_icons_group_aria') }}">
-                    <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/35 bg-white/10 text-white" title="{{ __('offer_dpf.models_tip_sws') }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7H8M8 7l2.25-2.25M8 7l2.25 2.25"/><path d="M8 17h8M16 17l-2.25-2.25M16 17l-2.25 2.25"/></svg>
-                    </span>
-                    <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/35 bg-white/10 text-white" title="{{ __('offer_dpf.models_tip_pfs') }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor" aria-hidden="true"><path d="M12 2.5c-3.5 4.5-7 8.2-7 11.5a7 7 0 1014 0c0-3.3-3.5-7-7-11.5zM8 18h8v2H8v-2z"/></svg>
-                    </span>
-                    <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/35 bg-white/10 text-white" title="{{ __('offer_dpf.models_tip_auto') }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor" aria-hidden="true"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4c-.48 0-.89.2-1.18.52l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.6V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9c0 .48.2.89.52 1.18l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06A1.65 1.65 0 0015 14.4a1.65 1.65 0 00-1.51 1H13a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
-                    </span>
-                </div>
-                <h1 class="mt-8 max-w-5xl text-2xl font-bold leading-snug sm:text-3xl md:text-4xl lg:text-[2.65rem] lg:leading-tight">{{ __('offer_dpf.hero_title') }}</h1>
-                <p class="mx-auto mt-6 max-w-3xl text-base leading-7 text-white/95 sm:text-lg sm:leading-8">{{ __('offer_dpf.hero_subtitle') }}</p>
-                <div class="mt-10 flex w-full max-w-lg flex-col items-center justify-center gap-3 sm:max-w-none">
-                    <a href="#offer-dpf-form" class="inline-flex w-full min-h-[3.25rem] max-w-md items-center justify-center rounded-full bg-[#ffad03] px-10 py-4 text-base font-bold uppercase tracking-wide text-[#001348] shadow-lg shadow-black/25 transition hover:bg-[#ffc94d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:min-h-[3.5rem] sm:text-lg">{{ __('offer_dpf.hero_cta_offer') }}</a>
-                    <a href="#offer-dpf-modele" class="inline-flex items-center justify-center rounded-full border-2 border-[#ffad03] bg-transparent px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-[#ffad03]/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffad03] sm:text-base">{{ __('offer_dpf.hero_cta_models') }}</a>
-                </div>
-                <p class="mt-6 max-w-md text-sm leading-6 text-white/75 sm:max-w-lg sm:text-[0.9375rem]">{{ __('offer_dpf.hero_micro') }}</p>
+                <p class="max-w-lg text-sm leading-6 text-white/75 sm:max-w-xl sm:text-[0.9375rem]">{{ __('offer_dpf.hero_micro') }}</p>
             </div>
         </div>
         <!--<div class="flex min-h-dvh flex-col justify-center bg-white px-6 py-14 sm:px-10">
@@ -65,6 +52,33 @@
                 <p>{{ __('offer_dpf.s1_p3') }}</p>
             </div>
         </div>-->
+    </section>
+    <section id="offer-dpf-pitch" class="scroll-mt-24 border-t border-[#e2e8f0] bg-white">
+        <div class="border-b border-[#e2e8f0] bg-[#f4f7fb] px-5 py-5 shadow-[inset_0_1px_0_0_rgba(255,255,255,.6)] sm:px-10 sm:py-6">
+            <ul class="mx-auto flex max-w-[1200px] list-none flex-col divide-y divide-[#dce3ed] sm:flex-row sm:divide-x sm:divide-y-0" role="list">
+                @foreach ([1, 2, 3] as $ti)
+                    <li class="flex flex-1 items-center justify-center gap-3 py-4 first:pt-0 last:pb-0 sm:justify-center sm:px-8 sm:py-2 sm:first:pl-0 sm:last:pr-0">
+                        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#244396] text-sm font-bold text-white shadow-sm" aria-hidden="true">✔</span>
+                        <span class="max-w-[16rem] text-center text-[0.9375rem] font-bold leading-snug tracking-tight text-[#001348] sm:max-w-none sm:text-left sm:text-base">{{ __('offer_dpf.posthero_trust_'.$ti) }}</span>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+        <div class="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-10 sm:py-16">
+            <h2 class="mx-auto max-w-[56rem] text-center text-2xl font-semibold leading-tight text-[#001348] text-balance sm:text-3xl md:text-4xl">{{ __('offer_dpf.posthero_heading') }}</h2>
+            <p class="mx-auto mt-6 max-w-[48rem] text-center text-base leading-7 text-[#003174] sm:text-lg sm:leading-8">{{ __('offer_dpf.posthero_lead') }}</p>
+            <div class="mt-12 grid gap-8 md:grid-cols-3 md:gap-6">
+                @foreach ([1, 2, 3] as $ai)
+                    <div class="flex flex-col rounded-[20px] border border-[#e2e8f0] bg-[#f8fafc] p-6 sm:p-7">
+                        <h3 class="text-lg font-semibold leading-snug text-[#001348]">{{ __('offer_dpf.posthero_a'.$ai.'_title') }}</h3>
+                        <p class="mt-3 text-sm leading-7 text-[#003174] sm:text-[0.9375rem]">{{ __('offer_dpf.posthero_a'.$ai.'_text') }}</p>
+                    </div>
+                @endforeach
+            </div>
+            <div class="mt-10 flex justify-center sm:mt-12">
+                <a href="#offer-dpf-form" class="inline-flex w-full min-h-[3.25rem] max-w-md items-center justify-center rounded-full bg-[#ffad03] px-10 py-4 text-base font-bold uppercase tracking-wide text-[#001348] shadow-md shadow-black/15 transition hover:bg-[#ffc94d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#001348] sm:min-h-[3.5rem] sm:w-auto sm:text-lg">{{ __('offer_dpf.hero_cta_offer') }}</a>
+            </div>
+        </div>
     </section>
     <section class="relative flex min-h-dvh flex-col justify-center overflow-hidden border-t border-[#e2e8f0] bg-white px-6 py-16 sm:px-10 sm:py-20">
         <div class="pointer-events-none absolute -left-24 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-[#244396]/15 blur-3xl"></div>
