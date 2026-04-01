@@ -14,9 +14,7 @@
     $l = app()->getLocale();
     $host = parse_url((string) config('app.url'), PHP_URL_HOST) ?: request()->getHost();
     $offerDpfSebastianPhoto = public_path('images/offer/sebastian-tkacz.jpg');
-    $offerDpfImgPremium = public_path('images/offer/slr-premium.jpg');
-    $offerDpfImgPlus = public_path('images/offer/slr-premium-plus.jpg');
-    $offerDpfImgDual = public_path('images/offer/slr-premium-dual.jpg');
+    $offerDpfImgModels = public_path('images/offer/1t5a9183ab.png');
 @endphp
 <div class="space-y-0">
     <section id="offer-dpf-hero" class="scroll-mt-24 flex flex-col">
@@ -233,11 +231,7 @@
                     @php
                         $techN = $mi === 3 ? 5 : 4;
                         $isDual = $mi === 3;
-                        $imgSrc = $mi === 1
-                            ? (file_exists($offerDpfImgPremium) ? asset('images/offer/slr-premium.jpg') : null)
-                            : ($mi === 2
-                                ? (file_exists($offerDpfImgPlus) ? asset('images/offer/slr-premium-plus.jpg') : null)
-                                : (file_exists($offerDpfImgDual) ? asset('images/offer/slr-premium-dual.jpg') : (file_exists($offerDpfImgPlus) ? asset('images/offer/slr-premium-plus.jpg') : null)));
+                        $imgSrc = file_exists($offerDpfImgModels) ? asset('images/offer/1t5a9183ab.png') : null;
                     @endphp
                     <article class="flex h-full w-[min(100%,calc(100vw-2.5rem))] max-w-[24rem] shrink-0 snap-center flex-col overflow-hidden rounded-[22px] border bg-white shadow-[0_16px_48px_-28px_rgba(36,67,150,.28)] sm:max-w-[22rem] lg:max-w-none lg:w-auto {{ $isDual ? 'border-[#ffad03] ring-2 ring-[#ffad03]/55 ring-offset-2 ring-offset-white' : 'border-[#e2e8f0]' }}">
                         <div class="relative aspect-[4/3] bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0]">
@@ -871,8 +865,8 @@
                             <td class="align-top bg-[#f8fafc]"></td>
                             <td class="p-3 align-top sm:p-4 sm:pt-5">
                                 <div class="overflow-hidden rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
-                                    @if (file_exists($offerDpfImgPremium))
-                                        <img class="h-36 w-full object-cover sm:h-44" src="{{ asset('images/offer/slr-premium.jpg') }}" width="400" height="300" alt="{{ __('offer_dpf.s8_img_alt_premium') }}">
+                                    @if (file_exists($offerDpfImgModels))
+                                        <img class="h-36 w-full object-cover sm:h-44" src="{{ asset('images/offer/1t5a9183ab.png') }}" width="400" height="300" alt="{{ __('offer_dpf.s8_img_alt_premium') }}">
                                     @else
                                         <div class="flex h-36 w-full items-center justify-center border border-dashed border-[#cbd2d9] bg-[#fafbfc] p-3 text-center text-xs text-[#64748b] sm:h-44 sm:text-sm">{{ __('offer_dpf.s3_img_placeholder') }}</div>
                                     @endif
@@ -880,8 +874,8 @@
                             </td>
                             <td class="p-3 align-top sm:p-4 sm:pt-5">
                                 <div class="overflow-hidden rounded-xl border border-[#e2e8f0] bg-white shadow-sm">
-                                    @if (file_exists($offerDpfImgPlus))
-                                        <img class="h-36 w-full object-cover sm:h-44" src="{{ asset('images/offer/slr-premium-plus.jpg') }}" width="400" height="300" alt="{{ __('offer_dpf.s8_img_alt_plus') }}">
+                                    @if (file_exists($offerDpfImgModels))
+                                        <img class="h-36 w-full object-cover sm:h-44" src="{{ asset('images/offer/1t5a9183ab.png') }}" width="400" height="300" alt="{{ __('offer_dpf.s8_img_alt_plus') }}">
                                     @else
                                         <div class="flex h-36 w-full items-center justify-center border border-dashed border-[#cbd2d9] bg-[#fafbfc] p-3 text-center text-xs text-[#64748b] sm:h-44 sm:text-sm">{{ __('offer_dpf.s3_img_placeholder') }}</div>
                                     @endif
