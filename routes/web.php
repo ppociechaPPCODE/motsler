@@ -6,6 +6,7 @@ use App\Http\Controllers\Web\ContactController;
 use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Web\OfferController;
 use App\Http\Controllers\Web\PrivacyController;
+use App\Http\Controllers\Web\SolutionsController;
 use Illuminate\Support\Facades\Route;
 
 $supportedLocales = array_keys(config('app.supported_locales', []));
@@ -29,6 +30,9 @@ foreach ($supportedLocales as $locale) {
         ->middleware(['locale'])
         ->group(function () use ($locale, $p) {
             Route::get($p['offer_dpf'], [OfferController::class, 'dpfMachines'])->name("{$locale}.offer.dpf");
+            Route::get($p['chemia'], [SolutionsController::class, 'chemical'])->name("{$locale}.solutions.chemia");
+            Route::get($p['custom_machines'], [SolutionsController::class, 'customMachines'])->name("{$locale}.solutions.custom_machines");
+            Route::get($p['new_products'], [SolutionsController::class, 'newProducts'])->name("{$locale}.solutions.new_products");
             Route::get($p['about'], [AboutController::class, 'index'])->name("{$locale}.about");
             Route::get($p['contact'], [ContactController::class, 'index'])->name("{$locale}.contact");
             Route::post($p['contact'], [ContactController::class, 'store'])->name("{$locale}.contact.store");

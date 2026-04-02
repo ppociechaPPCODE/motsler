@@ -142,7 +142,7 @@
             </div>
         </div>
     </section>
-    <section class="border-t border-[#e2e8f0] bg-white px-0 py-16 sm:py-20 sm:px-10">
+    <section id="offer-dpf-tech" class="scroll-mt-24 border-t border-[#e2e8f0] bg-white px-0 py-16 sm:py-20 sm:px-10">
         <div class="mx-auto w-full max-w-[1200px] px-6 sm:px-0">
             <h2 class="text-center text-3xl font-semibold leading-tight text-[#001348] sm:text-4xl">{{ __('offer_dpf.tech_heading') }}</h2>
             <p class="mx-auto mt-6 max-w-[52rem] text-center text-base leading-7 text-[#003174] sm:text-lg sm:leading-8">{{ __('offer_dpf.tech_intro') }}</p>
