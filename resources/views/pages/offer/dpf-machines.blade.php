@@ -113,7 +113,7 @@
             </div>
         </div>
     </section>
-    <section id="offer-dpf-why" class="relative overflow-hidden border-t border-[#e2e8f0] bg-white px-5 py-14 sm:px-10 sm:py-20" aria-labelledby="offer-dpf-s2-heading">
+    <section id="offer-dpf-why" class="relative overflow-hidden border-t border-[#e2e8f0] bg-[#edf2f7] px-5 py-14 sm:px-10 sm:py-20" aria-labelledby="offer-dpf-s2-heading">
         <div class="pointer-events-none absolute -left-24 top-1/3 h-72 w-72 rounded-full bg-[#244396]/12 blur-3xl"></div>
         <div class="pointer-events-none absolute -right-20 bottom-1/4 h-64 w-64 rounded-full bg-[#ffad03]/10 blur-3xl"></div>
         <div class="relative mx-auto w-full max-w-[1200px]">
@@ -142,7 +142,7 @@
             </div>
         </div>
     </section>
-    <section class="border-t border-[#e2e8f0] bg-[#edf2f7] px-0 py-16 sm:py-20 sm:px-10">
+    <section class="border-t border-[#e2e8f0] bg-white px-0 py-16 sm:py-20 sm:px-10">
         <div class="mx-auto w-full max-w-[1200px] px-6 sm:px-0">
             <h2 class="text-center text-3xl font-semibold leading-tight text-[#001348] sm:text-4xl">{{ __('offer_dpf.tech_heading') }}</h2>
             <p class="mx-auto mt-6 max-w-[52rem] text-center text-base leading-7 text-[#003174] sm:text-lg sm:leading-8">{{ __('offer_dpf.tech_intro') }}</p>
@@ -221,7 +221,7 @@
             <a href="#offer-dpf-modele" class="inline-flex max-w-full items-center justify-center rounded-full bg-[#ffad03] px-5 py-2.5 text-center text-xs font-bold uppercase tracking-wide text-[#001348] shadow-md transition hover:bg-[#ffc94d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#001348] sm:px-6 sm:py-3 sm:text-sm">{{ __('offer_dpf.tech_cta') }}</a>
         </div>
     </section>
-    <section id="offer-dpf-modele" class="scroll-mt-24 border-t border-[#e2e8f0] bg-white px-0 py-16 sm:py-20 sm:px-10">
+    <section id="offer-dpf-modele" class="scroll-mt-24 border-t border-[#e2e8f0] bg-[#edf2f7] px-0 py-16 sm:py-20 sm:px-10">
         <div class="mx-auto w-full max-w-[1200px] px-6 sm:px-0">
             <h2 class="text-center text-3xl font-semibold leading-tight text-[#001348] sm:text-4xl">{{ __('offer_dpf.models_heading') }}</h2>
         </div>
@@ -282,7 +282,7 @@
             </div>
         </div>
     </section>
-    <section class="border-t border-[#e2e8f0] bg-[#edf2f7] px-0 py-16 sm:py-20 sm:px-10">
+    <section class="border-t border-[#e2e8f0] bg-white px-0 py-16 sm:py-20 sm:px-10">
         <div class="mx-auto w-full max-w-[1200px] px-6 sm:px-0">
             <h2 class="text-center text-3xl font-semibold leading-tight text-[#001348] sm:text-4xl">{{ __('offer_dpf.proc_heading') }}</h2>
             <div class="mt-6 w-full space-y-4 text-center text-base leading-7 text-[#003174] sm:text-lg sm:leading-8">
@@ -344,7 +344,7 @@
             <a href="#offer-dpf-modele" class="inline-flex w-full max-w-sm items-center justify-center rounded-full border-2 border-[#ffad03] bg-white px-6 py-3.5 text-center text-sm font-semibold text-[#001348] transition hover:bg-[#ffad03]/10 sm:w-auto sm:px-8">{{ __('offer_dpf.proc_cta_models') }}</a>
         </div>
     </section>
-    <section class="border-t border-[#e2e8f0] bg-white px-0 py-16 sm:py-20 sm:px-10">
+    <section class="border-t border-[#e2e8f0] bg-[#edf2f7] px-0 py-16 sm:py-20 sm:px-10">
         <div class="mx-auto w-full max-w-[1200px] px-6 sm:px-0">
             <h2 class="text-center text-3xl font-semibold leading-tight text-[#001348] sm:text-4xl">{{ __('offer_dpf.benefits_heading') }}</h2>
             <div class="mt-6 w-full space-y-4 text-center text-base leading-7 text-[#003174] sm:text-lg sm:leading-8">
@@ -387,7 +387,7 @@
             </div>
         </div>
     </section>
-    <section id="offer-dpf-vs-competitors" class="scroll-mt-24 border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
+    <section id="offer-dpf-vs-competitors" class="scroll-mt-24 border-t border-[#e2e8f0] bg-white px-6 py-16 sm:px-10 sm:py-20">
         <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="text-center text-3xl font-semibold leading-tight text-[#001348] sm:text-4xl">{{ __('offer_dpf.cmp_heading') }}</h2>
             <div class="mt-10 overflow-x-auto rounded-[20px] border border-[#e2e8f0] shadow-[0_12px_48px_-28px_rgba(36,67,150,.15)]">
@@ -445,7 +445,7 @@
             </div>
         </div>
     </section>
-    <section id="offer-dpf-testimonials" class="scroll-mt-24 border-t border-[#e2e8f0] bg-white px-0 py-16 sm:py-20 sm:px-10" aria-labelledby="offer-dpf-testimonials-heading">
+    <section id="offer-dpf-testimonials" class="scroll-mt-24 border-t border-[#e2e8f0] bg-[#edf2f7] px-0 py-16 sm:py-20 sm:px-10" aria-labelledby="offer-dpf-testimonials-heading">
         <div class="mx-auto w-full max-w-[1200px] px-6 sm:px-0">
             <div class="grid grid-cols-1 items-center gap-3 sm:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] sm:gap-x-4 sm:gap-y-0">
                 <div class="hidden sm:block" aria-hidden="true"></div>
@@ -563,7 +563,7 @@
             })();
         </script>
     </section>
-    <section id="offer-dpf-successes" class="scroll-mt-24 border-t border-[#e2e8f0] bg-[#edf2f7] px-0 py-16 sm:py-20 sm:px-10" aria-labelledby="offer-dpf-successes-heading">
+    <section id="offer-dpf-successes" class="scroll-mt-24 border-t border-[#e2e8f0] bg-white px-0 py-16 sm:py-20 sm:px-10" aria-labelledby="offer-dpf-successes-heading">
         <div class="mx-auto w-full max-w-[1200px] px-6 text-center sm:px-0">
             <h2 id="offer-dpf-successes-heading" class="text-3xl font-semibold leading-tight text-[#001348] sm:text-4xl">{{ __('offer_dpf.successes_heading') }}</h2>
             <p class="mx-auto mt-4 max-w-[46rem] text-base leading-7 text-[#003174] sm:text-lg sm:leading-8">{{ __('offer_dpf.successes_sub') }}</p>
@@ -642,7 +642,7 @@
             </div>
         </div>
     </section>
-    <section id="offer-dpf-form" class="scroll-mt-24 border-t border-[#e2e8f0] bg-white px-0 py-16 sm:py-20 sm:px-10" aria-labelledby="offer-dpf-cta-heading">
+    <section id="offer-dpf-form" class="scroll-mt-24 border-t border-[#e2e8f0] bg-[#edf2f7] px-0 py-16 sm:py-20 sm:px-10" aria-labelledby="offer-dpf-cta-heading">
         <div class="mx-auto w-full max-w-[1200px] px-6 lg:px-6 xl:px-0">
             <h2 id="offer-dpf-cta-heading" class="text-center text-3xl font-semibold leading-tight text-[#001348] sm:text-4xl">{{ __('offer_dpf.cta_h2') }}</h2>
             <div class="mt-6 w-full space-y-3 text-center text-base leading-6 text-[#003174] sm:text-lg sm:leading-7">
@@ -698,7 +698,7 @@
             </ul>
         </div>
     </section>
-    <section id="offer-dpf-expert" class="scroll-mt-24 border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-14 sm:px-10 sm:py-20" aria-labelledby="offer-dpf-expert-heading">
+    <section id="offer-dpf-expert" class="scroll-mt-24 border-t border-[#e2e8f0] bg-white px-6 py-14 sm:px-10 sm:py-20" aria-labelledby="offer-dpf-expert-heading">
         <div class="mx-auto grid w-full max-w-[1100px] gap-8 sm:gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
             <div class="mx-auto w-full max-w-[220px] sm:max-w-[260px] lg:col-span-4 lg:mx-0 lg:max-w-[280px] lg:justify-self-start">
                 <figure class="w-full overflow-hidden rounded-[18px] border border-[#e2e8f0] bg-white shadow-[0_14px_40px_-28px_rgba(36,67,150,.22)]">
@@ -795,7 +795,7 @@
             </div>
         </div>
     </section>
-    <section class="flex min-h-dvh flex-col justify-center bg-white px-6 py-16 sm:px-10 sm:py-20">
+    <section class="flex min-h-dvh flex-col justify-center bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
         <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s4_title') }}</h2>
             <p class="mx-auto mt-6 max-w-[1200px] text-center text-lg leading-8 text-[#003174]">{{ __('offer_dpf.s4_lead') }}</p>
@@ -809,7 +809,7 @@
             </div>
         </div>
     </section>
-    <section class="flex min-h-dvh flex-col justify-center bg-[#edf2f7] px-6 py-16 sm:px-10 sm:py-20">
+    <section class="flex min-h-dvh flex-col justify-center bg-white px-6 py-16 sm:px-10 sm:py-20">
         <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="text-center text-3xl font-semibold text-[#001348] sm:text-4xl">{{ __('offer_dpf.s41_title') }}</h2>
             <p class="mx-auto mt-6 max-w-[1200px] text-center text-lg leading-8 text-[#003174]">{{ __('offer_dpf.s41_body') }}</p>
