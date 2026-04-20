@@ -8,11 +8,11 @@
     $l = app()->getLocale();
 @endphp
 <div class="space-y-0">
-    <section class="bg-[#001348] px-6 py-14 text-white sm:px-10">
+    <section class="bg-primary px-6 py-14 text-white sm:px-10">
         <div class="mx-auto w-full max-w-[840px]">
             <h1 class="text-3xl font-bold leading-tight sm:text-4xl">{{ $l === 'en' ? 'Machine design and production' : 'Projektowanie i produkcja maszyn' }}</h1>
             <p class="mt-6 text-lg leading-8 text-white/90">{{ $l === 'en' ? 'We build industrial machines tailored to your needs – from concept to a complete solution.' : 'Tworzymy urządzenia dopasowane do potrzeb klientów – produkcja maszyn przemysłowych i maszyny na zamówienie, od koncepcji po gotowe rozwiązanie.' }}</p>
-            <a href="{{ locale_route('contact', ['locale' => $l]) }}" class="mt-8 inline-flex rounded-full bg-[#ffad03] px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-[#001348] transition hover:bg-[#ffc94d]">{{ $l === 'en' ? 'Request offer' : 'Poproś o ofertę' }}</a>
+            <a href="{{ locale_route('contact', ['locale' => $l]) }}" class="mt-8 inline-flex rounded-full bg-accent px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-accent/88">{{ $l === 'en' ? 'Request offer' : 'Poproś o ofertę' }}</a>
         </div>
     </section>
 </div>

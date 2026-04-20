@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="min-h-full bg-[#f1f4f9]">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="min-h-full bg-background">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@
     @endif
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-screen bg-[#f1f4f9] font-sans text-[#003174] antialiased">
+<body class="min-h-screen bg-background font-sans text-primary antialiased">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:shadow">{{ __('nav.skip') }}</a>
     @include('partials.header')
     <main id="main" class="w-full py-0">
