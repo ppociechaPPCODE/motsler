@@ -284,13 +284,13 @@
         </div>
     </section>
 
-    <section id="home-engineering" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-white" aria-labelledby="home-eng-heading">
+    <section id="home-engineering" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-[#eef2f6]" aria-labelledby="home-eng-heading">
         <div class="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-10 sm:py-16 lg:py-20">
             <h2 id="home-eng-heading" class="mx-auto max-w-[52rem] text-balance text-center text-2xl font-semibold leading-tight text-primary sm:text-3xl md:text-[2rem] md:leading-[1.25]">{{ __('home.eng_heading') }}</h2>
             <p class="mx-auto mt-5 max-w-[52rem] text-pretty text-center text-base leading-7 text-zinc-600 sm:mt-6 sm:text-lg sm:leading-8">{{ __('home.eng_lead') }}</p>
             <div class="mt-10 grid grid-cols-1 gap-6 sm:mt-12 md:grid-cols-2 md:gap-7 lg:gap-8">
                 @foreach ([1, 2, 3, 4] as $bi)
-                    <article class="flex h-full flex-col rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-6 shadow-sm sm:p-7">
+                    <article class="flex h-full flex-col rounded-2xl border border-[#e2e8f0] bg-white p-6 shadow-sm sm:p-7">
                         <h3 class="text-lg font-semibold leading-snug text-primary sm:text-xl">{{ __('home.eng_b'.$bi.'_title') }}</h3>
                         <p class="mt-3 flex-1 text-pretty text-sm leading-7 text-zinc-600 sm:text-[0.9375rem]">{{ __('home.eng_b'.$bi.'_desc') }}</p>
                         <p class="mt-6 text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">{{ __('home.eng_effect_label') }}</p>
