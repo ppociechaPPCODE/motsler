@@ -29,7 +29,10 @@ foreach ($supportedLocales as $locale) {
         ->where(['locale' => $locale])
         ->middleware(['locale'])
         ->group(function () use ($locale, $p) {
+            Route::get($p['offer_index'], [OfferController::class, 'index'])->name("{$locale}.offer.index");
             Route::get($p['offer_dpf'], [OfferController::class, 'dpfMachines'])->name("{$locale}.offer.dpf");
+            Route::get($p['offer_workshop_washers'], [OfferController::class, 'workshopWashers'])->name("{$locale}.offer.workshop_washers");
+            Route::get($p['offer_pressure_washers'], [OfferController::class, 'pressureWashers'])->name("{$locale}.offer.pressure_washers");
             Route::get($p['chemia'], [SolutionsController::class, 'chemical'])->name("{$locale}.solutions.chemia");
             Route::get($p['custom_machines'], [SolutionsController::class, 'customMachines'])->name("{$locale}.solutions.custom_machines");
             Route::get($p['new_products'], [SolutionsController::class, 'newProducts'])->name("{$locale}.solutions.new_products");
@@ -41,3 +44,6 @@ foreach ($supportedLocales as $locale) {
             Route::get($p['blog_show'], [BlogController::class, 'show'])->name("{$locale}.blog.show");
         });
 }
+
+Route::permanentRedirect('pl/chemia-przemyslowa', '/pl/oferta/chemia');
+Route::permanentRedirect('en/industrial-chemicals', '/en/offer/chemistry');

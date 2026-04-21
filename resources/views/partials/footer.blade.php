@@ -14,6 +14,7 @@
                 <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-white">{{ __('footer.quick_links') }}</h3>
                 <ul class="mt-5 space-y-2.5 text-sm">
                     <li><a class="text-white/85 transition hover:text-[#6bd269]" href="{{ locale_route('home', ['locale' => $l]) }}">{{ __('nav.home') }}</a></li>
+                    <li><a class="text-white/85 transition hover:text-[#6bd269]" href="{{ locale_route('offer.index', ['locale' => $l]) }}">{{ __('page.offer') }}</a></li>
                     <li><a class="text-white/85 transition hover:text-[#6bd269]" href="{{ locale_route('offer.dpf', ['locale' => $l]) }}">{{ __('nav.offer_dpf') }}</a></li>
                     <li>
                         <a class="inline-flex items-center text-sm font-semibold text-accent transition hover:text-accent/85" href="https://motsler24.pl/" target="_blank" rel="noopener noreferrer">{{ __('footer.shop_online') }}</a>
