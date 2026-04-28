@@ -229,7 +229,7 @@
             <div class="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth scroll-pl-6 scroll-pr-6 px-6 pb-4 [scrollbar-width:none] [-ms-overflow-style:none] sm:scroll-pl-10 sm:scroll-pr-10 sm:px-10 lg:mx-auto lg:grid lg:max-w-[1200px] lg:grid-cols-3 lg:items-stretch lg:gap-8 lg:overflow-visible lg:scroll-pl-0 lg:scroll-pr-0 lg:px-6 lg:pb-0 lg:snap-none xl:px-0 [&::-webkit-scrollbar]:hidden">
                 @foreach ([1, 2, 3] as $mi)
                     @php
-                        $techN = $mi === 3 ? 5 : 4;
+                        $techN = in_array($mi, [2, 3], true) ? 5 : 4;
                         $isDual = $mi === 3;
                         $imgSrc = file_exists($offerDpfImgModels) ? asset('images/offer/1t5a9183ab.png') : null;
                     @endphp
@@ -257,14 +257,17 @@
                                 </span>
                             </div>
                             <h3 class="mt-5 text-center text-xl font-bold text-primary sm:text-2xl">{{ __('offer_dpf.models_m'.$mi.'_title') }}</h3>
-                            <p class="mt-3 text-balance text-center text-sm leading-7 text-zinc-700 sm:text-[0.9375rem] lg:min-h-[11rem]">{{ __('offer_dpf.models_m'.$mi.'_desc') }}</p>
-                            <dl class="mt-5 space-y-2.5 border-t border-[#e2e8f0] pt-5 text-sm leading-6 text-zinc-700">
+                            <p class="mt-3 text-balance text-center text-sm leading-7 text-zinc-700 sm:text-[0.9375rem]">{{ __('offer_dpf.models_m'.$mi.'_desc') }}</p>
+                            <dl class="mt-1 space-y-1 border-t border-[#e2e8f0] pt-2.5 text-sm leading-5.5 text-zinc-700">
                                 <div><dt class="font-semibold text-primary">{{ __('offer_dpf.models_label_dims') }}</dt><dd>{{ __('offer_dpf.models_m'.$mi.'_dims') }}</dd></div>
+                                @if (in_array($mi, [1, 2, 3], true))
+                                    <div><dt class="font-semibold text-primary">{{ __('offer_dpf.models_label_chamber_dims') }}</dt><dd>{{ __('offer_dpf.models_m'.$mi.'_chamber_dims') }}</dd></div>
+                                @endif
                                 <div><dt class="font-semibold text-primary">{{ __('offer_dpf.models_label_throughput') }}</dt><dd>{{ __('offer_dpf.models_m'.$mi.'_throughput') }}</dd></div>
                                 <div><dt class="font-semibold text-primary">{{ __('offer_dpf.models_label_cleaning') }}</dt><dd>{{ __('offer_dpf.models_m'.$mi.'_cleaning') }}</dd></div>
                             </dl>
-                            <p class="mt-5 text-xs font-bold uppercase tracking-wide text-primary">{{ __('offer_dpf.models_tech_heading') }}</p>
-                            <ul class="mt-3 space-y-2.5 text-sm leading-6 text-zinc-700 lg:min-h-[13rem]">
+                            <p class="mt-3 text-xs font-bold uppercase tracking-wide text-primary">{{ __('offer_dpf.models_tech_heading') }}</p>
+                            <ul class="mt-2.5 space-y-2 text-sm leading-6 text-zinc-700 lg:min-h-[13rem]">
                                 @for ($ti = 1; $ti <= $techN; $ti++)
                                     <li class="flex items-start gap-2.5 leading-6">
                                         <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#6bd269]" aria-hidden="true"></span>
@@ -356,7 +359,7 @@
             <div class="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-6 pb-2 [scrollbar-width:none] [-ms-overflow-style:none] sm:px-10 lg:mx-auto lg:grid lg:max-w-[1200px] lg:grid-cols-3 lg:items-stretch lg:gap-8 lg:overflow-visible lg:px-6 lg:pb-0 lg:snap-none xl:px-0 [&::-webkit-scrollbar]:hidden">
                 @for ($bi = 1; $bi <= 3; $bi++)
                     <article class="flex h-full w-[min(100%,calc(100vw-3rem))] max-w-[24rem] shrink-0 snap-center flex-col rounded-[22px] border border-[#e2e8f0] bg-gradient-to-b from-[#f8fafc] to-white p-6 shadow-[0_14px_44px_-28px_rgba(36,67,150,.2)] sm:max-w-[22rem] lg:max-w-none lg:w-auto">
-                        <div class="flex items-center justify-center gap-3">
+                        <div class="flex items-center justify-center">
                             <span class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/12 text-primary">
                                 @if ($bi === 1)
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path stroke-linecap="round" d="M4 19V5M8 13v6M12 9v10M16 6v13M20 10v9"/></svg>
@@ -364,15 +367,6 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l4 2"/></svg>
                                 @else
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 10-8.4 1.8L4 14l3-1 1.8-3.1a4 4 0 001.9-3.6z"/><path stroke-linecap="round" d="M10 12l4 4"/></svg>
-                                @endif
-                            </span>
-                            <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#e2e8f0] bg-white text-primary" title="{{ __('offer_dpf.benefits_client_'.$bi.'_aria') }}">
-                                @if ($bi === 1)
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M4 10h4v10H4zM10 6h4v14h-4zM16 14h4v6h-4z"/></svg>
-                                @elseif ($bi === 2)
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 17h18v2H3zM5 17l2-8h10l2 8"/><circle cx="8" cy="19" r="1.5"/><circle cx="16" cy="19" r="1.5"/></svg>
-                                @else
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path stroke-linecap="round" d="M12 3v18M8 8h8M6 14h12"/></svg>
                                 @endif
                             </span>
                         </div>

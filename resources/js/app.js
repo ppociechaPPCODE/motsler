@@ -34,31 +34,26 @@ if (homeDpfTiles && homeDpfA && homeDpfB) {
         if (articles.length < 4) return;
         const vh = window.innerHeight;
         const center = vh * 0.5;
-        let zoneTop;
-        let zoneBottom;
-        if (homeDpfMqlLg.matches) {
-            const a0 = articles[0].getBoundingClientRect();
-            const a1 = articles[1].getBoundingClientRect();
-            const a2 = articles[2].getBoundingClientRect();
-            const a3 = articles[3].getBoundingClientRect();
-            zoneTop = Math.min(a0.top, a1.top);
-            zoneBottom = Math.max(a2.bottom, a3.bottom);
-        } else {
-            const a0 = articles[0].getBoundingClientRect();
-            const a1 = articles[1].getBoundingClientRect();
-            zoneTop = a0.top;
-            zoneBottom = a1.bottom;
-        }
+        const first = articles[0].getBoundingClientRect();
+        const last = articles[articles.length - 1].getBoundingClientRect();
+
+        const zoneTop = first.top;
+        const zoneBottom = last.bottom;
         const zh = zoneBottom - zoneTop;
-        const holdFrac = 0.66;
-        const blendStart = zoneTop + zh * holdFrac;
-        const blendSpan = zoneBottom - blendStart;
-        let t = blendSpan > 0 ? (center - blendStart) / blendSpan : 0;
-        if (t < 0) t = 0;
-        else if (t > 1) t = 1;
-        t = t * t * (3 - 2 * t);
-        homeDpfA.style.opacity = String(1 - t);
-        homeDpfB.style.opacity = String(t);
+        const blendStart = zoneTop + zh * 0.5;
+
+        if (center <= blendStart) {
+            homeDpfA.style.opacity = '1';
+            homeDpfB.style.opacity = '0';
+            return;
+        }
+
+        let p = (center - blendStart) / (zoneBottom - blendStart);
+        if (p < 0) p = 0;
+        else if (p > 1) p = 1;
+        p = p * p * (3 - 2 * p);
+        homeDpfA.style.opacity = String(1 - p);
+        homeDpfB.style.opacity = String(p);
     };
     const homeDpfOnScroll = () => {
         if (!homeDpfTicking) {

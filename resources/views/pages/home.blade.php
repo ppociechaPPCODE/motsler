@@ -30,53 +30,90 @@
             <div class="absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(11,31,58,0.78)_0%,rgba(11,31,58,0.68)_38%,rgba(11,31,58,0.42)_72%,rgba(11,31,58,0.22)_100%)]" aria-hidden="true"></div>
             <div class="relative z-[2] flex min-h-[100vh] w-full items-center px-5 py-12 sm:px-8 sm:py-14 lg:px-14">
                 <div class="w-full max-w-[600px] text-left">
-                    <h1 class="home-hero-reveal home-hero-reveal-d1 text-balance text-2xl font-bold leading-[1.12] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,.45)] sm:text-3xl md:text-4xl">Producent maszyn przemysłowych i urządzeń dla warsztatów samochodowych</h1>
-                    <h2 class="home-hero-reveal home-hero-reveal-d2 mt-4 text-balance text-base font-semibold leading-snug text-white/95 sm:text-lg md:text-xl">Projektujemy i budujemy maszyny do czyszczenia, regeneracji i automatyzacji procesów w motoryzacji i przemyśle</h2>
-                    <p class="home-hero-reveal home-hero-reveal-d3 mt-4 text-pretty text-sm font-medium leading-relaxed text-white/95 sm:text-base md:text-[1.0625rem]">Dostarczamy rozwiązania dla warsztatów samochodowych, punktów regeneracji oraz firm przemysłowych. Specjalizujemy się w maszynach do DPF, myjkach warsztatowych, systemach czyszczenia oraz urządzeniach automatyzujących procesy techniczne.</p>
+                    <h1 class="home-hero-reveal home-hero-reveal-d1 text-balance text-2xl font-bold leading-[1.12] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,.45)] sm:text-3xl md:text-4xl">{{ __('home.hero_h1') }}</h1>
+                    <h2 class="home-hero-reveal home-hero-reveal-d2 mt-4 text-balance text-base font-semibold leading-snug text-white/95 sm:text-lg md:text-xl">{{ __('home.hero_subheadline') }}</h2>
+                    <p class="home-hero-reveal home-hero-reveal-d3 mt-4 text-pretty text-sm font-medium leading-relaxed text-white/95 sm:text-base md:text-[1.0625rem]">{{ __('home.hero_p') }}</p>
                     <ul class="home-hero-reveal home-hero-reveal-d4 mt-6 list-none space-y-2.5 p-0 text-sm leading-snug text-white sm:text-[0.9375rem]" role="list">
-                        <li class="flex gap-2.5"><span class="shrink-0 text-emerald-400" aria-hidden="true">✔</span><span>Maszyny dla warsztatów, przemysłu i flot pojazdów</span></li>
-                        <li class="flex gap-2.5"><span class="shrink-0 text-emerald-400" aria-hidden="true">✔</span><span>Automatyzacja procesów i redukcja kosztów pracy</span></li>
-                        <li class="flex gap-2.5"><span class="shrink-0 text-emerald-400" aria-hidden="true">✔</span><span>Produkcja i wdrożenia w Polsce i Europie</span></li>
+                        <li class="flex gap-2.5"><span class="shrink-0 text-emerald-400" aria-hidden="true">✔</span><span>{{ __('home.hero_value_1') }}</span></li>
+                        <li class="flex gap-2.5"><span class="shrink-0 text-emerald-400" aria-hidden="true">✔</span><span>{{ __('home.hero_value_2') }}</span></li>
+                        <li class="flex gap-2.5"><span class="shrink-0 text-emerald-400" aria-hidden="true">✔</span><span>{{ __('home.hero_value_3') }}</span></li>
                     </ul>
                     <div class="home-hero-reveal home-hero-reveal-d5 mt-8 flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-3">
-                        <a href="{{ locale_route('offer.dpf', ['locale' => $l]) }}" class="btn btn-primary inline-flex min-h-[3rem] w-full flex-1 items-center justify-center rounded-full bg-accent px-6 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-black/25 transition hover:bg-accent/88 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:min-w-0 sm:flex-1">Zobacz maszyny</a>
-                        <a href="{{ $homeContactOfferUrl }}" class="btn btn-outline inline-flex min-h-[3rem] w-full flex-1 items-center justify-center rounded-full border-2 border-white bg-transparent px-6 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:min-w-0 sm:flex-1">Porozmawiaj z ekspertem</a>
+                        <a href="{{ locale_route('offer.dpf', ['locale' => $l]) }}" class="btn btn-primary inline-flex min-h-[3rem] w-full flex-1 items-center justify-center rounded-full bg-accent px-6 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-black/25 transition hover:bg-accent/88 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:min-w-0 sm:flex-1">{{ __('home.hero_cta_primary') }}</a>
+                        <a href="{{ $homeContactOfferUrl }}" class="btn btn-outline inline-flex min-h-[3rem] w-full flex-1 items-center justify-center rounded-full border-2 border-white bg-transparent px-6 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:min-w-0 sm:flex-1">{{ __('home.hero_cta_secondary') }}</a>
                     </div>
                     <ul class="home-hero-reveal home-hero-reveal-d6 mt-8 list-none space-y-2 p-0 text-xs leading-snug text-white/75 sm:text-sm" role="list">
-                        <li class="flex gap-2.5"><span class="shrink-0 text-white/80" aria-hidden="true">✔</span><span>1000+ przeszkolonych operatorów</span></li>
-                        <li class="flex gap-2.5"><span class="shrink-0 text-white/80" aria-hidden="true">✔</span><span>wdrożenia w Europie</span></li>
-                        <li class="flex gap-2.5"><span class="shrink-0 text-white/80" aria-hidden="true">✔</span><span>produkcja premium w Polsce</span></li>
+                        <li class="flex gap-2.5"><span class="shrink-0 text-white/80" aria-hidden="true">✔</span><span>{{ __('home.hero_trust_1') }}</span></li>
+                        <li class="flex gap-2.5"><span class="shrink-0 text-white/80" aria-hidden="true">✔</span><span>{{ __('home.hero_trust_2') }}</span></li>
+                        <li class="flex gap-2.5"><span class="shrink-0 text-white/80" aria-hidden="true">✔</span><span>{{ __('home.hero_trust_3') }}</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="home-areas-intro" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-white" aria-labelledby="home-areas-intro-heading">
+        <div class="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-10 sm:py-16">
+            <h2 id="home-areas-intro-heading" class="mx-auto max-w-[58rem] text-balance text-center text-2xl font-semibold leading-tight text-primary sm:text-3xl md:text-4xl">{{ __('home.areas_title') }}</h2>
+            <p class="mx-auto mt-5 max-w-[62rem] text-pretty text-center text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">{{ __('home.areas_lead') }}</p>
+
+            <article class="mx-auto mt-10 max-w-[62rem] rounded-3xl border border-accent/25 bg-gradient-to-br from-[#fff8f2] via-[#fffdfb] to-white p-6 shadow-[0_20px_50px_-35px_rgba(255,107,0,0.55)] sm:p-8 lg:p-10">
+                <h3 class="text-balance text-center text-xl font-semibold leading-tight text-primary sm:text-2xl">{{ __('home.areas_system_title') }}</h3>
+                <p class="mt-3 text-sm leading-7 text-zinc-700 sm:text-base sm:leading-8">{{ __('home.areas_system_text') }}</p>
+            </article>
+
+            <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-7">
+                <article class="rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-6 shadow-sm sm:p-7">
+                    <h3 class="text-lg font-semibold leading-snug text-primary sm:text-xl">{{ __('home.areas_c1_title') }}</h3>
+                    <p class="mt-3 text-pretty text-sm leading-7 text-zinc-600 sm:text-[0.9375rem]">{{ __('home.areas_c1_text') }}</p>
+                </article>
+                <article class="rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-6 shadow-sm sm:p-7">
+                    <h3 class="text-lg font-semibold leading-snug text-primary sm:text-xl">{{ __('home.areas_c2_title') }}</h3>
+                    <p class="mt-3 text-pretty text-sm leading-7 text-zinc-600 sm:text-[0.9375rem]">{{ __('home.areas_c2_text') }}</p>
+                </article>
+                <article class="rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-6 shadow-sm sm:p-7">
+                    <h3 class="text-lg font-semibold leading-snug text-primary sm:text-xl">{{ __('home.areas_c3_title') }}</h3>
+                    <p class="mt-3 text-pretty text-sm leading-7 text-zinc-600 sm:text-[0.9375rem]">{{ __('home.areas_c3_text') }}</p>
+                </article>
+            </div>
+
+            <div class="mx-auto mt-10 max-w-[62rem] rounded-2xl border border-emerald-200 bg-gradient-to-br from-emerald-50 to-white p-6 shadow-[0_18px_50px_-35px_rgba(5,150,105,0.55)] sm:p-8">
+                <ul class="list-none space-y-2.5 p-0 text-sm font-medium leading-relaxed text-zinc-800 sm:text-base" role="list">
+                    <li class="flex gap-2.5"><span class="shrink-0 text-emerald-600" aria-hidden="true">✔</span><span>{{ __('home.areas_value_1') }}</span></li>
+                    <li class="flex gap-2.5"><span class="shrink-0 text-emerald-600" aria-hidden="true">✔</span><span>{{ __('home.areas_value_2') }}</span></li>
+                    <li class="flex gap-2.5"><span class="shrink-0 text-emerald-600" aria-hidden="true">✔</span><span>{{ __('home.areas_value_3') }}</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <section id="home-areas" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-white" aria-labelledby="home-areas-heading">
         <div class="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-10 sm:py-16">
-            <p class="text-center text-xs font-bold uppercase tracking-[0.2em] text-accent sm:text-sm">{{ __('home.areas_kicker') }}</p>
-            <h2 id="home-areas-heading" class="mx-auto mt-3 max-w-[52rem] text-balance text-center text-2xl font-semibold leading-tight text-primary sm:text-3xl md:text-4xl">{{ __('home.areas_title') }}</h2>
-            <p class="mx-auto mt-5 max-w-[52rem] text-pretty text-center text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">{{ __('home.areas_lead') }}</p>
-            <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:mt-12 lg:grid-cols-4 lg:gap-6">
+            <p class="text-center text-xs font-bold uppercase tracking-[0.2em] text-accent sm:text-sm">{{ __('home.areas_old_kicker') }}</p>
+            <h2 id="home-areas-heading" class="mx-auto mt-3 max-w-[52rem] text-balance text-center text-2xl font-semibold leading-tight text-primary sm:text-3xl md:text-4xl">{{ __('home.areas_old_title') }}</h2>
+            <p class="mx-auto mt-5 max-w-[52rem] text-pretty text-center text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">{{ __('home.areas_old_lead') }}</p>
+            <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:mt-12 lg:grid-cols-2 lg:gap-6">
                 <a href="{{ locale_route('offer.dpf', ['locale' => $l]) }}" class="group flex h-full min-h-0 flex-col rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-lg hover:shadow-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:p-7">
-                    <h3 class="text-lg font-semibold leading-snug text-primary sm:text-xl">{{ __('home.areas_c1_title') }}</h3>
-                    <p class="mt-3 flex-1 text-pretty text-sm leading-7 text-zinc-600 sm:text-[0.9375rem]">{{ __('home.areas_c1_text') }}</p>
-                    <span class="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-accent group-hover:underline">{{ __('home.areas_link_solutions') }} <span aria-hidden="true">→</span></span>
+                    <h3 class="text-lg font-semibold leading-snug text-primary sm:text-xl">{{ __('home.areas_old_c1_title') }}</h3>
+                    <p class="mt-3 flex-1 text-pretty text-sm leading-7 text-zinc-600 sm:text-[0.9375rem]">{{ __('home.areas_old_c1_text') }}</p>
+                    <span class="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-accent group-hover:underline">{{ __('home.areas_old_link_solutions') }} <span aria-hidden="true">→</span></span>
                 </a>
+                {{--
                 <a href="{{ locale_route('solutions.custom_machines', ['locale' => $l]) }}" class="group flex h-full min-h-0 flex-col rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-lg hover:shadow-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:p-7">
-                    <h3 class="text-lg font-semibold leading-snug text-primary sm:text-xl">{{ __('home.areas_c2_title') }}</h3>
-                    <p class="mt-3 flex-1 text-pretty text-sm leading-7 text-zinc-600 sm:text-[0.9375rem]">{{ __('home.areas_c2_text') }}</p>
-                    <span class="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-accent group-hover:underline">{{ __('home.areas_link_solutions') }} <span aria-hidden="true">→</span></span>
+                    <h3 class="text-lg font-semibold leading-snug text-primary sm:text-xl">{{ __('home.areas_old_c2_title') }}</h3>
+                    <p class="mt-3 flex-1 text-pretty text-sm leading-7 text-zinc-600 sm:text-[0.9375rem]">{{ __('home.areas_old_c2_text') }}</p>
+                    <span class="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-accent group-hover:underline">{{ __('home.areas_old_link_solutions') }} <span aria-hidden="true">→</span></span>
                 </a>
                 <a href="{{ locale_route('solutions.new_products', ['locale' => $l]) }}" class="group flex h-full min-h-0 flex-col rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-lg hover:shadow-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:p-7">
-                    <h3 class="text-lg font-semibold leading-snug text-primary sm:text-xl">{{ __('home.areas_c3_title') }}</h3>
-                    <p class="mt-3 flex-1 text-pretty text-sm leading-7 text-zinc-600 sm:text-[0.9375rem]">{{ __('home.areas_c3_text') }}</p>
-                    <span class="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-accent group-hover:underline">{{ __('home.areas_link_solutions') }} <span aria-hidden="true">→</span></span>
+                    <h3 class="text-lg font-semibold leading-snug text-primary sm:text-xl">{{ __('home.areas_old_c3_title') }}</h3>
+                    <p class="mt-3 flex-1 text-pretty text-sm leading-7 text-zinc-600 sm:text-[0.9375rem]">{{ __('home.areas_old_c3_text') }}</p>
+                    <span class="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-accent group-hover:underline">{{ __('home.areas_old_link_solutions') }} <span aria-hidden="true">→</span></span>
                 </a>
+                --}}
                 <a href="{{ locale_route('solutions.chemia', ['locale' => $l]) }}" class="group flex h-full min-h-0 flex-col rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-lg hover:shadow-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:p-7">
-                    <h3 class="text-lg font-semibold leading-snug text-primary sm:text-xl">{{ __('home.areas_c4_title') }}</h3>
-                    <p class="mt-3 flex-1 text-pretty text-sm leading-7 text-zinc-600 sm:text-[0.9375rem]">{{ __('home.areas_c4_text') }}</p>
-                    <span class="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-accent group-hover:underline">{{ __('home.areas_link_products') }} <span aria-hidden="true">→</span></span>
+                    <h3 class="text-lg font-semibold leading-snug text-primary sm:text-xl">{{ __('home.areas_old_c4_title') }}</h3>
+                    <p class="mt-3 flex-1 text-pretty text-sm leading-7 text-zinc-600 sm:text-[0.9375rem]">{{ __('home.areas_old_c4_text') }}</p>
+                    <span class="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-accent group-hover:underline">{{ __('home.areas_old_link_products') }} <span aria-hidden="true">→</span></span>
                 </a>
             </div>
             <div class="mx-auto mt-14 flex justify-center sm:mt-16">
@@ -88,30 +125,7 @@
     <section id="home-dpf-system" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-[#f1f5f9]" aria-labelledby="home-dpf-system-heading">
         <div class="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-10 sm:py-16 lg:py-20">
             <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:gap-12 xl:gap-14">
-                <div class="min-w-0">
-                    <p class="inline-flex rounded-full border border-primary/15 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">{{ __('home.dpf_system_badge') }}</p>
-                    <h2 id="home-dpf-system-heading" class="mt-4 text-balance text-3xl font-semibold leading-tight text-primary sm:text-4xl">{{ __('home.dpf_system_heading') }}</h2>
-                    <p class="mt-5 max-w-xl text-base leading-7 text-zinc-700 sm:text-lg sm:leading-8">{{ __('home.dpf_system_intro') }}</p>
-                    <div id="home-dpf-tiles" class="mt-8 grid grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-2">
-                        @foreach ([1, 2, 3, 4] as $ti)
-                            <article class="flex flex-col rounded-[20px] border border-[#e2e8f0] bg-white p-5 shadow-[0_12px_40px_-24px_rgba(36,67,150,.12)] sm:p-6">
-                                <h3 class="text-balance text-base font-semibold leading-snug text-primary sm:text-lg">{{ __('home.dpf_system_c'.$ti.'_title') }}</h3>
-                                <p class="mt-3 text-sm leading-relaxed text-zinc-700 sm:text-[0.9375rem] sm:leading-7"><span class="font-semibold text-primary">{{ __('home.dpf_system_label_desc') }}:</span> {{ __('home.dpf_system_c'.$ti.'_desc') }}</p>
-                                <p class="mt-3 text-sm font-semibold text-primary">{{ __('home.dpf_system_label_effect') }}:</p>
-                                <ul class="mt-2 space-y-1.5 text-sm leading-relaxed text-zinc-700 sm:text-[0.9375rem]" role="list">
-                                    @foreach ([1, 2, 3] as $ei)
-                                        <li class="flex gap-2"><span class="shrink-0 text-accent" aria-hidden="true">✔</span><span>{{ __('home.dpf_system_c'.$ti.'_effect_'.$ei) }}</span></li>
-                                    @endforeach
-                                </ul>
-                            </article>
-                        @endforeach
-                    </div>
-                    <div class="mt-8 flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:items-center">
-                        <a href="{{ locale_route('offer.dpf', ['locale' => $l]) }}#offer-dpf-modele" class="inline-flex min-h-[3rem] flex-1 items-center justify-center rounded-full bg-accent px-6 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-white shadow-md shadow-black/15 transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">{{ __('home.dpf_system_cta_primary') }}</a>
-                        <a href="{{ $homeOfferDpfFormUrl }}" class="inline-flex min-h-[3rem] flex-1 items-center justify-center rounded-full border-2 border-primary bg-white px-6 py-3.5 text-center text-sm font-semibold text-primary transition hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">{{ __('home.dpf_system_cta_secondary') }}</a>
-                    </div>
-                </div>
-                <div class="min-w-0 lg:sticky lg:top-28 lg:self-start">
+                <div class="order-2 min-w-0 lg:order-2 lg:sticky lg:top-28 lg:self-start">
                     <figure class="relative mx-auto w-full max-w-lg lg:max-w-none">
                         <div class="absolute -inset-1 -z-10 rounded-[24px] bg-gradient-to-br from-white via-[#f1f5f9] to-zinc-200/80 sm:-inset-2 sm:rounded-[28px]"></div>
                         <div id="home-dpf-visual" class="relative overflow-hidden rounded-[20px] bg-white ring-1 ring-[#e2e8f0] shadow-[0_24px_60px_-28px_rgba(0,19,72,.22)] sm:rounded-[22px]">
@@ -125,6 +139,34 @@
                             </div>
                         </div>
                     </figure>
+                </div>
+                <div class="order-1 min-w-0 lg:order-1">
+                    <p class="inline-flex rounded-full border border-primary/15 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">{{ __('home.dpf_system_badge') }}</p>
+                    <h2 id="home-dpf-system-heading" class="mt-4 text-balance text-3xl font-semibold leading-tight text-primary sm:text-4xl">{{ __('home.dpf_system_heading') }}</h2>
+                    <p class="mt-5 max-w-xl text-base leading-7 text-zinc-700 sm:text-lg sm:leading-8">{{ __('home.dpf_system_intro') }}</p>
+                    <div id="home-dpf-tiles" class="mt-8 grid grid-cols-1 gap-4 sm:gap-5">
+                        @php
+                            $homeDpfSystemIcons = [1 => 'SWS', 2 => 'PFS', 3 => 'AUTO', 4 => 'FLOW', 5 => 'RFS'];
+                        @endphp
+                        @foreach ([1, 2, 3, 4, 5] as $ti)
+                            <article class="flex flex-col rounded-[20px] border border-[#e2e8f0] bg-white p-5 shadow-[0_12px_40px_-24px_rgba(36,67,150,.12)] sm:p-6">
+                                <div class="flex items-center gap-3">
+                                    <span class="inline-flex min-h-[2.2rem] min-w-[2.2rem] items-center justify-center rounded-full bg-primary/10 px-2 text-[0.625rem] font-bold uppercase tracking-[0.08em] text-primary">{{ $homeDpfSystemIcons[$ti] }}</span>
+                                    <h3 class="text-balance text-base font-semibold leading-snug text-primary sm:text-lg">{{ __('home.dpf_system_c'.$ti.'_title') }}</h3>
+                                </div>
+                                <p class="mt-2.5 text-sm leading-relaxed text-zinc-700 sm:text-[0.9375rem] sm:leading-7">{{ __('home.dpf_system_c'.$ti.'_desc') }}</p>
+                                <ul class="mt-3 flex flex-wrap gap-2 text-xs leading-snug text-zinc-700 sm:text-sm" role="list">
+                                    @foreach ([1, 2, 3] as $ei)
+                                        <li class="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-zinc-50 px-2.5 py-1"><span class="shrink-0 text-accent" aria-hidden="true">✔</span><span>{{ __('home.dpf_system_c'.$ti.'_effect_'.$ei) }}</span></li>
+                                    @endforeach
+                                </ul>
+                            </article>
+                        @endforeach
+                    </div>
+                    <div class="mt-8 flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:items-center">
+                        <a href="{{ locale_route('offer.dpf', ['locale' => $l]) }}#offer-dpf-modele" class="inline-flex min-h-[3rem] flex-1 items-center justify-center rounded-full bg-accent px-6 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-white shadow-md shadow-black/15 transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">{{ __('home.dpf_system_cta_primary') }}</a>
+                        <a href="{{ $homeOfferDpfFormUrl }}" class="inline-flex min-h-[3rem] flex-1 items-center justify-center rounded-full border-2 border-primary bg-white px-6 py-3.5 text-center text-sm font-semibold text-primary transition hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">{{ __('home.dpf_system_cta_secondary') }}</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -150,7 +192,10 @@
                         <div class="mt-5 rounded-xl border border-accent/25 bg-gradient-to-b from-[#fff9f5] to-white p-4 shadow-sm">
                             <p class="text-xs font-bold uppercase tracking-wide text-primary">{{ __('home.models_tech_label') }}</p>
                             <ul class="mt-3 space-y-2 text-sm leading-snug text-zinc-800" role="list">
-                                @foreach ([1, 2, 3, 4] as $ti)
+                                @php
+                                    $homeModelTechCounts = [1 => 4, 2 => 4, 3 => 4];
+                                @endphp
+                                @foreach (range(1, $homeModelTechCounts[$mi] ?? 4) as $ti)
                                     <li class="flex gap-2.5"><span class="shrink-0 text-accent" aria-hidden="true">✔</span><span>{{ __('home.models_m'.$mi.'_tech'.$ti) }}</span></li>
                                 @endforeach
                             </ul>
@@ -310,7 +355,6 @@
                 @foreach ([1, 2, 3, 4] as $bi)
                     <article class="flex h-full flex-col rounded-2xl border border-[#e2e8f0] bg-white p-6 shadow-sm sm:p-7">
                         <h3 class="text-lg font-semibold leading-snug text-primary sm:text-xl">{{ __('home.eng_b'.$bi.'_title') }}</h3>
-                        <p class="mt-2 text-[0.6875rem] font-bold uppercase tracking-[0.14em] text-zinc-500">{{ __('home.eng_label_desc') }}</p>
                         <p class="mt-2 flex-1 text-pretty text-sm leading-7 text-zinc-600 sm:text-[0.9375rem]">{{ __('home.eng_b'.$bi.'_desc') }}</p>
                         <p class="mt-5 text-[0.6875rem] font-bold uppercase tracking-[0.14em] text-accent">{{ __('home.eng_effect_label') }}</p>
                         <ul class="mt-2 space-y-2.5 text-sm leading-snug text-zinc-800" role="list">
