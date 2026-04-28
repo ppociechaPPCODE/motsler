@@ -87,7 +87,7 @@
         </div>
     </section>
 
-    <section id="home-areas" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-white" aria-labelledby="home-areas-heading">
+    <section id="home-areas" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-[#f1f5f9]" aria-labelledby="home-areas-heading">
         <div class="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-10 sm:py-16">
             <p class="text-center text-xs font-bold uppercase tracking-[0.2em] text-accent sm:text-sm">{{ __('home.areas_old_kicker') }}</p>
             <h2 id="home-areas-heading" class="mx-auto mt-3 max-w-[52rem] text-balance text-center text-2xl font-semibold leading-tight text-primary sm:text-3xl md:text-4xl">{{ __('home.areas_old_title') }}</h2>
@@ -122,7 +122,7 @@
         </div>
     </section>
 
-    <section id="home-dpf-system" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-[#f1f5f9]" aria-labelledby="home-dpf-system-heading">
+    <section id="home-dpf-system" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-white" aria-labelledby="home-dpf-system-heading">
         <div class="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-10 sm:py-16 lg:py-20">
             <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:gap-12 xl:gap-14">
                 <div class="order-2 min-w-0 lg:order-2 lg:sticky lg:top-28 lg:self-start">
@@ -172,7 +172,7 @@
         </div>
     </section>
 
-    <section id="home-models" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-white" aria-labelledby="home-models-heading">
+    <section id="home-models" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-[#f1f5f9]" aria-labelledby="home-models-heading">
         <div class="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-10 sm:py-16 lg:py-20">
             <h2 id="home-models-heading" class="mx-auto max-w-[52rem] text-balance text-center text-2xl font-semibold leading-tight text-primary sm:text-3xl md:text-[2rem] md:leading-[1.25]">{{ __('home.models_heading') }}</h2>
             <p class="mx-auto mt-5 max-w-[52rem] text-pretty text-center text-base leading-7 text-zinc-600 sm:mt-6 sm:text-lg sm:leading-8">{{ __('home.models_lead') }}</p>
@@ -209,7 +209,7 @@
         </div>
     </section>
 
-    <section id="home-dpf-process" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-[#f1f5f9]" aria-labelledby="home-proc-heading">
+    <section id="home-dpf-process" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-white" aria-labelledby="home-proc-heading">
         <div class="mx-auto w-full max-w-[1180px] px-5 py-12 sm:px-10 sm:py-16 lg:py-20">
             <h2 id="home-proc-heading" class="mx-auto max-w-[48rem] text-balance text-center text-2xl font-semibold leading-tight text-primary sm:text-3xl">{{ __('home.proc_heading') }}</h2>
             <p class="mx-auto mt-5 max-w-[52rem] text-pretty text-center text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">{{ __('home.proc_lead') }}</p>
@@ -251,7 +251,7 @@
         </div>
     </section>
 
-    <section id="home-roi" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-white" aria-labelledby="home-roi-heading">
+    <section id="home-roi" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-[#f1f5f9]" aria-labelledby="home-roi-heading">
         <div class="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-10 sm:py-16 lg:py-20">
             <h2 id="home-roi-heading" class="mx-auto max-w-[52rem] text-balance text-center text-2xl font-semibold leading-tight text-primary sm:text-3xl md:text-[2rem] md:leading-[1.25]">{{ __('home.roi_heading') }}</h2>
             <p class="mx-auto mt-5 max-w-[52rem] text-pretty text-center text-base leading-7 text-zinc-600 sm:mt-6 sm:text-lg sm:leading-8">{{ __('home.roi_lead') }}</p>
@@ -276,7 +276,7 @@
         </div>
     </section>
 
-    <section id="home-dpf-ecosystem" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-[#f1f5f9]" aria-labelledby="home-ecosystem-heading">
+    <section id="home-dpf-ecosystem" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-white" aria-labelledby="home-ecosystem-heading">
         <div class="mx-auto w-full max-w-[1200px] px-5 py-14 sm:px-10 sm:py-16 lg:py-20">
             <p class="text-center text-xs font-bold uppercase tracking-[0.18em] text-accent sm:text-sm">{{ __('home.ecosystem_kicker') }}</p>
             <h2 id="home-ecosystem-heading" class="mx-auto mt-3 max-w-[52rem] text-balance text-center text-2xl font-semibold leading-tight text-primary sm:text-3xl md:text-[2rem] md:leading-[1.25]">{{ __('home.ecosystem_heading') }}</h2>
@@ -308,7 +308,7 @@
         </div>
     </section>
 
-    <section id="home-cases" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-white" aria-labelledby="home-cases-heading">
+    <section id="home-cases" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-[#f1f5f9]" aria-labelledby="home-cases-heading">
         <div class="mx-auto w-full max-w-[1200px] px-5 py-14 sm:px-10 sm:py-16 lg:py-20">
             <p class="text-center text-xs font-bold uppercase tracking-[0.18em] text-accent sm:text-sm">{{ __('home.cs_kicker') }}</p>
             <h2 id="home-cases-heading" class="mx-auto mt-3 max-w-[52rem] text-balance text-center text-2xl font-semibold leading-tight text-primary sm:text-3xl md:text-[2rem] md:leading-[1.25]">{{ __('home.cs_heading') }}</h2>
@@ -347,7 +347,7 @@
         </div>
     </section>
 
-    <section id="home-engineering" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-[#f1f5f9]" aria-labelledby="home-eng-heading">
+    <section id="home-engineering" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-white" aria-labelledby="home-eng-heading">
         <div class="mx-auto w-full max-w-[1200px] px-5 py-14 sm:px-10 sm:py-16 lg:py-20">
             <h2 id="home-eng-heading" class="mx-auto max-w-[52rem] text-balance text-center text-2xl font-semibold leading-tight text-primary sm:text-3xl md:text-[2rem] md:leading-[1.25]">{{ __('home.eng_heading') }}</h2>
             <p class="mx-auto mt-5 max-w-[52rem] text-pretty text-center text-base leading-7 text-zinc-600 sm:mt-6 sm:text-lg sm:leading-8">{{ __('home.eng_lead') }}</p>
@@ -372,7 +372,7 @@
         </div>
     </section>
 
-    <section id="home-contact-expert" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-white" aria-labelledby="home-ce-heading">
+    <section id="home-contact-expert" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-[#f1f5f9]" aria-labelledby="home-ce-heading">
         <div class="mx-auto w-full max-w-[1200px] px-5 py-14 sm:px-10 sm:py-16 lg:py-20">
             <h2 id="home-ce-heading" class="mx-auto max-w-[52rem] text-balance text-center text-2xl font-semibold leading-tight text-primary sm:text-3xl md:text-[2rem] md:leading-[1.25]">{{ __('home.ce_heading') }}</h2>
             <p class="mx-auto mt-5 max-w-[52rem] text-pretty text-center text-base leading-7 text-zinc-600 sm:mt-6 sm:text-lg sm:leading-8">{{ __('home.ce_lead') }}</p>
