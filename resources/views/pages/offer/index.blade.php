@@ -68,7 +68,7 @@
     <section class="scroll-mt-24 w-full bg-white" aria-labelledby="offer-hub-final-heading">
         <div class="mx-auto w-full max-w-[1200px] px-5 py-14 text-center sm:px-8 sm:py-16">
             <h2 id="offer-hub-final-heading" class="mx-auto max-w-[36rem] text-balance text-2xl font-semibold leading-tight text-primary sm:text-3xl">{{ __('offer_hub.final_h2') }}</h2>
-            <a href="{{ $contactFormUrl }}" class="mt-10 inline-flex min-h-[3rem] items-center justify-center rounded-full border-2 border-primary bg-transparent px-10 py-3.5 text-sm font-bold uppercase tracking-wide text-primary transition hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:text-base">{{ __('offer_hub.final_cta') }}</a>
+            <a href="{{ $contactFormUrl }}" class="mt-10 inline-flex min-h-[3rem] items-center justify-center rounded-full border-2 border-accent bg-transparent px-10 py-3.5 text-sm font-bold uppercase tracking-wide text-primary transition hover:bg-accent/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-base">{{ __('offer_hub.final_cta') }}</a>
         </div>
     </section>
 </div>

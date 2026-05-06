@@ -27,20 +27,24 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>
             </div>
-            <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/82 to-primary/92"></div>
-            <div class="relative z-10 flex min-h-[min(72vh,820px)] flex-col items-center justify-center gap-4 px-5 py-16 text-center text-white md:gap-6 sm:px-10">
-                <p class="max-w-[50rem] text-sm font-semibold leading-snug text-white/90 sm:text-base">{{ __('offer_dpf.hero_kicker') }}</p>
-                <p class="max-w-[50rem] text-xs leading-snug text-white/70 sm:text-sm">{{ __('offer_dpf.hero_seo_line') }}</p>
-                <h1 class="max-w-[48rem] text-balance text-[1.75rem] font-bold leading-[1.15] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,.45)] sm:text-[2.125rem] lg:text-[2.5rem] lg:leading-[1.15] xl:text-[3rem]">
-                    <span class="block">{{ __('offer_dpf.hero_title_l1') }}</span>
-                    <span class="block">{{ __('offer_dpf.hero_title_l2') }}</span>
-                </h1>
-                <p class="mx-auto max-w-[50rem] text-pretty text-base leading-snug text-white/95 sm:text-lg">{{ __('offer_dpf.hero_subtitle') }}</p>
-                <div class="flex w-full max-w-2xl flex-col gap-3 md:max-w-3xl md:flex-row md:justify-center md:gap-4">
-                    <a href="#offer-dpf-form" class="inline-flex w-full min-h-[3.25rem] flex-1 items-center justify-center rounded-full bg-accent px-8 py-4 text-center text-base font-bold uppercase tracking-wide text-white shadow-lg shadow-black/25 transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:min-h-[3.5rem] md:max-w-xs md:px-10 md:text-lg">{{ __('offer_dpf.hero_cta_offer') }}</a>
-                    <a href="#offer-dpf-modele" class="inline-flex w-full min-h-[3.25rem] flex-1 items-center justify-center rounded-full border-2 border-accent bg-transparent px-8 py-4 text-center text-base font-semibold text-white transition hover:bg-accent/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:min-h-[3.5rem] md:max-w-xs">{{ __('offer_dpf.hero_cta_models') }}</a>
+            <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,31,58,0.78)_0%,rgba(11,31,58,0.68)_38%,rgba(11,31,58,0.42)_72%,rgba(11,31,58,0.22)_100%)]"></div>
+            <div class="relative z-10 flex min-h-[min(72vh,820px)] w-full items-center py-16 text-white">
+                <div class="mx-auto w-full max-w-[1200px] px-5 sm:px-10">
+                    <div class="w-full max-w-[600px] text-left">
+                    <p class="text-sm font-semibold leading-snug text-white/90 sm:text-base">{{ __('offer_dpf.hero_kicker') }}</p>
+                    <p class="mt-1 text-xs leading-snug text-white/70 sm:text-sm">{{ __('offer_dpf.hero_seo_line') }}</p>
+                    <h1 class="mt-4 text-balance text-2xl font-bold leading-[1.12] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,.45)] sm:mt-5 sm:text-3xl md:text-4xl">
+                        <span class="block">{{ __('offer_dpf.hero_title_l1') }}</span>
+                        <span class="block">{{ __('offer_dpf.hero_title_l2') }}</span>
+                    </h1>
+                    <p class="mt-4 text-pretty text-base font-medium leading-relaxed text-white/95 sm:mt-5 sm:text-lg md:text-[1.0625rem]">{{ __('offer_dpf.hero_subtitle') }}</p>
+                    <div class="mt-8 flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-3">
+                        <a href="#offer-dpf-form" class="inline-flex min-h-[3rem] w-full flex-1 items-center justify-center rounded-full bg-accent px-6 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-black/25 transition hover:bg-accent/88 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:min-w-0 sm:flex-1">{{ __('offer_dpf.hero_cta_offer') }}</a>
+                        <a href="#offer-dpf-modele" class="inline-flex min-h-[3rem] w-full flex-1 items-center justify-center rounded-full border-2 border-white bg-transparent px-6 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:min-w-0 sm:flex-1">{{ __('offer_dpf.hero_cta_models') }}</a>
+                    </div>
+                    <p class="mt-6 text-sm leading-relaxed text-white/75 sm:mt-8 sm:text-[0.9375rem]">{{ __('offer_dpf.hero_micro') }}</p>
+                    </div>
                 </div>
-                <p class="max-w-lg text-sm leading-6 text-white/75 sm:max-w-xl sm:text-[0.9375rem]">{{ __('offer_dpf.hero_micro') }}</p>
             </div>
         </div>
         <!--<div class="flex min-h-dvh flex-col justify-center bg-white px-6 py-14 sm:px-10">
@@ -104,9 +108,9 @@
                 <p class="mx-auto mt-10 max-w-[48rem] text-center text-sm font-semibold leading-snug text-primary sm:mt-12 sm:text-base">{{ __('offer_dpf.posthero_credibility_question') }}</p>
                 <ul class="mx-auto mt-5 grid max-w-[48rem] list-none gap-3 sm:mt-6 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-3" role="list">
                     @foreach ([1, 2, 3, 4] as $ci)
-                        <li class="flex items-start gap-3">
-                            <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-white shadow-sm" aria-hidden="true">✔</span>
-                            <span class="text-left text-[0.9375rem] font-semibold leading-snug text-primary sm:text-base">{{ __('offer_dpf.posthero_credibility_'.$ci) }}</span>
+                        <li class="relative min-h-0 pl-10 text-left text-[0.9375rem] font-semibold leading-normal text-primary sm:text-base">
+                            <span class="pointer-events-none absolute left-0 top-[max(0px,calc(0.52lh-0.875rem))] flex h-7 w-7 items-center justify-center rounded-full bg-primary text-[0.65rem] font-bold leading-none text-white shadow-sm" aria-hidden="true">✔</span>
+                            <span class="block min-w-0">{{ __('offer_dpf.posthero_credibility_'.$ci) }}</span>
                         </li>
                     @endforeach
                 </ul>
@@ -160,7 +164,7 @@
                             <h3 class="text-balance text-lg font-semibold leading-snug text-primary">{{ __('offer_dpf.tech_c1_title') }}</h3>
                         </div>
                         <div class="mt-3 min-h-0 flex-1 space-y-3 text-sm leading-7 text-zinc-700 sm:text-[0.9375rem]">
-                            <p><span class="font-semibold text-primary">{{ __('offer_dpf.tech_label_desc') }}:</span> {{ __('offer_dpf.tech_c1_desc') }}</p>
+                            <p>{{ __('offer_dpf.tech_c1_desc') }}</p>
                             <p><span class="font-semibold text-primary">{{ __('offer_dpf.tech_label_benefit') }}:</span> {{ __('offer_dpf.tech_c1_benefit') }}</p>
                         </div>
                         <p class="mt-4 border-l-4 border-accent bg-[#fff9eb] px-3 py-2 text-xs font-medium italic leading-relaxed text-[#5c4a1a] sm:text-sm">{{ __('offer_dpf.tech_c1_micro') }}</p>
@@ -177,7 +181,7 @@
                             <h3 class="text-balance text-lg font-semibold leading-snug text-primary">{{ __('offer_dpf.tech_c2_title') }}</h3>
                         </div>
                         <div class="mt-3 min-h-0 flex-1 space-y-3 text-sm leading-7 text-zinc-700 sm:text-[0.9375rem]">
-                            <p><span class="font-semibold text-primary">{{ __('offer_dpf.tech_label_desc') }}:</span> {{ __('offer_dpf.tech_c2_desc') }}</p>
+                            <p>{{ __('offer_dpf.tech_c2_desc') }}</p>
                             <p><span class="font-semibold text-primary">{{ __('offer_dpf.tech_label_benefit') }}:</span> {{ __('offer_dpf.tech_c2_benefit') }}</p>
                         </div>
                         <p class="mt-4 border-l-4 border-accent bg-[#fff9eb] px-3 py-2 text-xs font-medium italic leading-relaxed text-[#5c4a1a] sm:text-sm">{{ __('offer_dpf.tech_c2_specs') }}</p>
@@ -187,14 +191,14 @@
                     <div class="flex flex-1 flex-col p-6">
                         <div class="flex shrink-0 justify-center" aria-hidden="true">
                             <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-primary/20 bg-primary/10 text-primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="none" aria-hidden="true"><circle cx="5" cy="6" r="1.5" fill="currentColor" stroke="none"/><circle cx="5" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="5" cy="18" r="1.5" fill="currentColor" stroke="none"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9 6h12M9 12h12M9 18h10"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9L5 12l3 3M16 15l3-3-3-3"/><path d="M5 12h14"/></svg>
                             </span>
                         </div>
                         <div class="mt-3 text-center">
                             <h3 class="text-balance text-lg font-semibold leading-snug text-primary">{{ __('offer_dpf.tech_c3_title') }}</h3>
                         </div>
                         <div class="mt-3 min-h-0 flex-1 space-y-3 text-sm leading-7 text-zinc-700 sm:text-[0.9375rem]">
-                            <p><span class="font-semibold text-primary">{{ __('offer_dpf.tech_label_desc') }}:</span> {{ __('offer_dpf.tech_c3_desc') }}</p>
+                            <p>{{ __('offer_dpf.tech_c3_desc') }}</p>
                             <p><span class="font-semibold text-primary">{{ __('offer_dpf.tech_label_benefit') }}:</span> {{ __('offer_dpf.tech_c3_benefit') }}</p>
                         </div>
                     </div>
@@ -203,14 +207,14 @@
                     <div class="flex flex-1 flex-col p-6">
                         <div class="flex shrink-0 justify-center" aria-hidden="true">
                             <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-primary/20 bg-primary/10 text-primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v4H4V5zM4 13h10v6H4v-6zM18 13h2v6h-2v-6z"/><path d="M8 9v4M14 9v8"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="7" height="14" rx="1.5"/><rect x="14" y="5" width="7" height="14" rx="1.5"/></svg>
                             </span>
                         </div>
                         <div class="mt-3 text-center">
                             <h3 class="text-balance text-lg font-semibold leading-snug text-primary">{{ __('offer_dpf.tech_c4_title') }}</h3>
                         </div>
                         <div class="mt-3 min-h-0 flex-1 space-y-3 text-sm leading-7 text-zinc-700 sm:text-[0.9375rem]">
-                            <p><span class="font-semibold text-primary">{{ __('offer_dpf.tech_label_desc') }}:</span> {{ __('offer_dpf.tech_c4_desc') }}</p>
+                            <p>{{ __('offer_dpf.tech_c4_desc') }}</p>
                             <p><span class="font-semibold text-primary">{{ __('offer_dpf.tech_label_benefit') }}:</span> {{ __('offer_dpf.tech_c4_benefit') }}</p>
                         </div>
                     </div>
@@ -245,18 +249,7 @@
                             @endif
                         </div>
                         <div class="flex min-h-0 flex-1 flex-col p-6 sm:p-7">
-                            <div class="flex justify-center gap-2.5" role="group" aria-label="{{ __('offer_dpf.models_icons_group_aria') }}">
-                                <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/12 text-primary" title="{{ __('offer_dpf.models_tip_sws') }}">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7H8M8 7l2.25-2.25M8 7l2.25 2.25"/><path d="M8 17h8M16 17l-2.25-2.25M16 17l-2.25 2.25"/></svg>
-                                </span>
-                                <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/12 text-primary" title="{{ __('offer_dpf.models_tip_pfs') }}">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor" aria-hidden="true"><path d="M12 2.5c-3.5 4.5-7 8.2-7 11.5a7 7 0 1014 0c0-3.3-3.5-7-7-11.5zM8 18h8v2H8v-2z"/></svg>
-                                </span>
-                                <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/12 text-primary" title="{{ __('offer_dpf.models_tip_auto') }}">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor" aria-hidden="true"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4c-.48 0-.89.2-1.18.52l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.6V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9c0 .48.2.89.52 1.18l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06A1.65 1.65 0 0015 14.4a1.65 1.65 0 00-1.51 1H13a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
-                                </span>
-                            </div>
-                            <h3 class="mt-5 text-center text-xl font-bold text-primary sm:text-2xl">{{ __('offer_dpf.models_m'.$mi.'_title') }}</h3>
+                            <h3 class="text-center text-xl font-bold text-primary sm:text-2xl">{{ __('offer_dpf.models_m'.$mi.'_title') }}</h3>
                             <p class="mt-3 text-balance text-center text-sm leading-7 text-zinc-700 sm:text-[0.9375rem]">{{ __('offer_dpf.models_m'.$mi.'_desc') }}</p>
                             <dl class="mt-1 space-y-1 border-t border-[#e2e8f0] pt-2.5 text-sm leading-5.5 text-zinc-700">
                                 <div><dt class="font-semibold text-primary">{{ __('offer_dpf.models_label_dims') }}</dt><dd>{{ __('offer_dpf.models_m'.$mi.'_dims') }}</dd></div>
@@ -356,18 +349,15 @@
             </div>
         </div>
         <div class="mx-auto mt-12 w-full max-w-[1200px] lg:px-0">
+            @php
+                $offerDpfBenefitsIconFiles = [1 => 'przemysł.png', 2 => 'floty.png', 3 => 'ikona warsztaty.png'];
+            @endphp
             <div class="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-6 pb-2 [scrollbar-width:none] [-ms-overflow-style:none] sm:px-10 lg:mx-auto lg:grid lg:max-w-[1200px] lg:grid-cols-3 lg:items-stretch lg:gap-8 lg:overflow-visible lg:px-6 lg:pb-0 lg:snap-none xl:px-0 [&::-webkit-scrollbar]:hidden">
                 @for ($bi = 1; $bi <= 3; $bi++)
                     <article class="flex h-full w-[min(100%,calc(100vw-3rem))] max-w-[24rem] shrink-0 snap-center flex-col rounded-[22px] border border-[#e2e8f0] bg-gradient-to-b from-[#f8fafc] to-white p-6 shadow-[0_14px_44px_-28px_rgba(36,67,150,.2)] sm:max-w-[22rem] lg:max-w-none lg:w-auto">
                         <div class="flex items-center justify-center">
-                            <span class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/12 text-primary">
-                                @if ($bi === 1)
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path stroke-linecap="round" d="M4 19V5M8 13v6M12 9v10M16 6v13M20 10v9"/></svg>
-                                @elseif ($bi === 2)
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l4 2"/></svg>
-                                @else
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 10-8.4 1.8L4 14l3-1 1.8-3.1a4 4 0 001.9-3.6z"/><path stroke-linecap="round" d="M10 12l4 4"/></svg>
-                                @endif
+                            <span class="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-primary/10 bg-primary/5 p-2.5">
+                                <img src="{{ asset('images/ico/'.rawurlencode($offerDpfBenefitsIconFiles[$bi])) }}" alt="" class="max-h-10 max-w-10 object-contain" width="40" height="40" loading="lazy" decoding="async">
                             </span>
                         </div>
                         <p class="mt-5 text-center text-sm font-bold uppercase tracking-wide text-primary">{{ __('offer_dpf.benefits_c'.$bi.'_sub') }}</p>
@@ -397,22 +387,7 @@
                         @for ($cr = 1; $cr <= 6; $cr++)
                             <tr class="border-t border-[#e2e8f0] {{ $cr % 2 === 0 ? 'bg-[#f8fafc]' : 'bg-white' }}">
                                 <td class="px-3 py-4 align-top font-medium text-primary sm:px-5 sm:py-5">
-                                    <span class="flex items-start gap-3">
-                                        @if ($cr === 1)
-                                            <span class="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/12 text-primary" aria-hidden="true">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7H8M8 7l2.25-2.25M8 7l2.25 2.25"/><path d="M8 17h8M16 17l-2.25-2.25M16 17l-2.25 2.25"/></svg>
-                                            </span>
-                                        @elseif ($cr === 2)
-                                            <span class="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/12 text-primary" aria-hidden="true">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M12 2.5c-3.5 4.5-7 8.2-7 11.5a7 7 0 1014 0c0-3.3-3.5-7-7-11.5zM8 18h8v2H8v-2z"/></svg>
-                                            </span>
-                                        @elseif ($cr === 3)
-                                            <span class="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/12 text-primary" aria-hidden="true">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9L5 12l3 3M16 15l3-3-3-3"/><path d="M5 12h14"/></svg>
-                                            </span>
-                                        @endif
-                                        <span class="min-w-0 pt-0.5 leading-snug">{{ __('offer_dpf.cmp_r'.$cr.'_feature') }}</span>
-                                    </span>
+                                    <span class="min-w-0 leading-snug">{{ __('offer_dpf.cmp_r'.$cr.'_feature') }}</span>
                                 </td>
                                 <td class="px-3 py-4 align-top sm:px-5 sm:py-5">
                                     <span class="flex gap-2.5">
@@ -441,57 +416,40 @@
     </section>
     <section id="offer-dpf-testimonials" class="scroll-mt-24 border-t border-[#e2e8f0] bg-[#edf2f7] px-0 py-16 sm:py-20 sm:px-10" aria-labelledby="offer-dpf-testimonials-heading">
         <div class="mx-auto w-full max-w-[1200px] px-6 sm:px-0">
-            <div class="grid grid-cols-1 items-center gap-3 sm:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] sm:gap-x-4 sm:gap-y-0">
-                <div class="hidden sm:block" aria-hidden="true"></div>
-                <h2 id="offer-dpf-testimonials-heading" class="col-span-1 text-center text-3xl font-semibold leading-tight text-primary sm:col-auto sm:text-4xl">{{ __('offer_dpf.testimonials_heading') }}</h2>
-                <div class="flex justify-center sm:justify-end">
-                    <img src="{{ asset('media/wp-uploads/2025/01/googl.png') }}" alt="{{ __('offer_dpf.testimonials_google_alt') }}" class="h-auto max-h-6 w-auto opacity-90 sm:max-h-7" width="96" height="32" loading="lazy" decoding="async">
-                </div>
-            </div>
+            <h2 id="offer-dpf-testimonials-heading" class="text-center text-3xl font-semibold leading-tight text-primary sm:text-4xl">{{ __('offer_dpf.testimonials_heading') }}</h2>
             <p class="mx-auto mt-4 max-w-[42rem] text-center text-base leading-7 text-zinc-700 sm:text-lg sm:leading-8">{{ __('offer_dpf.testimonials_sub') }}</p>
         </div>
         <div class="mx-auto mt-12 w-full max-w-[1200px] lg:px-0">
             <div id="offer-dpf-testimonials-track" class="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth scroll-pl-6 scroll-pr-6 px-6 pb-2 pt-1 [scrollbar-width:thin] [scrollbar-color:#94a3b8_transparent] sm:scroll-pl-10 sm:scroll-pr-10 sm:px-10 lg:mx-auto lg:max-w-[1200px] lg:gap-8 lg:overflow-x-auto lg:scroll-pl-6 lg:scroll-pr-6 lg:px-6 xl:scroll-pl-0 xl:scroll-pr-0 xl:px-0 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#cbd5e1]" role="region" aria-roledescription="carousel" aria-label="{{ __('offer_dpf.testimonials_aria') }}" tabindex="0">
-                @foreach (range(1, 5) as $tn)
+                @foreach (range(1, 3) as $tn)
                     @php
                         $logo = match ($tn) {
                             1 => '2025/01/aiw_200.png',
                             2 => '2025/01/auto_bodo_200-1.png',
-                            3 => '2025/01/clean_fap_200.png',
                             default => null,
                         };
-                        $initials = match ($tn) {
-                            4 => 'AS',
-                            5 => 'SZ',
-                            default => null,
-                        };
+                        $initials = $tn === 3 ? 'G' : null;
                     @endphp
                     <article data-testimonial-slide class="flex w-[min(100%,calc(100vw-3rem))] max-w-[24rem] shrink-0 snap-center flex-col rounded-[20px] border border-[#e2e8f0] bg-white p-6 text-left shadow-[0_14px_44px_-28px_rgba(36,67,150,.18)] sm:max-w-[22rem]">
                         @if ($logo)
-                            <img src="{{ asset('media/wp-uploads/'.$logo) }}" alt="{{ $tn <= 3 ? __('offer_dpf.s5_t'.$tn.'_name') : __('offer_dpf.testimonials_t'.$tn.'_name') }}" class="mb-4 h-12 w-auto object-contain object-left opacity-80 grayscale sm:h-14" width="140" height="56" loading="lazy" decoding="async">
+                            <img src="{{ asset('media/wp-uploads/'.$logo) }}" alt="{{ __('offer_dpf.s5_t'.$tn.'_name') }}" class="mb-4 h-12 w-auto object-contain object-left opacity-80 grayscale sm:h-14" width="140" height="56" loading="lazy" decoding="async">
                         @else
                             <div class="mb-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/12 text-sm font-bold tracking-tight text-primary sm:h-14 sm:w-14 sm:text-base" aria-hidden="true">{{ $initials }}</div>
                         @endif
                         <div class="text-amber-500" aria-hidden="true">★★★★★</div>
                         <blockquote class="mt-4 text-sm leading-7 text-primary sm:text-[0.9375rem] sm:leading-7">
-                            <p>“{{ __('offer_dpf.testimonials_q'.$tn) }}”</p>
+                            <p>“{{ __('offer_dpf.s5_t'.$tn.'_quote') }}”</p>
                         </blockquote>
                         <footer class="mt-6 border-t border-[#e2e8f0] pt-4">
-                            @if ($tn <= 3)
-                                <div class="font-semibold text-primary">{{ __('offer_dpf.s5_t'.$tn.'_name') }}</div>
-                                <div class="mt-1 text-sm leading-snug text-zinc-700">{{ __('offer_dpf.s5_t'.$tn.'_company') }}</div>
-                            @else
-                                <div class="font-semibold text-primary">{{ __('offer_dpf.testimonials_t'.$tn.'_name') }}</div>
-                                <div class="mt-1 text-sm leading-snug text-zinc-700">{{ __('offer_dpf.testimonials_t'.$tn.'_company') }}</div>
-                            @endif
+                            <div class="font-semibold text-primary">{{ __('offer_dpf.s5_t'.$tn.'_name') }}</div>
                         </footer>
                     </article>
                 @endforeach
             </div>
             <div class="mt-5 flex justify-center px-6 sm:px-10 lg:px-6 xl:px-0">
                 <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5" role="group" aria-label="{{ __('offer_dpf.testimonials_dots_aria') }}">
-                    @foreach (range(1, 5) as $dn)
-                        <button type="button" data-testimonial-dot="{{ $dn - 1 }}" aria-label="{{ __('offer_dpf.testimonials_dot_aria', ['num' => $dn, 'total' => 5]) }}" aria-current="{{ $dn === 1 ? 'true' : 'false' }}" class="testimonial-dot-btn flex h-11 min-w-[2.75rem] items-center justify-center rounded-full text-primary transition hover:bg-[#f1f5f9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                    @foreach (range(1, 3) as $dn)
+                        <button type="button" data-testimonial-dot="{{ $dn - 1 }}" aria-label="{{ __('offer_dpf.testimonials_dot_aria', ['num' => $dn, 'total' => 3]) }}" aria-current="{{ $dn === 1 ? 'true' : 'false' }}" class="testimonial-dot-btn flex h-11 min-w-[2.75rem] items-center justify-center rounded-full text-primary transition hover:bg-[#f1f5f9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
                             <span class="testimonial-dot-inner block h-2 rounded-full transition-all duration-300 {{ $dn === 1 ? 'w-6 bg-primary' : 'w-2 bg-slate-300' }}" aria-hidden="true"></span>
                         </button>
                     @endforeach
@@ -562,20 +520,13 @@
             <h2 id="offer-dpf-successes-heading" class="text-3xl font-semibold leading-tight text-primary sm:text-4xl">{{ __('offer_dpf.successes_heading') }}</h2>
             <p class="mx-auto mt-4 max-w-[46rem] text-base leading-7 text-zinc-700 sm:text-lg sm:leading-8">{{ __('offer_dpf.successes_sub') }}</p>
         </div>
-        <div class="mx-auto mt-12 w-full max-w-[1200px] lg:px-0">
-            <div class="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth scroll-pl-6 scroll-pr-6 px-6 pb-4 pt-1 [scrollbar-width:thin] [scrollbar-color:#94a3b8_transparent] sm:scroll-pl-10 sm:scroll-pr-10 sm:px-10 lg:grid lg:grid-cols-3 lg:gap-8 lg:overflow-visible lg:px-6 lg:pb-0 lg:snap-none xl:px-0 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#cbd5e1]" role="region" aria-roledescription="carousel" aria-label="{{ __('offer_dpf.successes_aria') }}" tabindex="0">
-                @foreach (range(1, 3) as $ci)
-                    @php
-                        $successBars = match ($ci) {
-                            1 => [88, 100, 82],
-                            2 => [72, 92, 95],
-                            default => [85, 78, 90],
-                        };
-                    @endphp
-                    <article class="flex w-[min(100%,calc(100vw-3rem))] max-w-[24rem] shrink-0 snap-center flex-col overflow-hidden rounded-[20px] border border-[#e2e8f0] bg-white text-left shadow-[0_14px_44px_-28px_rgba(36,67,150,.15)] sm:max-w-[22rem] lg:max-w-none lg:w-auto">
+        <div class="relative mx-auto mt-12 w-full max-w-[1200px] lg:px-0">
+            <div id="offer-dpf-successes-track" class="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth scroll-pl-6 scroll-pr-6 px-6 pb-2 pt-1 [scrollbar-width:thin] [scrollbar-color:#94a3b8_transparent] sm:scroll-pl-10 sm:scroll-pr-10 sm:px-10 lg:mx-auto lg:max-w-[1200px] lg:gap-8 lg:overflow-x-auto lg:scroll-pl-6 lg:scroll-pr-6 lg:px-6 xl:scroll-pl-0 xl:scroll-pr-0 xl:px-0 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#cbd5e1]" role="region" aria-roledescription="carousel" aria-label="{{ __('offer_dpf.successes_aria') }}" tabindex="0">
+                @foreach (range(1, 4) as $ci)
+                    <article data-success-slide class="flex w-[min(100%,calc(100vw-3rem))] max-w-[24rem] shrink-0 snap-center flex-col overflow-hidden rounded-[20px] border bg-white text-left shadow-[0_14px_44px_-28px_rgba(36,67,150,.15)] sm:max-w-[22rem] {{ $ci === 4 ? 'border-accent ring-2 ring-accent/45 ring-offset-2 ring-offset-white' : 'border-[#e2e8f0]' }}">
                         <div class="h-1 bg-gradient-to-r from-primary via-primary/80 to-accent"></div>
                         <div class="flex flex-col p-5 sm:p-6">
-                            <span class="inline-flex w-fit rounded-full bg-primary/12 px-2.5 py-0.5 text-[0.6875rem] font-bold uppercase tracking-wide text-primary">{{ __('offer_dpf.s9_cs'.$ci.'_tag') }}</span>
+                            <span class="inline-flex w-fit rounded-full px-2.5 py-0.5 text-[0.6875rem] font-bold uppercase tracking-wide {{ $ci === 4 ? 'bg-accent/15 text-accent ring-1 ring-accent/35' : 'bg-primary/12 text-primary' }}">{{ __('offer_dpf.s9_cs'.$ci.'_tag') }}</span>
                             <h3 class="mt-3 text-base font-bold leading-snug text-primary sm:text-lg">{{ __('offer_dpf.success_cs'.$ci.'_h3') }}</h3>
                             <dl class="mt-4 space-y-3 text-sm leading-snug text-zinc-700">
                                 <div class="rounded-xl border border-[#e2e8f0] bg-[#f8fafc] px-3 py-2.5">
@@ -615,84 +566,160 @@
                                     <dd class="mt-1.5 pl-8 font-medium text-primary">{{ __('offer_dpf.success_cs'.$ci.'_result') }}</dd>
                                 </div>
                             </dl>
-                            <div class="mt-5 space-y-2.5 border-t border-[#e2e8f0] pt-5">
-                                @foreach (['M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', 'M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z', 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'] as $ki => $path)
-                                    <div class="rounded-xl bg-[#f1f5f9] px-3 py-2">
-                                        <div class="flex items-center gap-2.5">
-                                            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white text-primary shadow-sm">
-                                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="{{ $path }}"/></svg>
-                                            </span>
-                                            <p class="min-w-0 flex-1 text-xs font-semibold leading-snug text-primary">{{ __('offer_dpf.success_cs'.$ci.'_kpi'.($ki + 1)) }}</p>
-                                        </div>
-                                        <div class="mt-2 h-1.5 overflow-hidden rounded-full bg-white">
-                                            <div class="h-full rounded-full bg-gradient-to-r from-primary to-primary/75" style="width: {{ $successBars[$ki] }}%"></div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
                         </div>
                     </article>
                 @endforeach
             </div>
-        </div>
-    </section>
-    <section id="offer-dpf-form" class="scroll-mt-24 border-t border-[#e2e8f0] bg-[#edf2f7] px-0 py-16 sm:py-20 sm:px-10" aria-labelledby="offer-dpf-cta-heading">
-        <div class="mx-auto w-full max-w-[1200px] px-6 lg:px-6 xl:px-0">
-            <h2 id="offer-dpf-cta-heading" class="text-center text-3xl font-semibold leading-tight text-primary sm:text-4xl">{{ __('offer_dpf.cta_h2') }}</h2>
-            <div class="mt-6 w-full space-y-3 text-center text-base leading-6 text-zinc-700 sm:text-lg sm:leading-7">
-                <p>{{ __('offer_dpf.cta_intro_p1') }}</p>
-                <p>{{ __('offer_dpf.cta_intro_p2') }}</p>
-                <p>{{ __('offer_dpf.cta_intro_p3') }}</p>
-            </div>
-            @if (session('contact_sent'))
-                <div class="mt-8 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-center text-sm text-emerald-900">{{ __('form.sent') }}</div>
-            @endif
-            @if (session('contact_error'))
-                <div class="mt-8 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-center text-sm text-red-900">{{ __('contact.mail_failed') }}</div>
-            @endif
-            <form class="mx-auto mt-10 w-full max-w-[52rem] space-y-4 text-left" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}">
-                @csrf
-                <label class="sr-only" for="offer-dpf-name">{{ __('form.name') }}</label>
-                <input class="w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3.5 text-sm text-primary outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" id="offer-dpf-name" name="name" type="text" value="{{ old('name') }}" required autocomplete="name" maxlength="200" placeholder="{{ __('form.name') }}">
-                @error('name')
-                    <p class="text-sm text-red-600">{{ $message }}</p>
-                @enderror
-                <label class="sr-only" for="offer-dpf-email">{{ __('form.email') }}</label>
-                <input class="w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3.5 text-sm text-primary outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" id="offer-dpf-email" name="email" type="email" value="{{ old('email') }}" required autocomplete="email" placeholder="{{ __('form.email') }}">
-                @error('email')
-                    <p class="text-sm text-red-600">{{ $message }}</p>
-                @enderror
-                <label class="sr-only" for="offer-dpf-phone">{{ __('offer_dpf.s12_phone_placeholder') }}</label>
-                <input class="w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3.5 text-sm text-primary outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" id="offer-dpf-phone" name="phone" type="tel" value="{{ old('phone') }}" autocomplete="tel" placeholder="{{ __('offer_dpf.s12_phone_placeholder') }}">
-                @error('phone')
-                    <p class="text-sm text-red-600">{{ $message }}</p>
-                @enderror
-                <label class="sr-only" for="offer-dpf-message">{{ __('offer_dpf.cta_message_placeholder') }}</label>
-                <textarea class="min-h-[8rem] w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3.5 text-sm text-primary outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" id="offer-dpf-message" name="message" required maxlength="5000" placeholder="{{ __('offer_dpf.cta_message_placeholder') }}">{{ old('message') }}</textarea>
-                @error('message')
-                    <p class="text-sm text-red-600">{{ $message }}</p>
-                @enderror
-                <div class="flex items-start gap-3 rounded-lg border border-[#e2e8f0] bg-[#f8fafc] px-4 py-3">
-                    <input class="mt-1 h-4 w-4 shrink-0 rounded border-[#cbd2d9] text-primary focus:ring-primary" id="offer-dpf-privacy" name="privacy_accept" type="checkbox" value="1" {{ old('privacy_accept') ? 'checked' : '' }} required>
-                    <label class="text-sm leading-snug text-zinc-700" for="offer-dpf-privacy">{{ __('form.privacy_accept') }}. <span class="text-zinc-500">{{ __('offer_dpf.cta_consent_hint') }}</span> <a href="{{ locale_route('privacy', ['locale' => $l]) }}" class="font-medium text-primary underline">{{ __('footer.privacy') }}</a>.</label>
+            <div class="mt-5 flex justify-center px-6 sm:px-10 lg:px-6 xl:px-0">
+                <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5" role="group" aria-label="{{ __('offer_dpf.successes_dots_aria') }}">
+                    @foreach (range(1, 4) as $sn)
+                        <button type="button" data-success-dot="{{ $sn - 1 }}" aria-label="{{ __('offer_dpf.successes_dot_aria', ['num' => $sn, 'total' => 4]) }}" aria-current="{{ $sn === 1 ? 'true' : 'false' }}" class="success-dot-btn flex h-11 min-w-[2.75rem] items-center justify-center rounded-full text-primary transition hover:bg-[#f1f5f9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                            <span class="success-dot-inner block h-2 rounded-full transition-all duration-300 {{ $sn === 1 ? 'w-6 bg-primary' : 'w-2 bg-slate-300' }}" aria-hidden="true"></span>
+                        </button>
+                    @endforeach
                 </div>
-                @error('privacy_accept')
-                    <p class="text-sm text-red-600">{{ $message }}</p>
-                @enderror
-                <button class="inline-flex w-full min-h-[3.25rem] items-center justify-center rounded-full bg-accent px-8 py-4 text-base font-bold uppercase tracking-wide text-white shadow-lg shadow-black/15 transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:min-h-[3.5rem] sm:text-lg" type="submit" aria-label="{{ __('offer_dpf.cta_submit_aria') }}">{{ __('offer_dpf.cta_submit') }}</button>
-                <p class="text-center text-sm text-zinc-700">{{ __('offer_dpf.cta_or_call') }} <a href="tel:{{ __('offer_dpf.cta_phone_href') }}" class="font-semibold text-primary underline decoration-primary/40 hover:decoration-primary">{{ __('offer_dpf.cta_phone_display') }}</a></p>
-            </form>
-            <ul class="mx-auto mt-8 w-full max-w-[52rem] space-y-2 text-left text-sm text-zinc-700">
-                @foreach (range(1, 3) as $cb)
-                    <li class="flex gap-3">
-                        <span class="flex h-6 w-4 shrink-0 items-center justify-center" aria-hidden="true"><span class="block h-1.5 w-1.5 rounded-full bg-[#6bd269]"></span></span>
-                        <span class="min-w-0 flex-1 leading-6">{{ __('offer_dpf.cta_bullet_'.$cb) }}</span>
-                    </li>
-                @endforeach
-            </ul>
+            </div>
+        </div>
+        <script>
+            (function () {
+                var track = document.getElementById('offer-dpf-successes-track');
+                if (!track) return;
+                var slides = track.querySelectorAll('[data-success-slide]');
+                var dots = document.querySelectorAll('[data-success-dot]');
+                if (!slides.length || !dots.length) return;
+                function setDot(i) {
+                    dots.forEach(function (btn, j) {
+                        var on = j === i;
+                        btn.setAttribute('aria-current', on ? 'true' : 'false');
+                        var inner = btn.querySelector('.success-dot-inner');
+                        if (inner) {
+                            inner.classList.toggle('w-6', on);
+                            inner.classList.toggle('w-2', !on);
+                            inner.classList.toggle('bg-primary', on);
+                            inner.classList.toggle('bg-slate-300', !on);
+                        }
+                    });
+                }
+                function activeFromScroll() {
+                    var t = track.getBoundingClientRect();
+                    var mid = t.left + t.width * 0.35;
+                    var best = 0;
+                    var bestD = Infinity;
+                    slides.forEach(function (el, j) {
+                        var r = el.getBoundingClientRect();
+                        var c = r.left + r.width / 2;
+                        var d = Math.abs(c - mid);
+                        if (d < bestD) {
+                            bestD = d;
+                            best = j;
+                        }
+                    });
+                    setDot(best);
+                }
+                dots.forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        var i = parseInt(btn.getAttribute('data-success-dot'), 10);
+                        var el = slides[i];
+                        if (el) {
+                            el.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+                            setDot(i);
+                        }
+                    });
+                });
+                var scrollTimer;
+                track.addEventListener('scroll', function () {
+                    clearTimeout(scrollTimer);
+                    scrollTimer = setTimeout(activeFromScroll, 80);
+                }, { passive: true });
+                activeFromScroll();
+                window.addEventListener('resize', function () {
+                    clearTimeout(scrollTimer);
+                    scrollTimer = setTimeout(activeFromScroll, 120);
+                });
+            })();
+        </script>
+    </section>
+    <section id="offer-dpf-form" class="scroll-mt-24 border-t border-[#e2e8f0] bg-[#eef2f6] px-0 py-16 sm:py-24 sm:px-10" aria-labelledby="offer-dpf-cta-heading">
+        <div class="mx-auto w-full max-w-[1200px] px-6 lg:px-8 xl:px-0">
+            <div class="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16 xl:gap-20">
+                <div class="flex flex-col gap-8 lg:max-w-xl lg:pt-1">
+                    <header class="space-y-4">
+                        <h2 id="offer-dpf-cta-heading" class="text-balance text-3xl font-semibold leading-tight text-primary sm:text-4xl">{{ __('offer_dpf.cta_h2') }}</h2>
+                        <p class="text-lg font-medium leading-snug text-primary sm:text-xl">{{ __('offer_dpf.cta_sub') }}</p>
+                        <p class="text-base leading-7 text-zinc-700 sm:text-lg sm:leading-8">{{ __('offer_dpf.cta_lead') }}</p>
+                    </header>
+                    <ul class="flex flex-col gap-4" role="list">
+                        @foreach (range(1, 3) as $cb)
+                            <li class="flex gap-4 rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-[0_8px_30px_-18px_rgba(36,67,150,.2)] sm:p-6">
+                                <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/[0.09] text-primary" aria-hidden="true">
+                                    @if ($cb === 1)
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
+                                    @elseif ($cb === 2)
+                                        <span class="text-[1.35rem] leading-none" aria-hidden="true">🔧</span>
+                                    @else
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    @endif
+                                </span>
+                                <span class="min-w-0 pt-0.5 text-base font-medium leading-snug text-zinc-800 sm:text-[1.0625rem] sm:leading-snug">{{ __('offer_dpf.cta_bullet_'.$cb) }}</span>
+                            </li>
+                        @endforeach
+                    </ul>
+                    <div class="rounded-2xl border border-primary/15 bg-white/90 p-6 shadow-[0_10px_36px_-20px_rgba(36,67,150,.25)] sm:p-7">
+                        <p class="text-sm font-semibold leading-relaxed text-zinc-800 sm:text-base">{{ __('offer_dpf.cta_trust_intro') }}</p>
+                        <ul class="mt-4 space-y-2.5 text-sm leading-relaxed text-zinc-700 sm:text-[0.9375rem]" role="list">
+                            @foreach (range(1, 3) as $ti)
+                                <li class="flex gap-2.5"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true"></span><span>{{ __('offer_dpf.cta_trust_li_'.$ti) }}</span></li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl border-2 border-accent/35 bg-white px-6 py-5 text-center shadow-md sm:px-8 sm:py-6 lg:text-left">
+                        <p class="text-sm font-semibold uppercase tracking-wide text-zinc-600">{{ __('offer_dpf.cta_phone_intro') }}</p>
+                        <a href="tel:{{ __('offer_dpf.cta_phone_href') }}" class="mt-2 inline-flex items-center justify-center gap-2 text-2xl font-bold tabular-nums text-primary transition hover:text-accent lg:justify-start sm:text-[1.65rem]"><span class="select-none text-lg leading-none sm:text-xl" aria-hidden="true">📞</span><span>{{ __('offer_dpf.cta_phone_display') }}</span></a>
+                    </div>
+                </div>
+                <div class="rounded-[1.35rem] border border-[#dce3eb] bg-white p-7 shadow-[0_20px_50px_-28px_rgba(36,67,150,.28)] sm:p-9 lg:sticky lg:top-28">
+                    @if (session('contact_sent'))
+                        <div class="mb-6 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-center text-sm text-emerald-900">{{ __('form.sent') }}</div>
+                    @endif
+                    @if (session('contact_error'))
+                        <div class="mb-6 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-center text-sm text-red-900">{{ __('contact.mail_failed') }}</div>
+                    @endif
+                    <form class="space-y-4 text-left" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}">
+                        @csrf
+                        <label class="sr-only" for="offer-dpf-name">{{ __('form.name') }}</label>
+                        <input class="w-full rounded-xl border border-[#cbd2d9] bg-[#fafbfc] px-4 py-3.5 text-sm text-primary outline-none transition placeholder:text-zinc-400 focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/15" id="offer-dpf-name" name="name" type="text" value="{{ old('name') }}" required autocomplete="name" maxlength="200" placeholder="{{ __('form.name') }}">
+                        @error('name')
+                            <p class="text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                        <label class="sr-only" for="offer-dpf-email">{{ __('form.email') }}</label>
+                        <input class="w-full rounded-xl border border-[#cbd2d9] bg-[#fafbfc] px-4 py-3.5 text-sm text-primary outline-none transition placeholder:text-zinc-400 focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/15" id="offer-dpf-email" name="email" type="email" value="{{ old('email') }}" required autocomplete="email" placeholder="{{ __('form.email') }}">
+                        @error('email')
+                            <p class="text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                        <label class="sr-only" for="offer-dpf-phone">{{ __('offer_dpf.s12_phone_placeholder') }}</label>
+                        <input class="w-full rounded-xl border border-[#cbd2d9] bg-[#fafbfc] px-4 py-3.5 text-sm text-primary outline-none transition placeholder:text-zinc-400 focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/15" id="offer-dpf-phone" name="phone" type="tel" value="{{ old('phone') }}" autocomplete="tel" placeholder="{{ __('offer_dpf.s12_phone_placeholder') }}">
+                        @error('phone')
+                            <p class="text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                        <label class="sr-only" for="offer-dpf-message">{{ __('offer_dpf.cta_message_placeholder') }}</label>
+                        <textarea class="min-h-[9.5rem] w-full rounded-xl border border-[#cbd2d9] bg-[#fafbfc] px-4 py-3.5 text-sm text-primary outline-none transition placeholder:text-zinc-400 focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/15" id="offer-dpf-message" name="message" required maxlength="5000" placeholder="{{ __('offer_dpf.cta_message_placeholder') }}">{{ old('message') }}</textarea>
+                        @error('message')
+                            <p class="text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                        <div class="flex items-start gap-3 rounded-xl border border-[#e8edf2] bg-[#f4f7fa] px-4 py-3.5">
+                            <input class="mt-1 h-4 w-4 shrink-0 rounded border-[#cbd2d9] text-primary focus:ring-primary" id="offer-dpf-privacy" name="privacy_accept" type="checkbox" value="1" {{ old('privacy_accept') ? 'checked' : '' }} required>
+                            <label class="text-sm leading-snug text-zinc-700" for="offer-dpf-privacy">{{ __('form.privacy_accept') }}. <span class="text-zinc-500">{{ __('offer_dpf.cta_consent_hint') }}</span> <a href="{{ locale_route('privacy', ['locale' => $l]) }}" class="font-medium text-primary underline">{{ __('footer.privacy') }}</a>.</label>
+                        </div>
+                        @error('privacy_accept')
+                            <p class="text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                        <button class="mt-2 inline-flex w-full min-h-[3.25rem] items-center justify-center rounded-full bg-accent px-8 py-4 text-base font-bold uppercase tracking-wide text-white shadow-lg shadow-accent/25 transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:min-h-[3.5rem] sm:text-lg" type="submit" aria-label="{{ __('offer_dpf.cta_submit_aria') }}">{{ __('offer_dpf.cta_submit') }}</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
-    <section id="offer-dpf-expert" class="scroll-mt-24 border-t border-[#e2e8f0] bg-white px-6 py-14 sm:px-10 sm:py-20" aria-labelledby="offer-dpf-expert-heading">
+    <!--<section id="offer-dpf-expert" class="scroll-mt-24 border-t border-[#e2e8f0] bg-white px-6 py-14 sm:px-10 sm:py-20" aria-labelledby="offer-dpf-expert-heading">
         <div class="mx-auto grid w-full max-w-[1100px] gap-8 sm:gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
             <div class="mx-auto w-full max-w-[220px] sm:max-w-[260px] lg:col-span-4 lg:mx-0 lg:max-w-[280px] lg:justify-self-start">
                 <figure class="w-full overflow-hidden rounded-[18px] border border-[#e2e8f0] bg-white shadow-[0_14px_40px_-28px_rgba(36,67,150,.22)]">
@@ -730,7 +757,7 @@
                 <a href="#offer-dpf-form" class="mt-8 inline-flex w-full min-h-[3.25rem] items-center justify-center rounded-full bg-accent px-8 py-4 text-center text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-black/15 transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:w-auto sm:min-h-[3.5rem] sm:text-base" aria-label="{{ __('offer_dpf.s13_cta_aria') }}">{{ __('offer_dpf.s13_cta') }}</a>
             </div>
         </div>
-    </section>
+    </section>-->
     <!--<section class="min-h-dvh bg-white px-6 pb-0 pt-14 sm:px-10">
         <div class="mx-auto w-full max-w-[1200px]">
             <h2 class="text-center text-3xl font-semibold text-primary sm:text-4xl">{{ __('offer_dpf.s3_intro') }}</h2>
@@ -826,12 +853,11 @@
     </section>
     <section class="flex min-h-dvh flex-col justify-center border-t border-[#d8e0ea] bg-[#edf2f7] px-6 py-16 sm:px-10">
         <div class="mx-auto w-full max-w-[1200px]">
-            <div class="mb-10 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+            <div class="mb-10 flex flex-col gap-4">
                 <div>
                     <h2 class="text-3xl font-semibold text-primary sm:text-4xl">{{ __('offer_dpf.s5_opinions_title') }}</h2>
                     <p class="mt-2 text-lg text-zinc-700">{{ __('offer_dpf.s5_opinions_sub') }}</p>
                 </div>
-                <img src="{{ asset('media/wp-uploads/2025/01/googl.png') }}" alt="" class="h-auto max-h-10 w-auto max-w-[min(140px,100%)] shrink-0 self-start object-contain object-left md:mt-2" width="120" height="40">
             </div>
             <div class="grid gap-6 lg:grid-cols-3">
                 <article class="rounded-[20px] bg-white p-6 shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]">
@@ -839,21 +865,18 @@
                     <div class="text-amber-400" aria-hidden="true">★★★★★</div>
                     <blockquote class="mt-6 text-sm leading-7 text-primary">{{ __('offer_dpf.s5_t1_quote') }}</blockquote>
                     <div class="mt-6 font-semibold text-primary">{{ __('offer_dpf.s5_t1_name') }}</div>
-                    <div class="text-sm text-zinc-700/80">{{ __('offer_dpf.s5_t1_company') }}</div>
                 </article>
                 <article class="rounded-[20px] bg-white p-6 shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]">
                     <img src="{{ asset('media/wp-uploads/2025/01/auto_bodo_200-1.png') }}" alt="" class="mb-4 h-12 w-auto opacity-60 grayscale" width="120" height="48">
                     <div class="text-amber-400" aria-hidden="true">★★★★★</div>
                     <blockquote class="mt-6 text-sm leading-7 text-primary">{{ __('offer_dpf.s5_t2_quote') }}</blockquote>
                     <div class="mt-6 font-semibold text-primary">{{ __('offer_dpf.s5_t2_name') }}</div>
-                    <div class="text-sm text-zinc-700/80">{{ __('offer_dpf.s5_t2_company') }}</div>
                 </article>
                 <article class="rounded-[20px] bg-white p-6 shadow-[0_15px_15px_-10px_rgba(140,202,245,.18)]">
-                    <img src="{{ asset('media/wp-uploads/2025/01/clean_fap_200.png') }}" alt="" class="mb-4 h-12 w-auto opacity-60 grayscale" width="120" height="48">
+                    <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/12 text-sm font-bold text-primary opacity-90" aria-hidden="true">G</div>
                     <div class="text-amber-400" aria-hidden="true">★★★★★</div>
                     <blockquote class="mt-6 text-sm leading-7 text-primary">{{ __('offer_dpf.s5_t3_quote') }}</blockquote>
                     <div class="mt-6 font-semibold text-primary">{{ __('offer_dpf.s5_t3_name') }}</div>
-                    <div class="text-sm text-zinc-700/80">{{ __('offer_dpf.s5_t3_company') }}</div>
                 </article>
             </div>
         </div>
@@ -1024,36 +1047,6 @@
                     </details>
                 @endforeach
             </div>
-        </div>
-    </section>
-  
-    <section id="offer-dpf-form" class="scroll-mt-24 flex min-h-dvh flex-col justify-center bg-white px-6 py-16 sm:px-10 sm:py-20">
-        <div class="mx-auto w-full max-w-[1200px] text-center">
-            <h2 class="text-3xl font-semibold text-primary sm:text-4xl">{{ __('offer_dpf.s12_title') }}</h2>
-            <p class="mt-4 text-lg text-zinc-700">{{ __('offer_dpf.s12_subtitle') }}</p>
-            @if (session('contact_sent'))
-                <div class="mx-auto mt-8 max-w-[640px] rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">{{ __('form.sent') }}</div>
-            @endif
-            @if (session('contact_error'))
-                <div class="mx-auto mt-8 max-w-[640px] rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">{{ __('contact.mail_failed') }}</div>
-            @endif
-            <form class="mx-auto mt-10 w-full max-w-[640px] space-y-5 text-left" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}">
-                @csrf
-                <input class="w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3 text-sm text-primary outline-none focus:border-primary" id="offer-dpf-email" name="email" type="email" value="{{ old('email') }}" required autocomplete="email" placeholder="{{ __('form.email') }}">
-                @error('email')
-                    <p class="text-sm text-red-600">{{ $message }}</p>
-                @enderror
-                <input class="w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3 text-sm text-primary outline-none focus:border-primary" id="offer-dpf-phone" name="phone" type="text" value="{{ old('phone') }}" autocomplete="tel" placeholder="{{ __('offer_dpf.s12_phone_placeholder') }}">
-                @error('phone')
-                    <p class="text-sm text-red-600">{{ $message }}</p>
-                @enderror
-                <textarea class="min-h-[10rem] w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3 text-sm text-primary outline-none focus:border-primary" id="offer-dpf-message" name="message" required placeholder="{{ __('form.message') }}">{{ old('message') }}</textarea>
-                @error('message')
-                    <p class="text-sm text-red-600">{{ $message }}</p>
-                @enderror
-                <button class="inline-flex w-full items-center justify-center rounded-xl bg-primary px-8 py-4 text-sm font-semibold uppercase text-white hover:bg-primary sm:w-auto" type="submit">{{ __('offer_dpf.s12_submit') }}</button>
-                <p class="text-sm leading-6 text-zinc-700">@lang('legal.consent_before', ['host' => $host])<a href="{{ locale_route('privacy', ['locale' => $l]) }}" class="text-primary underline">{{ __('footer.privacy') }}</a>@lang('legal.consent_after')</p>
-            </form>
         </div>
     </section>
     <section class="flex min-h-dvh flex-col justify-center border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-14 sm:px-10 sm:py-20">
