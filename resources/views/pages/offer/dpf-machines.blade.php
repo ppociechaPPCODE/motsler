@@ -244,14 +244,16 @@
                             @else
                                 <div class="flex h-full w-full items-center justify-center p-4 text-center text-sm text-zinc-500">{{ __('offer_dpf.s3_img_placeholder') }}</div>
                             @endif
-                            @if ($isDual)
+                            @if ($mi === 1)
+                                <span class="absolute right-3 top-3 rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wide text-white shadow-md">{{ __('offer_dpf.models_m1_badge') }}</span>
+                            @elseif ($isDual)
                                 <span class="absolute right-3 top-3 rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wide text-white shadow-md">{{ __('offer_dpf.models_dual_badge') }}</span>
                             @endif
                         </div>
                         <div class="flex min-h-0 flex-1 flex-col p-6 sm:p-7">
                             <h3 class="text-center text-xl font-bold text-primary sm:text-2xl">{{ __('offer_dpf.models_m'.$mi.'_title') }}</h3>
                             <p class="mt-3 text-balance text-center text-sm leading-7 text-zinc-700 sm:text-[0.9375rem]">{{ __('offer_dpf.models_m'.$mi.'_desc') }}</p>
-                            <dl class="mt-1 space-y-1 border-t border-[#e2e8f0] pt-2.5 text-sm leading-5.5 text-zinc-700">
+                            <dl class="mt-6 space-y-1 border-t border-[#e2e8f0] pt-2.5 text-sm leading-5.5 text-zinc-700 sm:mt-7">
                                 <div><dt class="font-semibold text-primary">{{ __('offer_dpf.models_label_dims') }}</dt><dd>{{ __('offer_dpf.models_m'.$mi.'_dims') }}</dd></div>
                                 @if (in_array($mi, [1, 2, 3], true))
                                     <div><dt class="font-semibold text-primary">{{ __('offer_dpf.models_label_chamber_dims') }}</dt><dd>{{ __('offer_dpf.models_m'.$mi.'_chamber_dims') }}</dd></div>

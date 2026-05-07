@@ -22,11 +22,14 @@ class ContactFormMail extends Mailable
 
     public function envelope(): Envelope
     {
+        $reply = [];
+        if ($this->replyEmail !== '' && filter_var($this->replyEmail, FILTER_VALIDATE_EMAIL)) {
+            $reply[] = new Address($this->replyEmail);
+        }
+
         return new Envelope(
             subject: (string) __('contact.mail_subject'),
-            replyTo: [
-                new Address($this->replyEmail),
-            ],
+            replyTo: $reply,
         );
     }
 

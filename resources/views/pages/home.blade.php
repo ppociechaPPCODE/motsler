@@ -11,7 +11,6 @@
     $homeOfferDpfFormUrl = locale_route('offer.dpf', ['locale' => $l]).'#offer-dpf-form';
     $homeModelCardImg = asset('media/wp-uploads/2024/12/slr-premium_300px.png');
     $homeContactOfferUrl = locale_route('contact', ['locale' => $l]);
-    $homeSebastianPhotoExists = file_exists(public_path('images/offer/sebastian-tkacz.jpg'));
     $homeModelInquiries = ['slr-premium', 'slr-premium-plus', 'slr-premium-dual'];
 @endphp
 
@@ -406,7 +405,8 @@
     <section id="home-contact-expert" class="scroll-mt-24 w-full border-t border-[#e2e8f0] bg-[#f1f5f9]" aria-labelledby="home-ce-heading">
         <div class="mx-auto w-full max-w-[1200px] px-5 py-14 sm:px-10 sm:py-16 lg:py-20">
             <h2 id="home-ce-heading" class="mx-auto max-w-[52rem] text-balance text-center text-2xl font-semibold leading-tight text-primary sm:text-3xl md:text-[2rem] md:leading-[1.25]">{{ __('home.ce_heading') }}</h2>
-            <p class="mx-auto mt-5 max-w-[52rem] text-pretty text-center text-base leading-7 text-zinc-600 sm:mt-6 sm:text-lg sm:leading-8">{{ __('home.ce_lead') }}</p>
+            <p class="mx-auto mt-5 max-w-[52rem] text-pretty text-center text-base leading-7 text-zinc-600 sm:mt-5 sm:text-lg sm:leading-8">{{ __('home.ce_lead') }}</p>
+            <p class="mx-auto mt-4 max-w-[52rem] text-pretty text-center text-base leading-7 text-zinc-600 sm:mt-4 sm:text-lg sm:leading-8">{{ __('home.ce_lead_2') }}</p>
             @if (session('contact_sent'))
                 <div class="mx-auto mt-6 max-w-2xl rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-center text-sm text-emerald-900">{{ __('form.sent') }}</div>
             @endif
@@ -414,7 +414,7 @@
                 <div class="mx-auto mt-6 max-w-2xl rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-center text-sm text-red-900">{{ __('contact.mail_failed') }}</div>
             @endif
             <div class="mt-10 grid grid-cols-1 gap-10 lg:mt-12 lg:grid-cols-2 lg:items-start lg:gap-12 xl:gap-14">
-                <div class="order-2 lg:order-1">
+                <div>
                     <form id="home-contact-form" class="rounded-2xl border border-[#e2e8f0] bg-white p-6 shadow-md shadow-black/5 sm:p-8" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}" novalidate data-ce-msg-summary="{{ __('form.validation_summary') }}" data-ce-msg-required="{{ __('form.validation_required_field') }}" data-ce-msg-email-invalid="{{ __('form.validation_email_invalid') }}" data-ce-msg-privacy="{{ __('form.validation_privacy_required') }}" data-ce-msg-message-max="{{ __('form.validation_message_max') }}">
                         @csrf
                         <p id="home-ce-js-summary" class="mb-4 hidden rounded-lg border border-red-200 bg-red-50 px-3 py-2.5 text-sm leading-snug text-red-800" role="alert"></p>
@@ -451,32 +451,32 @@
                         <p id="home-ce-js-err-privacy" class="mt-1 hidden text-sm text-red-600" role="status"></p>
                         <button class="mt-6 inline-flex min-h-[3rem] w-full items-center justify-center rounded-full bg-accent px-8 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-black/20 transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" type="submit">{{ __('home.ce_submit') }}</button>
                     </form>
+                    <p class="mt-5 text-center text-sm font-medium text-zinc-600 sm:text-left">{{ __('home.ce_form_note') }}</p>
                     <ul class="mt-6 space-y-2.5 text-sm leading-relaxed text-zinc-700 sm:text-[0.9375rem]" role="list">
-                        @foreach ([1, 2, 3] as $ti)
+                        @foreach ([1, 2, 3, 4] as $ti)
                             <li class="flex gap-2.5"><span class="shrink-0 text-accent" aria-hidden="true">✔</span><span>{{ __('home.ce_trust_'.$ti) }}</span></li>
                         @endforeach
                     </ul>
                 </div>
-                <div class="order-1 flex flex-col gap-6 lg:order-2 lg:sticky lg:top-28">
-                    @if ($homeSebastianPhotoExists)
-                        <figure class="relative overflow-hidden rounded-2xl border border-[#e2e8f0] bg-white shadow-sm ring-1 ring-[#e2e8f0]">
-                            <img src="{{ asset('images/offer/sebastian-tkacz.jpg') }}" alt="{{ __('home.ce_expert_img_alt') }}" class="h-auto w-full object-cover object-center" width="640" height="800" loading="lazy" decoding="async">
-                        </figure>
-                    @endif
-                    <div class="rounded-2xl border border-[#e2e8f0] bg-white p-6 shadow-sm sm:p-8">
-                        <h3 class="text-xl font-semibold leading-snug text-primary sm:text-2xl">{{ __('home.ce_expert_title') }}</h3>
-                        <p class="mt-4 text-pretty text-sm leading-relaxed text-zinc-600 sm:text-base">{{ __('home.ce_expert_p1') }}</p>
-                        <p class="mt-3 text-pretty text-sm leading-relaxed text-zinc-600 sm:text-base">{{ __('home.ce_expert_p2') }}</p>
-                        <p class="mt-6 text-[0.6875rem] font-bold uppercase tracking-[0.14em] text-accent">{{ __('home.ce_experience_label') }}</p>
-                        <ul class="mt-3 space-y-2.5 text-sm leading-snug text-zinc-800" role="list">
-                            @foreach ([1, 2, 3] as $ei)
-                                <li class="flex gap-2.5"><span class="shrink-0 text-accent" aria-hidden="true">✔</span><span>{{ __('home.ce_exp_'.$ei) }}</span></li>
-                            @endforeach
-                        </ul>
-                        <p class="mt-8 text-center sm:text-left">
-                            <span class="text-sm font-semibold text-primary">{{ __('home.ce_call_prefix') }}</span>
-                            <a href="tel:{{ __('contact.phone_href') }}" class="ml-1 text-lg font-bold tabular-nums text-accent underline-offset-2 transition hover:underline">{{ __('contact.phone_value') }}</a>
-                        </p>
+                <div class="lg:sticky lg:top-28">
+                    <div class="overflow-hidden rounded-2xl border border-[#e2e8f0] bg-gradient-to-b from-white to-[#f8fafc] p-5 shadow-md shadow-black/5 sm:p-7">
+                        <div class="min-w-0">
+                            <h3 class="text-balance text-lg font-semibold leading-snug tracking-tight text-primary sm:text-xl md:text-2xl">{{ __('home.ce_expert_title') }}</h3>
+                            <p class="mt-3 text-pretty text-sm leading-relaxed text-zinc-600 sm:mt-3.5 sm:text-[0.9375rem]">{{ __('home.ce_expert_p1') }}</p>
+                            <p class="mt-2.5 text-pretty text-sm leading-relaxed text-zinc-600 sm:text-[0.9375rem]">{{ __('home.ce_expert_p2') }}</p>
+                            <div class="mt-5 rounded-xl border border-zinc-200/80 bg-white/80 px-3.5 py-3 sm:px-4 sm:py-3.5">
+                                <p class="text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-accent">{{ __('home.ce_experience_label') }}</p>
+                                <ul class="mt-2 space-y-2 text-[0.8125rem] leading-snug text-zinc-700 sm:text-sm" role="list">
+                                    @foreach ([1, 2, 3] as $ei)
+                                        <li class="flex gap-2"><span class="mt-0.5 shrink-0 text-accent" aria-hidden="true">✔</span><span class="min-w-0">{{ __('home.ce_exp_'.$ei) }}</span></li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            <p class="mt-6 border-t border-zinc-200/70 pt-5">
+                                <span class="block text-xs font-semibold uppercase tracking-wide text-zinc-500">{{ __('home.ce_call_prefix') }}</span>
+                                <a href="tel:{{ __('contact.phone_href') }}" class="mt-1 inline-block text-lg font-bold tabular-nums tracking-tight text-accent underline-offset-4 transition hover:underline sm:text-xl">{{ __('contact.phone_value') }}</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

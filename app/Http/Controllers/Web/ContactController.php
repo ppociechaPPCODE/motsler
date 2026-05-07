@@ -32,10 +32,10 @@ class ContactController extends Controller
 
         try {
             Mail::to($to)->send(new ContactFormMail(
-                name: $data['name'],
-                replyEmail: $data['email'],
+                name: $data['name'] ?? '',
+                replyEmail: $data['email'] ?? '',
                 phone: $data['phone'] ?? null,
-                messageBody: $data['message'],
+                messageBody: $data['message'] ?? '',
             ));
         } catch (\Throwable $e) {
             report($e);
