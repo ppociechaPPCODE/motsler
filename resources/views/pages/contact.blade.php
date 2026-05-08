@@ -137,6 +137,7 @@
             @endif
             <div class="min-w-0 text-center lg:text-left">
                 <h2 id="contact-expert-h2" class="text-balance text-2xl font-semibold leading-tight text-primary sm:text-3xl">{{ __('contact_page.expert_h2') }}</h2>
+                <p class="mt-3 text-sm font-semibold text-primary sm:text-base">{{ __('contact_page.hero_caption') }}</p>
                 @foreach (range(1, 4) as $ei)
                     <p class="{{ $ei === 1 ? 'mt-5' : 'mt-3' }} text-pretty text-sm leading-relaxed text-zinc-700 sm:text-base sm:leading-7">{{ __('contact_page.expert_p'.$ei) }}</p>
                 @endforeach
@@ -147,13 +148,8 @@
 
     <section class="bg-white py-10 sm:py-12">
         <div class="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
-            <details class="group rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-5 shadow-sm open:bg-white sm:p-6">
-                <summary class="cursor-pointer list-none text-lg font-semibold text-primary [&::-webkit-details-marker]:hidden">
-                    <span class="flex items-center justify-between gap-3">
-                        <span>{{ __('contact_page.company_summary') }}</span>
-                        <span class="text-accent transition group-open:rotate-180" aria-hidden="true">▼</span>
-                    </span>
-                </summary>
+            <div class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm sm:p-6">
+                <h2 class="text-lg font-semibold text-primary">{{ __('contact_page.company_summary') }}</h2>
                 <div class="mt-6 grid gap-8 border-t border-[#e8edf2] pt-6 text-sm leading-relaxed text-zinc-800 sm:grid-cols-2 sm:text-[0.9375rem]">
                     <div class="space-y-3">
                         <p class="whitespace-pre-line font-semibold text-primary">{{ __('contact_page.company_col_left') }}</p>
@@ -162,7 +158,7 @@
                         <p class="whitespace-pre-line">{{ __('contact_page.company_col_right') }}</p>
                     </div>
                 </div>
-            </details>
+            </div>
         </div>
     </section>
 

@@ -9,9 +9,12 @@
     $homeHeroPoster = 'https://i.ytimg.com/vi/lvkEzHiBAoo/maxresdefault.jpg';
     $homeDpfModelsUrl = locale_route('offer.dpf', ['locale' => $l]).'#offer-dpf-modele';
     $homeOfferDpfFormUrl = locale_route('offer.dpf', ['locale' => $l]).'#offer-dpf-form';
-    $homeModelCardImg = asset('media/wp-uploads/2024/12/slr-premium_300px.png');
+    $homeModelCardImgPath = public_path('images/offer/1t5a9183ab.png');
+    $homeModelCardImgSrc = file_exists($homeModelCardImgPath) ? asset('images/offer/1t5a9183ab.png') : null;
     $homeContactOfferUrl = locale_route('contact', ['locale' => $l]);
     $homeModelInquiries = ['slr-premium', 'slr-premium-plus', 'slr-premium-dual'];
+    $homeExpertPhotoPath = public_path('images/foto.png');
+    $homeExpertPhotoSrc = file_exists($homeExpertPhotoPath) ? asset('images/foto.png') : null;
 @endphp
 
 <div class="space-y-0">
@@ -200,7 +203,24 @@
             <p class="mx-auto mt-5 max-w-[52rem] text-pretty text-center text-base leading-7 text-zinc-600 sm:mt-6 sm:text-lg sm:leading-8">{{ __('home.models_lead') }}</p>
             <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-12 lg:grid-cols-3 lg:gap-8">
                 @foreach ([1, 2, 3] as $mi)
+                    @php
+                        $homeIsDualModel = $mi === 3;
+                    @endphp
                     <article class="flex h-full flex-col rounded-2xl border-2 border-zinc-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-zinc-300 hover:shadow-xl hover:shadow-zinc-900/10 sm:p-7">
+                        <div class="-mx-6 -mt-6 mb-5 overflow-hidden rounded-t-xl sm:-mx-7 sm:-mt-7">
+                            <div class="relative aspect-[4/3] bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0]">
+                                @if ($homeModelCardImgSrc)
+                                    <img src="{{ $homeModelCardImgSrc }}" alt="{{ __('offer_dpf.models_m'.$mi.'_img_alt') }}" class="h-full w-full object-cover object-center" width="480" height="360" loading="lazy" decoding="async">
+                                @else
+                                    <div class="flex h-full w-full items-center justify-center p-4 text-center text-sm text-zinc-500">{{ __('offer_dpf.s3_img_placeholder') }}</div>
+                                @endif
+                                @if ($mi === 1)
+                                    <span class="absolute right-3 top-3 rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wide text-white shadow-md">{{ __('offer_dpf.models_m1_badge') }}</span>
+                                @elseif ($homeIsDualModel)
+                                    <span class="absolute right-3 top-3 rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wide text-white shadow-md">{{ __('offer_dpf.models_dual_badge') }}</span>
+                                @endif
+                            </div>
+                        </div>
                         <h3 class="text-xl font-bold leading-snug text-primary">{{ __('home.models_m'.$mi.'_name') }}</h3>
                         <p class="mt-3 text-pretty text-sm leading-7 text-zinc-600 sm:text-[0.9375rem]">{{ __('home.models_m'.$mi.'_desc') }}</p>
                         <div class="mt-5 border-t border-zinc-200 pt-5">
@@ -461,9 +481,13 @@
                 <div class="lg:sticky lg:top-28">
                     <div class="overflow-hidden rounded-2xl border border-[#e2e8f0] bg-gradient-to-b from-white to-[#f8fafc] p-5 shadow-md shadow-black/5 sm:p-7">
                         <div class="min-w-0">
-                            <h3 class="text-balance text-lg font-semibold leading-snug tracking-tight text-primary sm:text-xl md:text-2xl">{{ __('home.ce_expert_title') }}</h3>
+                            @if ($homeExpertPhotoSrc)
+                                <img src="{{ $homeExpertPhotoSrc }}" alt="{{ __('contact_page.expert_img_alt') }}" class="float-right ml-4 mb-3 h-40 w-40 rounded-xl object-cover object-center sm:ml-5 sm:h-48 sm:w-48" width="192" height="192" loading="lazy" decoding="async">
+                            @endif
+                            <h3 class="min-w-0 text-balance text-lg font-semibold leading-snug tracking-tight text-primary sm:text-xl md:text-2xl">{{ __('home.ce_expert_title') }}</h3>
                             <p class="mt-3 text-pretty text-sm leading-relaxed text-zinc-600 sm:mt-3.5 sm:text-[0.9375rem]">{{ __('home.ce_expert_p1') }}</p>
                             <p class="mt-2.5 text-pretty text-sm leading-relaxed text-zinc-600 sm:text-[0.9375rem]">{{ __('home.ce_expert_p2') }}</p>
+                            <div class="clear-both"></div>
                             <div class="mt-5 rounded-xl border border-zinc-200/80 bg-white/80 px-3.5 py-3 sm:px-4 sm:py-3.5">
                                 <p class="text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-accent">{{ __('home.ce_experience_label') }}</p>
                                 <ul class="mt-2 space-y-2 text-[0.8125rem] leading-snug text-zinc-700 sm:text-sm" role="list">
