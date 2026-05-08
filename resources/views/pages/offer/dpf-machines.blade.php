@@ -13,7 +13,7 @@
     $offerDpfStoryVideoId = null;
     $l = app()->getLocale();
     $host = parse_url((string) config('app.url'), PHP_URL_HOST) ?: request()->getHost();
-    $offerDpfSebastianPhoto = public_path('images/offer/sebastian-tkacz.jpg');
+    $offerDpfSebastianPhoto = public_path('images/foto.png');
     $offerDpfImgModels = public_path('images/offer/1t5a9183ab.png');
 @endphp
 <div class="space-y-0">
@@ -724,11 +724,11 @@
     <!--<section id="offer-dpf-expert" class="scroll-mt-24 border-t border-[#e2e8f0] bg-white px-6 py-14 sm:px-10 sm:py-20" aria-labelledby="offer-dpf-expert-heading">
         <div class="mx-auto grid w-full max-w-[1100px] gap-8 sm:gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
             <div class="mx-auto w-full max-w-[220px] sm:max-w-[260px] lg:col-span-4 lg:mx-0 lg:max-w-[280px] lg:justify-self-start">
-                <figure class="w-full overflow-hidden rounded-[18px] border border-[#e2e8f0] bg-white shadow-[0_14px_40px_-28px_rgba(36,67,150,.22)]">
+                <figure class="w-full overflow-hidden rounded-[18px] border border-[#3f454d] bg-[#2f343b] shadow-[0_14px_40px_-28px_rgba(36,67,150,.22)]">
                 @if (file_exists($offerDpfSebastianPhoto))
                     <img class="aspect-[3/4] w-full object-cover object-center" src="{{ asset('images/offer/sebastian-tkacz.jpg') }}" width="520" height="693" alt="{{ __('offer_dpf.s13_img_alt') }}" loading="lazy" decoding="async">
                 @else
-                    <div class="flex aspect-[3/4] w-full items-center justify-center bg-[#f8fafc] p-5 text-center text-xs leading-snug text-zinc-500 sm:text-sm">{{ __('offer_dpf.s13_photo_placeholder') }}</div>
+                    <div class="flex aspect-[3/4] w-full items-center justify-center bg-[#2f343b] p-5 text-center text-xs leading-snug text-zinc-200 sm:text-sm">{{ __('offer_dpf.s13_photo_placeholder') }}</div>
                 @endif
                 </figure>
             </div>
@@ -920,7 +920,7 @@
                 @endfor
             </ul>
             <div class="mt-12 text-center">
-                <a href="{{ locale_route('contact', ['locale' => $l]) }}" class="inline-flex rounded-full bg-accent px-8 py-4 text-sm font-semibold uppercase text-white shadow-md transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">{{ __('offer_dpf.s6_cta') }}</a>
+                <a href="#offer-dpf-form" class="inline-flex rounded-full bg-accent px-8 py-4 text-sm font-semibold uppercase text-white shadow-md transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">{{ __('offer_dpf.s6_cta') }}</a>
             </div>
         </div>
     </section>
@@ -981,10 +981,10 @@
                         <tr class="border-t-2 border-[#e2e8f0] bg-[#edf2f7]">
                             <td class="bg-[#edf2f7]"></td>
                             <td class="p-3 align-top sm:p-5">
-                                <a href="{{ locale_route('contact', ['locale' => $l]) }}?inquiry=slr-premium#contact-form" class="inline-flex w-full min-w-0 justify-center rounded-full bg-accent px-4 py-3.5 text-center text-xs font-semibold uppercase leading-tight text-white shadow-md transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:px-6 sm:py-4 sm:text-sm">{{ __('offer_dpf.s8_cta_quote') }}</a>
+                                <a href="#offer-dpf-form" class="inline-flex w-full min-w-0 justify-center rounded-full bg-accent px-4 py-3.5 text-center text-xs font-semibold uppercase leading-tight text-white shadow-md transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:px-6 sm:py-4 sm:text-sm">{{ __('offer_dpf.s8_cta_quote') }}</a>
                             </td>
                             <td class="p-3 align-top sm:p-5">
-                                <a href="{{ locale_route('contact', ['locale' => $l]) }}?inquiry=slr-premium-plus#contact-form" class="inline-flex w-full min-w-0 justify-center rounded-full bg-accent px-4 py-3.5 text-center text-xs font-semibold uppercase leading-tight text-white shadow-md transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:px-6 sm:py-4 sm:text-sm">{{ __('offer_dpf.s8_cta_quote') }}</a>
+                                <a href="#offer-dpf-form" class="inline-flex w-full min-w-0 justify-center rounded-full bg-accent px-4 py-3.5 text-center text-xs font-semibold uppercase leading-tight text-white shadow-md transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:px-6 sm:py-4 sm:text-sm">{{ __('offer_dpf.s8_cta_quote') }}</a>
                             </td>
                         </tr>
                     </tfoot>
@@ -1050,15 +1050,17 @@
                 @endforeach
             </div>
         </div>
-    </section>
+    </section>-->
     <section class="flex min-h-dvh flex-col justify-center border-t border-[#e2e8f0] bg-[#edf2f7] px-6 py-14 sm:px-10 sm:py-20">
         <div class="mx-auto grid w-full max-w-[1100px] gap-8 sm:gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
             <div class="mx-auto w-full max-w-[220px] sm:max-w-[260px] lg:col-span-4 lg:mx-0 lg:max-w-[280px] lg:justify-self-start">
-                <figure class="w-full overflow-hidden rounded-[18px] border border-[#e2e8f0] bg-white shadow-[0_14px_40px_-28px_rgba(36,67,150,.22)]">
+                <figure class="w-full overflow-hidden rounded-[18px] border border-[#3f454d] bg-[#2f343b] shadow-[0_14px_40px_-28px_rgba(36,67,150,.22)]">
                 @if (file_exists($offerDpfSebastianPhoto))
-                    <img class="aspect-[3/4] w-full object-cover object-center" src="{{ asset('images/offer/sebastian-tkacz.jpg') }}" width="520" height="693" alt="{{ __('offer_dpf.s13_img_alt') }}">
+                    <img class="aspect-[3/4] w-full object-cover object-center" src="{{ asset('images/foto.png') }}" width="520" height="693" alt="{{ __('offer_dpf.s13_img_alt') }}">
+                @elseif (file_exists($offerDpfImgModels))
+                    <img class="aspect-[3/4] w-full object-cover object-center" src="{{ asset('images/offer/1t5a9183ab.png') }}" width="520" height="693" alt="{{ __('offer_dpf.s13_img_alt') }}">
                 @else
-                    <div class="flex aspect-[3/4] w-full items-center justify-center bg-[#f8fafc] p-5 text-center text-xs leading-snug text-zinc-500 sm:text-sm">{{ __('offer_dpf.s13_photo_placeholder') }}</div>
+                    <div class="flex aspect-[3/4] w-full items-center justify-center bg-[#2f343b] p-5 text-center text-xs leading-snug text-zinc-200 sm:text-sm">{{ __('offer_dpf.s13_photo_placeholder') }}</div>
                 @endif
                 </figure>
             </div>
@@ -1089,6 +1091,6 @@
                 <a href="#offer-dpf-form" class="mt-8 inline-flex w-full min-h-[3.25rem] items-center justify-center rounded-full bg-accent px-8 py-4 text-center text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-black/15 transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:w-auto sm:min-h-[3.5rem] sm:text-base" aria-label="{{ __('offer_dpf.s13_cta_aria') }}">{{ __('offer_dpf.s13_cta') }}</a>
             </div>
         </div>
-    </section>-->
+    </section>
 </div>
 @endsection

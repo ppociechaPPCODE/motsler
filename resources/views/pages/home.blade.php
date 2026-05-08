@@ -1,5 +1,9 @@
 @extends('layouts.app')
-@section('title', __('page.home'))
+@section('title', __('offer_dpf.seo_title'))
+@push('head')
+    <meta name="description" content="{{ __('offer_dpf.seo_description') }}">
+    <meta name="keywords" content="{{ __('offer_dpf.seo_keywords') }}">
+@endpush
 @section('content')
 @php
     $l = app()->getLocale();
@@ -11,8 +15,7 @@
     $homeOfferDpfFormUrl = locale_route('offer.dpf', ['locale' => $l]).'#offer-dpf-form';
     $homeModelCardImgPath = public_path('images/offer/1t5a9183ab.png');
     $homeModelCardImgSrc = file_exists($homeModelCardImgPath) ? asset('images/offer/1t5a9183ab.png') : null;
-    $homeContactOfferUrl = locale_route('contact', ['locale' => $l]);
-    $homeModelInquiries = ['slr-premium', 'slr-premium-plus', 'slr-premium-dual'];
+    $homeContactOfferUrl = '#home-contact-expert';
     $homeExpertPhotoPath = public_path('images/foto.png');
     $homeExpertPhotoSrc = file_exists($homeExpertPhotoPath) ? asset('images/foto.png') : null;
 @endphp
@@ -243,7 +246,7 @@
                             </ul>
                         </div>
                         <div class="mt-auto shrink-0 pt-10 sm:pt-12">
-                            <a href="{{ locale_route('contact', ['locale' => $l]) }}?inquiry={{ $homeModelInquiries[$mi - 1] }}#contact-form" class="inline-flex min-h-[3rem] w-full items-center justify-center rounded-full bg-accent px-6 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-white shadow-md shadow-black/10 transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">{{ __('offer_dpf.s8_cta_quote') }}</a>
+                            <a href="#home-contact-form" class="inline-flex min-h-[3rem] w-full items-center justify-center rounded-full bg-accent px-6 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-white shadow-md shadow-black/10 transition hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">{{ __('offer_dpf.s8_cta_quote') }}</a>
                         </div>
                     </article>
                 @endforeach

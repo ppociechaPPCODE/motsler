@@ -5,11 +5,20 @@ use Illuminate\Support\Facades\URL;
 if (! function_exists('locale_route')) {
     function locale_route(string $name, array $parameters = []): string
     {
+        $defaultLocale = config('app.locale', 'pl');
         $locale = $parameters['locale'] ?? app()->getLocale();
         unset($parameters['locale']);
 
         if ($name === 'home') {
-            return route('home', array_merge(['locale' => $locale], $parameters));
+            if ($locale === $defaultLocale) {
+                return route('home', $parameters);
+            }
+
+            return route($locale.'.home', array_merge(['locale' => $locale], $parameters));
+        }
+
+        if ($locale === $defaultLocale) {
+            return route($locale.'.'.$name, $parameters);
         }
 
         return route($locale.'.'.$name, array_merge(['locale' => $locale], $parameters));
@@ -62,8 +71,14 @@ if (! function_exists('hreflang_urls')) {
 
         if ($name === 'home') {
             $urls = [];
+            $defaultLocale = config('app.locale', 'pl');
             foreach ($locales as $loc) {
-                $urls[$loc] = url(route('home', ['locale' => $loc]));
+                if ($loc === $defaultLocale) {
+                    $urls[$loc] = url(route('home'));
+                    continue;
+                }
+
+                $urls[$loc] = url(route($loc.'.home', ['locale' => $loc]));
             }
 
             return $urls;

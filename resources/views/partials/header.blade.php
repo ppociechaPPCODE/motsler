@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            <a class="text-base font-semibold text-primary hover:text-accent" href="https://motsler24.pl/" target="_blank" rel="noopener noreferrer">{{ __('nav.shop') }}</a>
+            {{-- <a class="text-base font-semibold text-primary hover:text-accent" href="https://motsler24.pl/" target="_blank" rel="noopener noreferrer">{{ __('nav.shop') }}</a> --}}
             <a class="text-base font-semibold text-primary hover:text-accent" href="{{ locale_route('contact', ['locale' => $l]) }}">{{ __('nav.contact') }}</a>
         </nav>
         <div class="flex items-center gap-3">
@@ -35,7 +35,7 @@
                     <a class="block rounded-md px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50" href="{{ locale_route('offer.index', ['locale' => $l]) }}">{{ __('page.offer') }}</a>
                     <a class="block rounded-md px-3 py-2 pl-6 text-sm text-zinc-600 hover:bg-zinc-50" href="{{ locale_route('offer.dpf', ['locale' => $l]) }}">{{ __('nav.offer_dpf') }}</a>
                     <a class="block rounded-md px-3 py-2 pl-6 text-sm text-zinc-600 hover:bg-zinc-50" href="{{ locale_route('solutions.chemia', ['locale' => $l]) }}">{{ __('nav.offer_cleaning_agents') }}</a>
-                    <a class="block rounded-md px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-50" href="https://motsler24.pl/" target="_blank" rel="noopener noreferrer">{{ __('nav.shop') }}</a>
+                    {{-- <a class="block rounded-md px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-50" href="https://motsler24.pl/" target="_blank" rel="noopener noreferrer">{{ __('nav.shop') }}</a> --}}
                     <a class="block rounded-md px-3 py-2 text-sm text-zinc-700 hover:bg-zinc-50" href="{{ locale_route('contact', ['locale' => $l]) }}">{{ __('nav.contact') }}</a>
                 </div>
             </details>

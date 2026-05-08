@@ -11,7 +11,7 @@ class SetLocale
 {
     public function handle(Request $request, Closure $next): Response
     {
-        $locale = $request->route('locale');
+        $locale = $request->route('locale') ?? config('app.locale', 'pl');
         $supportedLocales = array_keys(config('app.supported_locales', []));
 
         if (in_array($locale, $supportedLocales, true)) {

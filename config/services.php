@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'gtag' => [
+        'id' => env('GTAG_ID'),
+    ],
+
 ];
