@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 $supportedLocales = array_keys(config('app.supported_locales', []));
 $paths = config('localized_routes.paths', []);
-$defaultLocale = config('app.locale', 'pl');
+$defaultLocale = 'pl';
 
 Route::get('/', [HomeController::class, 'index'])
     ->middleware(['locale'])
