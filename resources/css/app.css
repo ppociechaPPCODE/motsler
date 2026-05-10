@@ -21,9 +21,26 @@
     --font-sans: 'Lato', ui-sans-serif, system-ui, sans-serif;
     --font-heading: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
     --font-alt: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+    --color-primary: #0b1f3a;
+    --color-accent: #ff6b00;
+    --color-muted: #6b7280;
+    --color-background: #f9fafb;
+    --max-width-content: 1280px;
 }
 
 @layer base {
+    html {
+        font-size: 16px;
+    }
+    body {
+        background-color: var(--color-background);
+        font-family: var(--font-sans);
+        color: var(--color-primary);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: clamp(1rem, 0.22vw + 0.95rem, 1.125rem);
+        line-height: 1.6;
+    }
     h1,
     h2,
     h3,
@@ -31,7 +48,33 @@
     h5,
     h6 {
         font-family: var(--font-heading);
+        color: var(--color-primary);
     }
+    h1 {
+        font-size: clamp(3rem, 1.6vw + 2.1rem, 4rem);
+        line-height: 1.1;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+    }
+    h2 {
+        font-size: clamp(2rem, 1.1vw + 1.42rem, 2.5rem);
+        line-height: 1.15;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+    }
+    h3 {
+        font-size: clamp(1.25rem, 0.4vw + 1.03rem, 1.5rem);
+        line-height: 1.25;
+        font-weight: 600;
+    }
+}
+
+@utility container-grid {
+    @apply mx-auto w-full max-w-[1280px] px-6 lg:px-20;
+}
+
+@utility section-y {
+    @apply py-20 lg:py-[7.5rem];
 }
 
 @keyframes home-hero-fade-up {
@@ -61,6 +104,12 @@
     }
     .home-hero-reveal-d4 {
         animation-delay: 0.62s;
+    }
+    .home-hero-reveal-d5 {
+        animation-delay: 0.78s;
+    }
+    .home-hero-reveal-d6 {
+        animation-delay: 0.94s;
     }
 }
 

@@ -22,4 +22,8 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+    RewriteRule ^darmowa-konsultacja/?$ https://motsler.pl/kontakt [R=301,L]
+    RewriteRule ^blog/?$ https://motsler.pl/ [R=301,L]
+    RewriteRule ^o-firmie/?$ https://motsler.pl/ [R=301,L]
 </IfModule>

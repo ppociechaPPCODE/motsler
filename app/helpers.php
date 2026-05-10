@@ -7,9 +7,19 @@ if (! function_exists('locale_route')) {
     {
         $locale = $parameters['locale'] ?? app()->getLocale();
         unset($parameters['locale']);
+        $locale = strtolower((string) $locale);
 
         if ($name === 'home') {
-            return route('home', array_merge(['locale' => $locale], $parameters));
+            if ($locale === 'pl') {
+                return route('home', $parameters);
+            }
+
+            return route($locale.'.home', array_merge(['locale' => $locale], $parameters));
+        }
+
+        if ($locale === 'pl') {
+            
+            return route($locale.'.'.$name, $parameters);
         }
 
         return route($locale.'.'.$name, array_merge(['locale' => $locale], $parameters));
@@ -63,7 +73,7 @@ if (! function_exists('hreflang_urls')) {
         if ($name === 'home') {
             $urls = [];
             foreach ($locales as $loc) {
-                $urls[$loc] = url(route('home', ['locale' => $loc]));
+                $urls[$loc] = url(locale_route('home', ['locale' => $loc]));
             }
 
             return $urls;

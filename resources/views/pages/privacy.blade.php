@@ -6,7 +6,7 @@
 
 <div class="space-y-0">
 
-    <section class="bg-[#001348] px-6 py-14 text-white sm:px-10">
+    <section class="bg-primary px-6 py-14 text-white sm:px-10">
 
         <div class="mx-auto w-full max-w-[1650px] text-center">
 
@@ -18,7 +18,7 @@
 
     <section class="bg-white px-6 py-14 sm:px-10">
 
-        <div class="mx-auto w-full max-w-[900px] text-lg leading-8 text-[#003174]">
+        <div class="mx-auto w-full max-w-[900px] text-lg leading-8 text-primary">
 
             <p>{{ __('page.privacy_body') }}</p>
 

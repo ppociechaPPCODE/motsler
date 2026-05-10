@@ -29,13 +29,13 @@
     <ul class="absolute right-0 z-50 mt-2 min-w-[9rem] rounded-lg border border-zinc-200 bg-white p-2 shadow-lg" aria-label="{{ __('lang.switch') }}">
         @foreach($supportedLocales as $code => $labelKey)
             @php
-                $href = url('/'.$code);
+                $href = locale_route('home', ['locale' => $code]);
                 if ($name === 'home') {
-                    $href = route('home', array_merge($params, ['locale' => $code]));
+                    $href = locale_route('home', array_merge($params, ['locale' => $code]));
                 } elseif ($name && str_contains((string) $name, '.')) {
                     [$prefix, $logical] = explode('.', (string) $name, 2);
                     if (isset($supportedLocales[$prefix])) {
-                        $href = route($code.'.'.$logical, array_merge($params, ['locale' => $code]));
+                        $href = locale_route($logical, array_merge($params, ['locale' => $code]));
                     }
                 }
                 $label = __($labelKey);
