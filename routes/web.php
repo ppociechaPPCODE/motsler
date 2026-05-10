@@ -6,6 +6,7 @@ use App\Http\Controllers\Web\ContactController;
 use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Web\OfferController;
 use App\Http\Controllers\Web\PrivacyController;
+use App\Http\Controllers\Web\SitemapController;
 use App\Http\Controllers\Web\SolutionsController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,6 +17,8 @@ $defaultLocale = 'pl';
 Route::get('/', [HomeController::class, 'index'])
     ->middleware(['locale'])
     ->name('home');
+
+Route::get('sitemap.xml', SitemapController::class);
 
 foreach ($supportedLocales as $locale) {
     $p = $paths[$locale] ?? [];

@@ -4,7 +4,7 @@ return [
     'paths' => [
         'pl' => [
             'offer_index' => 'oferta',
-            'offer_dpf' => 'oferta/maszyny-dpf',
+            'offer_dpf' => 'oferta/maszyny-do-dpf',
             'offer_workshop_washers' => 'oferta/myjki-warsztatowe',
             'offer_pressure_washers' => 'oferta/myjki-cisnieniowe',
             'chemia' => 'oferta/chemia',
