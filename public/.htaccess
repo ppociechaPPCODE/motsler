@@ -26,4 +26,7 @@
     RewriteRule ^darmowa-konsultacja/?$ https://motsler.pl/kontakt [R=301,L]
     RewriteRule ^blog/?$ https://motsler.pl/ [R=301,L]
     RewriteRule ^o-firmie/?$ https://motsler.pl/ [R=301,L]
+    RewriteRule ^en/homepage/?$ https://motsler.pl/en [R=301,L]
+    RewriteRule ^cena-maszyny-do-czyszczenia-dpf/?$ https://motsler.pl/maszyny-do-dpf [R=301,L]
+    RewriteRule ^darmowa-konsultacja/?$ https://motsler.pl/kontakt [R=301,L]
 </IfModule>
