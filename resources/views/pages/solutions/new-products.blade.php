@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('title', app()->getLocale() === 'en' ? 'New product lines – coming soon | Motsler' : 'Nowe linie produktowe – wkrótce | Motsler')
-@push('head')
-    <meta name="description" content="{{ app()->getLocale() === 'en' ? 'Pressure washers, sandblasters and ultrasonic washers – new Motsler lines coming soon.' : 'Myjki ciśnieniowe, piaskarki i myjki ultradźwiękowe – nowe linie produktowe Motsler wkrótce w ofercie.' }}">
-@endpush
+@section('meta_description', app()->getLocale() === 'en' ? 'Pressure washers, sandblasters and ultrasonic washers – new Motsler lines coming soon.' : 'Myjki ciśnieniowe, piaskarki i myjki ultradźwiękowe – nowe linie produktowe Motsler wkrótce w ofercie.')
 @section('content')
 @php
     $l = app()->getLocale();

@@ -11,20 +11,14 @@ class SitemapController extends Controller
     {
         $lastmod = now()->toAtomString();
         $locales = array_keys(config('app.supported_locales', []));
-        $blog = config('app.content.blog', []);
 
         $suffixes = [
             'offer.index',
             'offer.dpf',
-            'offer.workshop_washers',
-            'offer.pressure_washers',
             'solutions.chemia',
-            'solutions.custom_machines',
-            'solutions.new_products',
             'about',
             'contact',
             'privacy',
-            'blog.index',
         ];
 
         $urls = [route('home')];
@@ -33,23 +27,13 @@ class SitemapController extends Controller
             if ($locale === 'pl') {
                 continue;
             }
-            $urls[] = route("{$locale}.home", ['locale' => $locale]);
+            $urls[] = route("{$locale}.home");
         }
 
         foreach ($locales as $locale) {
             foreach ($suffixes as $suffix) {
                 $name = "{$locale}.{$suffix}";
-                $urls[] = $locale === 'en'
-                    ? route($name, ['locale' => 'en'])
-                    : route($name);
-            }
-        }
-
-        foreach ($locales as $locale) {
-            foreach (array_values($blog[$locale] ?? []) as $slug) {
-                $urls[] = $locale === 'en'
-                    ? route("{$locale}.blog.show", ['locale' => 'en', 'slug' => $slug])
-                    : route("{$locale}.blog.show", ['slug' => $slug]);
+                $urls[] = route($name);
             }
         }
 

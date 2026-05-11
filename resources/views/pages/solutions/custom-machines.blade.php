@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('title', app()->getLocale() === 'en' ? 'Custom industrial machine production | Motsler' : 'Produkcja maszyn przemysłowych na zamówienie | Motsler')
-@push('head')
-    <meta name="description" content="{{ app()->getLocale() === 'en' ? 'Motsler designs and builds industrial machines to order – from concept to commissioning.' : 'Motsler – produkcja maszyn przemysłowych i maszyny na zamówienie: od koncepcji po wdrożenie.' }}">
-@endpush
+@section('meta_description', app()->getLocale() === 'en' ? 'Motsler designs and builds industrial machines to order – from concept to commissioning.' : 'Motsler – produkcja maszyn przemysłowych i maszyny na zamówienie: od koncepcji po wdrożenie.')
 @section('content')
 @php
     $l = app()->getLocale();

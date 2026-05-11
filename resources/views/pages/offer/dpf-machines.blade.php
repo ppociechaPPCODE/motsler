@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', __('offer_dpf.seo_title'))
+@section('meta_description', __('offer_dpf.seo_description'))
 @push('head')
-    <meta name="description" content="{{ __('offer_dpf.seo_description') }}">
     <meta name="keywords" content="{{ __('offer_dpf.seo_keywords') }}">
 @endpush
 @section('content')

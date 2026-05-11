@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', __('offer_dpf.seo_title'))
+@section('meta_description', __('offer_dpf.seo_description'))
 @push('head')
-    <meta name="description" content="{{ __('offer_dpf.seo_description') }}">
     <meta name="keywords" content="{{ __('offer_dpf.seo_keywords') }}">
 @endpush
 @section('content')
@@ -38,7 +38,6 @@
                     <div class="w-full max-w-[600px] text-left">
                     <h1 class="home-hero-reveal home-hero-reveal-d1 text-balance text-2xl font-bold leading-[1.12] tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,.45)] sm:text-3xl md:text-4xl">{{ __('home.hero_h1') }}</h1>
                     <h2 class="home-hero-reveal home-hero-reveal-d2 mt-4 text-balance text-base font-semibold leading-snug text-white/95 sm:text-lg md:text-xl">{{ __('home.hero_subheadline') }}</h2>
-                    <!--<p class="home-hero-reveal home-hero-reveal-d3 mt-4 text-pretty text-sm font-medium leading-relaxed text-white/95 sm:text-base md:text-[1.0625rem]">{{ __('home.hero_p') }}</p>-->
                     <ul class="home-hero-reveal home-hero-reveal-d4 mt-6 list-none space-y-2.5 p-0 text-sm leading-snug text-white sm:text-[0.9375rem]" role="list">
                         <li class="flex gap-2.5"><span class="shrink-0 text-emerald-400" aria-hidden="true">✔</span><span>{{ __('home.hero_value_1') }}</span></li>
                         <li class="flex gap-2.5"><span class="shrink-0 text-emerald-400" aria-hidden="true">✔</span><span>{{ __('home.hero_value_2') }}</span></li>

@@ -58,7 +58,12 @@
     <div class="border-t border-white/10 bg-primary/90">
         <div class="container-grid flex flex-col gap-3 py-5 text-center text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <p class="order-2 sm:order-1">© {{ date('Y') }} {{ __('footer.company_line') }}. {{ __('footer.rights') }}.</p>
-            <a href="{{ locale_route('privacy', ['locale' => $l]) }}" class="order-1 text-white/90 underline decoration-white/30 underline-offset-2 transition hover:text-[#6bd269] hover:decoration-[#6bd269] sm:order-2">{{ __('footer.privacy') }}</a>
+            <div class="order-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:order-2 sm:justify-end">
+                <a href="{{ locale_route('privacy', ['locale' => $l]) }}" class="text-white/90 underline decoration-white/30 underline-offset-2 transition hover:text-[#6bd269] hover:decoration-[#6bd269]">{{ __('footer.privacy') }}</a>
+                @if (! (bool) config('app.debug') && filled(config('services.gtag.id')))
+                    <button type="button" class="text-white/90 underline decoration-white/30 underline-offset-2 transition hover:text-[#6bd269] hover:decoration-[#6bd269]" data-cookie-consent-open>{{ __('cookies.settings') }}</button>
+                @endif
+            </div>
             <p class="order-3 text-xs font-semibold uppercase tracking-wider text-white/45">{{ __('footer.brand_line') }}</p>
         </div>
     </div>

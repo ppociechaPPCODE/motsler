@@ -174,3 +174,7 @@ html.js #technologie-motsler:not(.is-revealed) .tech-motsler-reveal {
         transition: none;
     }
 }
+
+body.motsler-cookie-bar-visible {
+    padding-bottom: clamp(10rem, 30vh, 16rem);
+}

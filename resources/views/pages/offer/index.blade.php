@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('title', __('page.offer_hub'))
-@push('head')
-    <meta name="description" content="{{ __('offer_hub.seo_description') }}">
-@endpush
+@section('meta_description', __('offer_hub.seo_description'))
 @section('content')
 @php
     $l = app()->getLocale();
