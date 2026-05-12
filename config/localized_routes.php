@@ -13,8 +13,8 @@ return [
             'about' => 'o-nas',
             'contact' => 'kontakt',
             'privacy' => 'polityka-prywatnosci',
-            'blog_index' => 'aktualnosci',
-            'blog_show' => 'aktualnosci/{slug}',
+            'blog_index' => 'blog',
+            'blog_show' => 'blog/{slug}',
         ],
         'en' => [
             'offer_index' => 'offer',
