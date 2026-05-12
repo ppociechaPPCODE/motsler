@@ -9,8 +9,8 @@
     $l = app()->getLocale();
     $blog = config('app.content.blog.'.$l, config('app.content.blog.pl'));
     $host = parse_url((string) config('app.url'), PHP_URL_HOST) ?: request()->getHost();
-    $homeHeroVideoEmbed = 'https://www.youtube.com/embed/lvkEzHiBAoo?autoplay=1&mute=1&loop=1&playlist=lvkEzHiBAoo&controls=0&rel=0&modestbranding=1&playsinline=1';
-    $homeHeroPoster = 'https://i.ytimg.com/vi/lvkEzHiBAoo/maxresdefault.jpg';
+    $homeHeroVideoEmbed = 'https://www.youtube.com/embed/D0AgmAUlSpQ?si=VWxfZQKGF6GZfXit&autoplay=1&mute=1&loop=1&playlist=D0AgmAUlSpQ&controls=0&rel=0&modestbranding=1&playsinline=1';
+    $homeHeroPoster = 'https://i.ytimg.com/vi/D0AgmAUlSpQ/maxresdefault.jpg';
     $homeDpfModelsUrl = locale_route('offer.dpf', ['locale' => $l]).'#offer-dpf-modele';
     $homeOfferDpfFormUrl = locale_route('offer.dpf', ['locale' => $l]).'#offer-dpf-form';
     $homeModelCardImgPath = public_path('images/offer/1t5a9183ab.png');
@@ -28,8 +28,10 @@
                 <iframe
                     class="pointer-events-none absolute left-1/2 top-1/2 hidden h-[56.25vw] min-h-[125%] w-[177.77vh] min-w-[125%] -translate-x-1/2 -translate-y-1/2 border-0 md:block"
                     src="{{ $homeHeroVideoEmbed }}"
-                    title="Film prezentacyjny maszyny do czyszczenia filtrów DPF Motsler"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
                 ></iframe>
             </div>
             <div class="absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(11,31,58,0.78)_0%,rgba(11,31,58,0.68)_38%,rgba(11,31,58,0.42)_72%,rgba(11,31,58,0.22)_100%)]" aria-hidden="true"></div>
