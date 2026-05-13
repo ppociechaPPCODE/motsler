@@ -14,6 +14,7 @@ class ContactFormMail extends Mailable
     use Queueable, SerializesModels;
 
     public function __construct(
+        public string $formContext,
         public string $name,
         public string $replyEmail,
         public ?string $phone,
@@ -28,7 +29,9 @@ class ContactFormMail extends Mailable
         }
 
         return new Envelope(
-            subject: (string) __('contact.mail_subject'),
+            subject: (string) __('contact.mail_subject_with_form', [
+                'form' => (string) __('contact.mail_form_source_'.$this->formContext),
+            ]),
             replyTo: $reply,
         );
     }

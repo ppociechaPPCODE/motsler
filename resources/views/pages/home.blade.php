@@ -9,8 +9,8 @@
     $l = app()->getLocale();
     $blog = config('app.content.blog.'.$l, config('app.content.blog.pl'));
     $host = parse_url((string) config('app.url'), PHP_URL_HOST) ?: request()->getHost();
-    $homeHeroVideoEmbed = 'https://www.youtube.com/embed/lvkEzHiBAoo?autoplay=1&mute=1&loop=1&playlist=lvkEzHiBAoo&controls=0&rel=0&modestbranding=1&playsinline=1';
-    $homeHeroPoster = 'https://i.ytimg.com/vi/lvkEzHiBAoo/maxresdefault.jpg';
+    $homeHeroVideoEmbed = 'https://www.youtube.com/embed/D0AgmAUlSpQ?si=VWxfZQKGF6GZfXit&autoplay=1&mute=1&loop=1&playlist=D0AgmAUlSpQ&controls=0&rel=0&modestbranding=1&playsinline=1';
+    $homeHeroPoster = 'https://i.ytimg.com/vi/D0AgmAUlSpQ/maxresdefault.jpg';
     $homeDpfModelsUrl = locale_route('offer.dpf', ['locale' => $l]).'#offer-dpf-modele';
     $homeOfferDpfFormUrl = locale_route('offer.dpf', ['locale' => $l]).'#offer-dpf-form';
     $homeModelCardImgPath = public_path('images/offer/1t5a9183ab.png');
@@ -28,8 +28,10 @@
                 <iframe
                     class="pointer-events-none absolute left-1/2 top-1/2 hidden h-[56.25vw] min-h-[125%] w-[177.77vh] min-w-[125%] -translate-x-1/2 -translate-y-1/2 border-0 md:block"
                     src="{{ $homeHeroVideoEmbed }}"
-                    title="Film prezentacyjny maszyny do czyszczenia filtrów DPF Motsler"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
                 ></iframe>
             </div>
             <div class="absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(11,31,58,0.78)_0%,rgba(11,31,58,0.68)_38%,rgba(11,31,58,0.42)_72%,rgba(11,31,58,0.22)_100%)]" aria-hidden="true"></div>
@@ -439,6 +441,7 @@
                 <div>
                     <form id="home-contact-form" class="rounded-2xl border border-[#e2e8f0] bg-white p-6 shadow-md shadow-black/5 sm:p-8" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}" novalidate data-ce-msg-summary="{{ __('form.validation_summary') }}" data-ce-msg-required="{{ __('form.validation_required_field') }}" data-ce-msg-email-invalid="{{ __('form.validation_email_invalid') }}" data-ce-msg-privacy="{{ __('form.validation_privacy_required') }}" data-ce-msg-message-max="{{ __('form.validation_message_max') }}">
                         @csrf
+                        <input type="hidden" name="form_context" value="home">
                         <p id="home-ce-js-summary" class="mb-4 hidden rounded-lg border border-red-200 bg-red-50 px-3 py-2.5 text-sm leading-snug text-red-800" role="alert"></p>
                         <label class="sr-only" for="home-ce-name">{{ __('form.name') }}</label>
                         <input class="home-ce-input w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3.5 text-sm text-primary outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" id="home-ce-name" name="name" type="text" value="{{ old('name') }}" required autocomplete="name" maxlength="200" placeholder="{{ __('form.name') }}" aria-describedby="home-ce-js-err-name">
