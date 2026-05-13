@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', __('page.blog'))
+@section('title', ($activeCategory?->name ? $activeCategory->name.' — ' : '').__('page.blog'))
 @section('meta_description', __('page.seo_description_blog'))
 @section('content')
 @php
@@ -9,6 +9,7 @@
         'case' => 'blog-card__tag--case',
         default => 'blog-card__tag--biz',
     };
+    $blogIndexUrl = locale_route('blog.index', ['locale' => $l]);
 @endphp
 <div class="blog-index w-full">
     <section class="blog-hero" aria-labelledby="blog-hero-heading">
@@ -20,14 +21,23 @@
         <div class="blog-hero__photo" role="presentation">TWOJE ZDJĘCIE<br>(Sebastian przy maszynie)</div>
     </section>
     <nav class="blog-cat-nav" aria-label="Kategorie bloga">
-        @forelse ($categories as $category)
-            <a href="#" class="blog-cat-link">{{ mb_strtoupper($category->name) }}</a>
-        @empty
-        @endforelse
+        @if ($categories->isNotEmpty())
+            <a href="{{ $blogIndexUrl }}" class="blog-cat-link @if (! $activeCategory) is-active @endif">{{ __('blog.all_posts') }}</a>
+        @endif
+        @foreach ($categories as $category)
+            <a href="{{ $blogIndexUrl }}?kategoria={{ urlencode($category->slug) }}" class="blog-cat-link @if ($activeCategory && $activeCategory->is($category)) is-active @endif">{{ mb_strtoupper($category->name) }}</a>
+        @endforeach
     </nav>
     <div class="blog-wrap">
         @if ($posts->isEmpty())
-            <p class="rounded-xl border border-zinc-200 bg-white py-12 text-center text-zinc-600 shadow-sm">Brak opublikowanych wpisów.</p>
+            <p class="rounded-xl border border-zinc-200 bg-white py-12 text-center text-zinc-600 shadow-sm">
+                @if ($activeCategory)
+                    {{ __('blog.empty_category') }}
+                    <a href="{{ $blogIndexUrl }}" class="mt-2 inline-block font-semibold text-accent hover:underline">{{ __('blog.show_all_again') }}</a>
+                @else
+                    {{ __('blog.empty') }}
+                @endif
+            </p>
         @else
             <div class="blog-grid">
                 @foreach ($posts as $i => $post)

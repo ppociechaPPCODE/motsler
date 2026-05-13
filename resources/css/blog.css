@@ -89,6 +89,12 @@
     color: var(--blog-white);
 }
 
+.blog-cat-link.is-active {
+    border-color: var(--blog-accent);
+    background: var(--blog-accent);
+    color: var(--blog-white);
+}
+
 .blog-wrap {
     max-width: 81.25rem;
     margin: clamp(2rem, 5vw, 3.125rem) auto;

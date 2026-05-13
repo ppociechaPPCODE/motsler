@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\QueryException;
 use Illuminate\Support\Str;
 
 class BlogPost extends Model
@@ -48,6 +49,49 @@ class BlogPost extends Model
     public function category(): BelongsTo
     {
         return $this->belongsTo(BlogCategory::class, 'blog_category_id');
+    }
+
+    public static function createWithLockRetry(array $attributes): static
+    {
+        $attempts = 6;
+        for ($i = 1; $i <= $attempts; $i++) {
+            try {
+                return static::query()->create($attributes);
+            } catch (QueryException $e) {
+                if (! static::isMysqlLockOrDeadlock($e) || $i === $attempts) {
+                    throw $e;
+                }
+                usleep(150000 * $i);
+            }
+        }
+
+        throw new \LogicException('createWithLockRetry');
+    }
+
+    public function updateWithLockRetry(array $attributes): bool
+    {
+        $attempts = 6;
+        for ($i = 1; $i <= $attempts; $i++) {
+            try {
+                return $this->update($attributes);
+            } catch (QueryException $e) {
+                if (! static::isMysqlLockOrDeadlock($e) || $i === $attempts) {
+                    throw $e;
+                }
+                usleep(150000 * $i);
+            }
+        }
+
+        throw new \LogicException('updateWithLockRetry');
+    }
+
+    protected static function isMysqlLockOrDeadlock(QueryException $e): bool
+    {
+        $msg = $e->getMessage();
+
+        return str_contains($msg, '1205')
+            || str_contains($msg, '1213')
+            || str_contains($msg, 'Deadlock');
     }
 
     public function isPublished(): bool

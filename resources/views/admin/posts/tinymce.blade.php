@@ -19,6 +19,8 @@
                 promotion: false,
                 relative_urls: false,
                 document_base_url: @json(url('/')),
+                automatic_uploads: true,
+                paste_data_images: true,
                 images_upload_handler: function (blobInfo) {
                     return new Promise(function (resolve, reject) {
                         var xhr = new XMLHttpRequest();

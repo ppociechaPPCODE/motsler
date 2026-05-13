@@ -73,7 +73,7 @@ class BlogPostController extends Controller
         } else {
             $data['published_at'] = null;
         }
-        BlogPost::create($data);
+        BlogPost::createWithLockRetry($data);
 
         $msg = $request->boolean('publish_now') ? 'Wpis opublikowany.' : 'Wpis zapisany jako szkic.';
 
@@ -107,7 +107,7 @@ class BlogPostController extends Controller
         } elseif ($request->boolean('unpublish')) {
             $data['published_at'] = null;
         }
-        $post->update($data);
+        $post->updateWithLockRetry($data);
 
         $msg = match (true) {
             $request->boolean('publish_now') => 'Wpis opublikowany (data zaktualizowana).',
@@ -124,9 +124,9 @@ class BlogPostController extends Controller
             'published' => ['required', 'boolean'],
         ]);
         if ($request->boolean('published')) {
-            $post->update(['published_at' => now()]);
+            $post->updateWithLockRetry(['published_at' => now()]);
         } else {
-            $post->update(['published_at' => null]);
+            $post->updateWithLockRetry(['published_at' => null]);
         }
 
         return back()->with('status', 'Ustawienie publikacji zapisane.');
