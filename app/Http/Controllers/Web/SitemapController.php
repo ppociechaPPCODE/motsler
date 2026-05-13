@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\BlogPost;
 use Illuminate\Http\Response;
 
 class SitemapController extends Controller
@@ -19,32 +20,51 @@ class SitemapController extends Controller
             'about',
             'contact',
             'privacy',
+            'blog.index',
         ];
 
-        $urls = [route('home')];
+        $byLoc = [];
+
+        $merge = function (string $loc, string $lm) use (&$byLoc): void {
+            if (! isset($byLoc[$loc]) || strcmp($lm, $byLoc[$loc]) > 0) {
+                $byLoc[$loc] = $lm;
+            }
+        };
+
+        $merge(route('home'), $lastmod);
 
         foreach ($locales as $locale) {
             if ($locale === 'pl') {
                 continue;
             }
-            $urls[] = route("{$locale}.home");
+            $merge(route("{$locale}.home"), $lastmod);
         }
 
         foreach ($locales as $locale) {
             foreach ($suffixes as $suffix) {
-                $name = "{$locale}.{$suffix}";
-                $urls[] = route($name);
+                $merge(route("{$locale}.{$suffix}"), $lastmod);
             }
         }
 
-        $urls = array_values(array_unique($urls));
-        sort($urls);
+        $posts = BlogPost::query()
+            ->whereNotNull('published_at')
+            ->where('published_at', '<=', now())
+            ->orderBy('id')
+            ->get(['locale', 'slug', 'published_at']);
+
+        foreach ($posts as $post) {
+            $loc = locale_route('blog.show', ['locale' => $post->locale, 'slug' => $post->slug]);
+            $lm = $post->published_at?->toAtomString() ?? $lastmod;
+            $merge($loc, $lm);
+        }
+
+        ksort($byLoc);
 
         $lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
-        foreach ($urls as $loc) {
+        foreach ($byLoc as $loc => $lm) {
             $lines[] = '  <url>';
             $lines[] = '    <loc>'.htmlspecialchars($loc, ENT_XML1 | ENT_COMPAT, 'UTF-8').'</loc>';
-            $lines[] = '    <lastmod>'.$lastmod.'</lastmod>';
+            $lines[] = '    <lastmod>'.htmlspecialchars($lm, ENT_XML1 | ENT_COMPAT, 'UTF-8').'</lastmod>';
             $lines[] = '  </url>';
         }
         $lines[] = '</urlset>';
