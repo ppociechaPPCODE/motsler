@@ -441,6 +441,7 @@
                 <div>
                     <form id="home-contact-form" class="rounded-2xl border border-[#e2e8f0] bg-white p-6 shadow-md shadow-black/5 sm:p-8" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}" novalidate data-ce-msg-summary="{{ __('form.validation_summary') }}" data-ce-msg-required="{{ __('form.validation_required_field') }}" data-ce-msg-email-invalid="{{ __('form.validation_email_invalid') }}" data-ce-msg-privacy="{{ __('form.validation_privacy_required') }}" data-ce-msg-message-max="{{ __('form.validation_message_max') }}">
                         @csrf
+                        <input type="hidden" name="form_context" value="home">
                         <p id="home-ce-js-summary" class="mb-4 hidden rounded-lg border border-red-200 bg-red-50 px-3 py-2.5 text-sm leading-snug text-red-800" role="alert"></p>
                         <label class="sr-only" for="home-ce-name">{{ __('form.name') }}</label>
                         <input class="home-ce-input w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3.5 text-sm text-primary outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" id="home-ce-name" name="name" type="text" value="{{ old('name') }}" required autocomplete="name" maxlength="200" placeholder="{{ __('form.name') }}" aria-describedby="home-ce-js-err-name">

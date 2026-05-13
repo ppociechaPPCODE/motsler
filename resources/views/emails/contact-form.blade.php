@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body style="font-family: system-ui, sans-serif; line-height: 1.5; color: #0b1f3a;">
+    <p><strong>{{ __('contact.mail_field_form') }}</strong> {{ __('contact.mail_form_source_'.$formContext) }}</p>
     <p><strong>{{ __('contact.mail_field_name') }}</strong> {{ $name !== '' ? $name : '—' }}</p>
     <p><strong>{{ __('contact.mail_field_email') }}</strong> {{ $replyEmail !== '' ? $replyEmail : '—' }}</p>
     @if ($phone)

@@ -690,6 +690,7 @@
                     @endif
                     <form class="space-y-4 text-left" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}">
                         @csrf
+                        <input type="hidden" name="form_context" value="dpf_machines">
                         <label class="sr-only" for="offer-dpf-name">{{ __('form.name') }}</label>
                         <input class="w-full rounded-xl border border-[#cbd2d9] bg-[#fafbfc] px-4 py-3.5 text-sm text-primary outline-none transition placeholder:text-zinc-400 focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/15" id="offer-dpf-name" name="name" type="text" value="{{ old('name') }}" required autocomplete="name" maxlength="200" placeholder="{{ __('form.name') }}">
                         @error('name')

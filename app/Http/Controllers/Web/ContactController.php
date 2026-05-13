@@ -32,6 +32,7 @@ class ContactController extends Controller
 
         try {
             Mail::to($to)->send(new ContactFormMail(
+                formContext: $data['form_context'],
                 name: $data['name'] ?? '',
                 replyEmail: $data['email'] ?? '',
                 phone: $data['phone'] ?? null,
