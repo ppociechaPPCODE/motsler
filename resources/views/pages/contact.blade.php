@@ -11,39 +11,84 @@
     $contactExpertSrc = $hasFoto ? asset('images/foto.png') : (($hasSeb && $hasZdj) ? asset('images/offer/sebastian-tkacz.jpg') : $contactHeroSrc);
 @endphp
 <div class="pb-28 lg:pb-0">
-    <section class="scroll-mt-24 bg-gradient-to-b from-[#0b1f3a] via-[#0b1f3a] to-[#0e2546] text-white" aria-labelledby="contact-hero-h1">
-        <div class="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-8 sm:py-16 lg:py-20">
+    <section class="scroll-mt-24 bg-gradient-to-b from-[#0b1f3a] via-[#0b1f3a] to-[#0e2546] text-white" aria-labelledby="contact-expert-h2">
+        <h1 class="sr-only">{{ __('contact_page.hero_h1') }}</h1>
+        <div class="mx-auto grid w-full max-w-[1200px] gap-10 px-5 py-12 sm:px-8 sm:py-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-stretch lg:gap-14 lg:py-20">
+            @if ($contactExpertSrc)
+                <figure class="relative mx-auto w-full max-w-md overflow-hidden rounded-3xl border border-white/15 bg-white/10 shadow-xl shadow-black/30 lg:mx-0 lg:h-full lg:min-h-0 lg:max-w-none">
+                    <img src="{{ $contactExpertSrc }}" alt="{{ __('contact_page.expert_img_alt') }}" class="aspect-[4/5] w-full object-cover object-center lg:absolute lg:inset-0 lg:h-full lg:w-full lg:aspect-auto" width="720" height="900" loading="eager" decoding="async">
+                </figure>
+            @endif
+            <div class="flex min-h-0 min-w-0 flex-col" aria-labelledby="contact-expert-h2">
+                <div class="h-full rounded-2xl border border-white/10 bg-white p-5 text-primary shadow-2xl shadow-black/40 sm:p-7">
+                    <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{{ __('contact_page.expert_badge') }}</p>
+                        <p class="mt-2 text-balance text-xl font-bold leading-tight text-primary sm:text-2xl">{{ __('contact_page.hero_caption') }}</p>
+                        <h2 id="contact-expert-h2" class="mt-3 text-balance text-base font-semibold leading-snug text-zinc-700 sm:text-lg">{{ __('contact_page.expert_h2') }}</h2>
+                        <div class="mt-4 space-y-3 text-sm leading-relaxed text-zinc-700 sm:text-[0.9375rem] sm:leading-7">
+                            @foreach (range(1, 4) as $ei)
+                                <p class="text-pretty">{{ __('contact_page.expert_p'.$ei) }}</p>
+                            @endforeach
+                        </div>
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <a href="tel:{{ __('contact.phone_href') }}" class="inline-flex min-h-[3rem] items-center justify-center gap-2 rounded-full border-2 border-primary bg-white px-6 py-3 text-sm font-bold uppercase tracking-wide text-primary shadow-sm transition hover:bg-primary hover:text-white">
+                                <span aria-hidden="true">📞</span><span>{{ __('contact.phone_value') }}</span>
+                            </a>
+                            <a href="#contact-callback-form" class="inline-flex min-h-[3rem] items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-black/15 transition hover:bg-accent/90">{{ __('contact_page.hero_cta') }}</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section class="border-b border-[#e2e8f0] bg-white py-14 sm:py-20" aria-labelledby="contact-usp-heading">
+        <div class="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
+            <div class="mx-auto max-w-3xl text-center">
+                <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{{ __('contact_page.usp_heading') }}</p>
+                <h2 id="contact-usp-heading" class="mt-3 text-balance text-2xl font-semibold leading-tight text-primary sm:text-3xl">{{ __('contact_page.expert_h2') }}</h2>
+            </div>
+            <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+                @foreach (range(1, 4) as $ui)
+                    <div class="flex h-full flex-col rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-5 transition hover:border-accent/40 hover:shadow-md sm:p-6">
+                        <span class="flex h-11 w-11 items-center justify-center rounded-full bg-accent/10 text-lg font-bold text-accent" aria-hidden="true">{{ $ui }}</span>
+                        <p class="mt-4 text-sm font-medium leading-relaxed text-zinc-800 sm:text-[0.9375rem]">{{ __('contact_page.usp_'.$ui) }}</p>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="border-b border-[#e2e8f0] bg-[#f1f5f9] py-14 sm:py-20" aria-labelledby="contact-hero-h1">
+        <div class="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
             <div class="grid gap-10 lg:grid-cols-[1.05fr_1fr] lg:items-start lg:gap-14">
                 <div class="min-w-0">
                     <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{{ __('contact_page.hero_badge') }}</p>
-                    <h1 id="contact-hero-h1" class="mt-3 text-balance text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl lg:text-[2.5rem]">{{ __('contact_page.hero_h1') }}</h1>
-                    <p class="mt-4 text-pretty text-base leading-relaxed text-white/85 sm:text-lg">{{ __('contact_page.hero_sub') }}</p>
-                    <ul class="mt-6 grid gap-2.5 text-sm font-medium leading-snug text-white sm:text-[0.9375rem]" role="list">
+                    <h2 id="contact-hero-h1" class="mt-3 text-balance text-3xl font-semibold leading-tight tracking-tight text-primary sm:text-4xl lg:text-[2.5rem]">{{ __('contact_page.hero_h1') }}</h2>
+                    <p class="mt-4 text-pretty text-base leading-relaxed text-zinc-600 sm:text-lg">{{ __('contact_page.hero_sub') }}</p>
+                    <ul class="mt-6 grid gap-2.5 text-sm font-medium leading-snug text-zinc-800 sm:text-[0.9375rem]" role="list">
                         @foreach (range(1, 3) as $i)
-                            <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/20 text-accent" aria-hidden="true">✔</span><span>{{ __('contact_page.hero_li_'.$i) }}</span></li>
+                            <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent" aria-hidden="true">✔</span><span>{{ __('contact_page.hero_li_'.$i) }}</span></li>
                         @endforeach
                     </ul>
                     <dl class="mt-8 grid gap-3 sm:grid-cols-2">
-                        <a href="tel:{{ __('contact.phone_href') }}" class="group flex items-center gap-3 rounded-xl border border-white/15 bg-white/5 px-4 py-3 transition hover:border-accent hover:bg-white/10">
-                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/20 text-lg text-accent" aria-hidden="true">📞</span>
+                        <a href="tel:{{ __('contact.phone_href') }}" class="group flex items-center gap-3 rounded-xl border border-[#e2e8f0] bg-white px-4 py-3 shadow-sm transition hover:border-accent hover:shadow-md">
+                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/10 text-lg text-accent" aria-hidden="true">📞</span>
                             <span class="min-w-0">
-                                <dt class="text-[0.7rem] font-bold uppercase tracking-wider text-white/60">{{ __('contact_page.quick_phone_label') }}</dt>
-                                <dd class="text-sm font-bold tabular-nums text-white">{{ __('contact.phone_value') }}</dd>
+                                <dt class="text-[0.7rem] font-bold uppercase tracking-wider text-zinc-500">{{ __('contact_page.quick_phone_label') }}</dt>
+                                <dd class="text-sm font-bold tabular-nums text-primary">{{ __('contact.phone_value') }}</dd>
                             </span>
                         </a>
-                        <a href="mailto:{{ __('contact.email_value') }}" class="group flex items-center gap-3 rounded-xl border border-white/15 bg-white/5 px-4 py-3 transition hover:border-accent hover:bg-white/10">
-                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/20 text-lg text-accent" aria-hidden="true">📧</span>
+                        <a href="mailto:{{ __('contact.email_value') }}" class="group flex items-center gap-3 rounded-xl border border-[#e2e8f0] bg-white px-4 py-3 shadow-sm transition hover:border-accent hover:shadow-md">
+                            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/10 text-lg text-accent" aria-hidden="true">📧</span>
                             <span class="min-w-0">
-                                <dt class="text-[0.7rem] font-bold uppercase tracking-wider text-white/60">{{ __('contact_page.quick_email_label') }}</dt>
-                                <dd class="break-all text-sm font-semibold text-white">{{ __('contact.email_value') }}</dd>
+                                <dt class="text-[0.7rem] font-bold uppercase tracking-wider text-zinc-500">{{ __('contact_page.quick_email_label') }}</dt>
+                                <dd class="break-all text-sm font-semibold text-primary">{{ __('contact.email_value') }}</dd>
                             </span>
                         </a>
                     </dl>
                 </div>
-
-                <div id="contact-callback-form" class="scroll-mt-24 min-w-0">
-                    <div class="rounded-2xl border border-white/10 bg-white p-5 text-primary shadow-2xl shadow-black/40 sm:p-7">
-                        <h2 class="text-balance text-xl font-semibold leading-tight text-primary sm:text-2xl">{{ __('contact_page.form_h2') }}</h2>
+                <div id="contact-callback-form" class="scroll-mt-24 min-w-0" aria-labelledby="contact-form-h2">
+                    <div class="rounded-2xl border border-[#e2e8f0] bg-white p-5 text-primary shadow-2xl shadow-black/10 sm:p-7">
+                        <h2 id="contact-form-h2" class="text-balance text-xl font-semibold leading-tight text-primary sm:text-2xl">{{ __('contact_page.form_h2') }}</h2>
                         <p class="mt-2 text-sm text-zinc-600">{{ __('contact_page.quick_consult_body') }}</p>
                         @if (session('contact_sent'))
                             <div class="mt-5 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-center text-sm text-emerald-900">{{ __('form.sent') }}</div>
@@ -85,49 +130,6 @@
                             <p class="text-center text-[0.7rem] leading-relaxed text-zinc-500">{{ __('contact_page.form_micro') }}</p>
                         </form>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="border-b border-[#e2e8f0] bg-white py-14 sm:py-20" aria-labelledby="contact-usp-heading">
-        <div class="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
-            <div class="mx-auto max-w-3xl text-center">
-                <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{{ __('contact_page.usp_heading') }}</p>
-                <h2 id="contact-usp-heading" class="mt-3 text-balance text-2xl font-semibold leading-tight text-primary sm:text-3xl">{{ __('contact_page.expert_h2') }}</h2>
-            </div>
-            <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
-                @foreach (range(1, 4) as $ui)
-                    <div class="flex h-full flex-col rounded-2xl border border-[#e2e8f0] bg-[#f8fafc] p-5 transition hover:border-accent/40 hover:shadow-md sm:p-6">
-                        <span class="flex h-11 w-11 items-center justify-center rounded-full bg-accent/10 text-lg font-bold text-accent" aria-hidden="true">{{ $ui }}</span>
-                        <p class="mt-4 text-sm font-medium leading-relaxed text-zinc-800 sm:text-[0.9375rem]">{{ __('contact_page.usp_'.$ui) }}</p>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    <section class="border-b border-[#e2e8f0] bg-[#f1f5f9] py-14 sm:py-20" aria-labelledby="contact-expert-h2">
-        <div class="mx-auto grid w-full max-w-[1200px] gap-10 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-14">
-            @if ($contactExpertSrc)
-                <figure class="mx-auto w-full max-w-md overflow-hidden rounded-3xl border border-[#e2e8f0] bg-white shadow-xl shadow-primary/10 lg:mx-0 lg:max-w-none">
-                    <img src="{{ $contactExpertSrc }}" alt="{{ __('contact_page.expert_img_alt') }}" class="aspect-[4/5] w-full object-cover object-center" width="720" height="900" loading="lazy" decoding="async">
-                </figure>
-            @endif
-            <div class="min-w-0">
-                <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{{ __('contact_page.expert_badge') }}</p>
-                <p class="mt-2 text-balance text-2xl font-bold leading-tight text-primary sm:text-3xl lg:text-[2rem]">{{ __('contact_page.hero_caption') }}</p>
-                <h2 id="contact-expert-h2" class="mt-4 text-balance text-lg font-semibold leading-snug text-zinc-700 sm:text-xl">{{ __('contact_page.expert_h2') }}</h2>
-                <div class="mt-5 space-y-3 text-sm leading-relaxed text-zinc-700 sm:text-base sm:leading-7">
-                    @foreach (range(1, 4) as $ei)
-                        <p class="text-pretty">{{ __('contact_page.expert_p'.$ei) }}</p>
-                    @endforeach
-                </div>
-                <div class="mt-7 flex flex-wrap gap-3">
-                    <a href="tel:{{ __('contact.phone_href') }}" class="inline-flex min-h-[3rem] items-center justify-center gap-2 rounded-full border-2 border-primary bg-white px-6 py-3 text-sm font-bold uppercase tracking-wide text-primary shadow-sm transition hover:bg-primary hover:text-white">
-                        <span aria-hidden="true">📞</span><span>{{ __('contact.phone_value') }}</span>
-                    </a>
-                    <a href="#contact-callback-form" class="inline-flex min-h-[3rem] items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-black/15 transition hover:bg-accent/90">{{ __('contact_page.hero_cta') }}</a>
                 </div>
             </div>
         </div>
