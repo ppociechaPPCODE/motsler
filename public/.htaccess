@@ -26,5 +26,4 @@
 	Redirect 301 /darmowa-konsultacja https://motsler.pl/kontakt
 	Redirect 301 /cena-maszyny-do-czyszczenia-dpf https://motsler.pl/
 	Redirect 301 /o-firmie/ https://motsler.pl/
-	Redirect 301 /blog/ https://motsler.pl/
 </IfModule>
