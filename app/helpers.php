@@ -14,15 +14,14 @@ if (! function_exists('locale_route')) {
                 return route('home', $parameters);
             }
 
-            return route($locale.'.home', array_merge(['locale' => $locale], $parameters));
+            return route($locale.'.home', $parameters);
         }
 
         if ($locale === 'pl') {
-            
             return route($locale.'.'.$name, $parameters);
         }
 
-        return route($locale.'.'.$name, array_merge(['locale' => $locale], $parameters));
+        return route($locale.'.'.$name, $parameters);
     }
 }
 

@@ -12,27 +12,114 @@
         <meta name="robots" content="noindex, nofollow">
     @endif
     <title>@yield('title', __('site.name'))</title>
-    @stack('head')
-    <link rel="canonical" href="{{ canonical_url() }}">
     @php
+        $pageTitle = trim($__env->yieldContent('title')) ?: __('site.name');
+        $pageDesc = trim($__env->yieldContent('meta_description'));
+        if ($pageDesc === '') {
+            $pageDesc = __('site.seo_default_description');
+        }
+        $canonical = canonical_url();
+        $siteUrl = rtrim((string) config('app.url'), '/');
+        if ($siteUrl === '') {
+            $siteUrl = rtrim(request()->getSchemeAndHttpHost(), '/');
+        }
+        $supportedLocaleCodes = array_keys(config('app.supported_locales', []));
+        $ogLocaleMap = ['pl' => 'pl_PL', 'en' => 'en_US', 'fr' => 'fr_FR'];
+        $pageLangBcp47 = ['pl' => 'pl-PL', 'en' => 'en-US', 'fr' => 'fr-FR'];
+        $currentLocaleCode = app()->getLocale();
+        $ogLocale = $ogLocaleMap[$currentLocaleCode] ?? str_replace('-', '_', $currentLocaleCode).'_'.strtoupper($currentLocaleCode);
+        $ogImage = url(asset('media/wp-uploads/2025/01/cropped-logo_www_2025_ciemne.png'));
         $hreflangs = hreflang_urls();
+        $telHref = preg_replace('/\s+/', '', (string) __('contact.phone_href'));
+        if ($telHref !== '' && ! str_starts_with($telHref, '+')) {
+            $telHref = '+'.$telHref;
+        }
+        $ldGraph = [
+            [
+                '@type' => 'Organization',
+                '@id' => $siteUrl.'#organization',
+                'name' => __('site.name'),
+                'legalName' => __('footer.company_line'),
+                'url' => $siteUrl,
+                'logo' => ['@type' => 'ImageObject', 'url' => $ogImage],
+                'email' => __('contact.email_value'),
+                'telephone' => $telHref,
+                'sameAs' => [
+                    'https://www.facebook.com/motsler',
+                    'https://www.youtube.com/channel/UCY5IzZEW_VpVeDcwte-iDnw',
+                ],
+                'address' => [
+                    '@type' => 'PostalAddress',
+                    'streetAddress' => 'ul. Reformacka 6',
+                    'postalCode' => '35-026',
+                    'addressLocality' => 'Rzeszów',
+                    'addressCountry' => 'PL',
+                ],
+                'contactPoint' => [
+                    [
+                        '@type' => 'ContactPoint',
+                        'telephone' => $telHref,
+                        'email' => __('contact.email_value'),
+                        'contactType' => 'customer support',
+                        'areaServed' => ['PL', 'EU'],
+                        'availableLanguage' => ['pl', 'en', 'fr'],
+                    ],
+                ],
+            ],
+            [
+                '@type' => 'WebSite',
+                '@id' => $siteUrl.'#website',
+                'url' => $siteUrl,
+                'name' => __('site.name'),
+                'description' => __('site.seo_default_description'),
+                'publisher' => ['@id' => $siteUrl.'#organization'],
+                'inLanguage' => ['pl-PL', 'en-US', 'fr-FR'],
+            ],
+            [
+                '@type' => 'WebPage',
+                '@id' => $canonical.'#webpage',
+                'url' => $canonical,
+                'name' => $pageTitle,
+                'description' => $pageDesc,
+                'isPartOf' => ['@id' => $siteUrl.'#website'],
+                'inLanguage' => $pageLangBcp47[$currentLocaleCode] ?? 'pl-PL',
+            ],
+        ];
     @endphp
+    <link rel="icon" href="{{ asset('media/wp-uploads/2025/01/cropped-logo_www_2025_ciemne.png') }}" sizes="any">
+    <link rel="apple-touch-icon" href="{{ asset('media/wp-uploads/2025/01/cropped-logo_www_2025_ciemne.png') }}">
+    <meta name="description" content="{{ $pageDesc }}">
+    <link rel="canonical" href="{{ $canonical }}">
     @foreach ($hreflangs as $hl => $href)
         <link rel="alternate" hreflang="{{ $hl }}" href="{{ $href }}">
     @endforeach
     @if ($hreflangs !== [])
         <link rel="alternate" hreflang="x-default" href="{{ $hreflangs['pl'] ?? reset($hreflangs) }}">
     @endif
+    <link rel="alternate" type="text/plain" href="{{ url('/llms.txt') }}" title="llms.txt">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ __('site.name') }}">
+    <meta property="og:title" content="{{ $pageTitle }}">
+    <meta property="og:description" content="{{ $pageDesc }}">
+    <meta property="og:url" content="{{ $canonical }}">
+    <meta property="og:locale" content="{{ $ogLocale }}">
+    @foreach ($supportedLocaleCodes as $code)
+        @if ($code !== $currentLocaleCode)
+            <meta property="og:locale:alternate" content="{{ $ogLocaleMap[$code] ?? $code }}">
+        @endif
+    @endforeach
+    <meta property="og:image" content="{{ $ogImage }}">
+    <meta property="og:image:alt" content="{{ $pageTitle }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $pageTitle }}">
+    <meta name="twitter:description" content="{{ $pageDesc }}">
+    <meta name="twitter:image" content="{{ $ogImage }}">
+    @stack('head')
+    <script type="application/ld+json">{!! json_encode([
+        '@context' => 'https://schema.org',
+        '@graph' => $ldGraph,
+    ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @if ($isProductionEnv && filled($gtagId))
-        <script async src="https://www.googletagmanager.com/gtag/js?id={{ $gtagId }}"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '{{ $gtagId }}');
-        </script>
-    @endif
 </head>
 <body class="min-h-screen bg-background font-sans text-primary antialiased">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:shadow">{{ __('nav.skip') }}</a>
@@ -41,5 +128,8 @@
         @yield('content')
     </main>
     @include('partials.footer')
+    @if ($isProductionEnv && filled($gtagId))
+        @include('partials.cookie-consent', ['gtagId' => $gtagId])
+    @endif
 </body>
 </html>

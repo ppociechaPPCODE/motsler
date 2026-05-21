@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('title', __('offer_dpf.seo_title'))
+@section('meta_description', __('offer_dpf.seo_description'))
 @push('head')
-    <meta name="description" content="{{ __('offer_dpf.seo_description') }}">
     <meta name="keywords" content="{{ __('offer_dpf.seo_keywords') }}">
 @endpush
 @section('content')
 @php
-    $offerDpfVideoEmbed = 'https://www.youtube.com/embed/lvkEzHiBAoo?autoplay=1&mute=1&loop=1&playlist=lvkEzHiBAoo&controls=0&rel=0&modestbranding=1&playsinline=1';
+    $offerDpfVideoEmbed = 'https://www.youtube.com/embed/D0AgmAUlSpQ?si=VWxfZQKGF6GZfXit&autoplay=1&mute=1&loop=1&playlist=D0AgmAUlSpQ&controls=0&rel=0&modestbranding=1&playsinline=1';
     $offerDpfProofVideoId = null;
     $offerDpfMapEmbed = 'https://maps.google.com/maps?q='.rawurlencode('ul. Reformacka 6, 35-026 Rzeszów, Polska').'&hl='.(app()->getLocale() === 'pl' ? 'pl' : 'en').'&z=16&output=embed';
     $offerDpfMapLink = 'https://www.google.com/maps/search/?api=1&query='.rawurlencode('Reformacka 6, 35-026 Rzeszów');
@@ -24,7 +24,9 @@
                     class="pointer-events-none absolute left-1/2 top-1/2 h-[56.25vw] min-h-[125%] w-[177.77vh] min-w-[125%] -translate-x-1/2 -translate-y-1/2 border-0"
                     src="{{ $offerDpfVideoEmbed }}"
                     title="{{ __('offer_dpf.hero_video_aria') }}"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
                 ></iframe>
             </div>
             <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,31,58,0.78)_0%,rgba(11,31,58,0.68)_38%,rgba(11,31,58,0.42)_72%,rgba(11,31,58,0.22)_100%)]"></div>
@@ -688,6 +690,7 @@
                     @endif
                     <form class="space-y-4 text-left" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}">
                         @csrf
+                        <input type="hidden" name="form_context" value="dpf_machines">
                         <label class="sr-only" for="offer-dpf-name">{{ __('form.name') }}</label>
                         <input class="w-full rounded-xl border border-[#cbd2d9] bg-[#fafbfc] px-4 py-3.5 text-sm text-primary outline-none transition placeholder:text-zinc-400 focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/15" id="offer-dpf-name" name="name" type="text" value="{{ old('name') }}" required autocomplete="name" maxlength="200" placeholder="{{ __('form.name') }}">
                         @error('name')

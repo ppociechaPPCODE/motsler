@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title', __('page.about'))
+@section('meta_description', __('page.seo_description_about'))
 @section('content')
 @php
     $l = app()->getLocale();

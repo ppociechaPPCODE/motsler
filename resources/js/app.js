@@ -1,4 +1,5 @@
 import './bootstrap';
+import './cookie-consent';
 
 document.documentElement.classList.add('js');
 

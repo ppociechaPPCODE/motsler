@@ -83,6 +83,7 @@ return [
     'supported_locales' => [
         'pl' => 'lang.pl',
         'en' => 'lang.en',
+        'fr' => 'lang.fr',
     ],
 
     'content' => [
@@ -92,6 +93,10 @@ return [
                 'post2' => 'dpf-cleanx-od-motsler-profesjonalne-i-oplacalne-czyszczenie-filtrow-dpf-bez-kompromisow',
             ],
             'en' => [
+                'post1' => 'start-profitable-business-with-motsler',
+                'post2' => 'dpf-cleanx-professional-dpf-filter-cleaning',
+            ],
+            'fr' => [
                 'post1' => 'start-profitable-business-with-motsler',
                 'post2' => 'dpf-cleanx-professional-dpf-filter-cleaning',
             ],

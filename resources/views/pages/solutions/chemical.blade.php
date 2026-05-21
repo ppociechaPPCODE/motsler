@@ -1,8 +1,6 @@
 @extends('layouts.app')
 @section('title', __('page.chem_cleanx'))
-@push('head')
-    <meta name="description" content="{{ __('chem_cleanx.seo_description') }}">
-@endpush
+@section('meta_description', __('chem_cleanx.seo_description'))
 @section('content')
 @php
     $l = app()->getLocale();

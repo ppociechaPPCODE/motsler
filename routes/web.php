@@ -6,6 +6,7 @@ use App\Http\Controllers\Web\ContactController;
 use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Web\OfferController;
 use App\Http\Controllers\Web\PrivacyController;
+use App\Http\Controllers\Web\LlmsTxtController;
 use App\Http\Controllers\Web\SitemapController;
 use App\Http\Controllers\Web\SolutionsController;
 use Illuminate\Support\Facades\Route;
@@ -18,20 +19,44 @@ Route::get('/', [HomeController::class, 'index'])
     ->middleware(['locale'])
     ->name('home');
 
+Route::get('/robots.txt', function (): \Illuminate\Http\Response {
+    $base = rtrim((string) config('app.url'), '/');
+    if ($base === '') {
+        $base = rtrim(request()->getSchemeAndHttpHost(), '/');
+    }
+    $body = "User-agent: *\nDisallow:\n\nSitemap: {$base}/sitemap.xml\n";
+
+    return response($body, 200, ['Content-Type' => 'text/plain; charset=UTF-8']);
+});
+
 Route::get('sitemap.xml', SitemapController::class);
+Route::get('llms.txt', LlmsTxtController::class);
 
 foreach ($supportedLocales as $locale) {
     $p = $paths[$locale] ?? [];
-    $routeGroup = Route::middleware(['locale']);
 
-    if ($locale !== $defaultLocale) {
-        $routeGroup = $routeGroup->prefix('{locale}')->where(['locale' => $locale]);
-        $routeGroup->group(function () use ($locale) {
-            Route::get('/', [HomeController::class, 'index'])->name("{$locale}.home");
+    if ($locale === $defaultLocale) {
+        Route::middleware(['locale'])->group(function () use ($locale, $p) {
+            Route::get($p['offer_index'], [OfferController::class, 'index'])->name("{$locale}.offer.index");
+            Route::get($p['offer_dpf'], [OfferController::class, 'dpfMachines'])->name("{$locale}.offer.dpf");
+            Route::get($p['offer_workshop_washers'], [OfferController::class, 'workshopWashers'])->name("{$locale}.offer.workshop_washers");
+            Route::get($p['offer_pressure_washers'], [OfferController::class, 'pressureWashers'])->name("{$locale}.offer.pressure_washers");
+            Route::get($p['chemia'], [SolutionsController::class, 'chemical'])->name("{$locale}.solutions.chemia");
+            Route::get($p['custom_machines'], [SolutionsController::class, 'customMachines'])->name("{$locale}.solutions.custom_machines");
+            Route::get($p['new_products'], [SolutionsController::class, 'newProducts'])->name("{$locale}.solutions.new_products");
+            Route::get($p['about'], [AboutController::class, 'index'])->name("{$locale}.about");
+            Route::get($p['contact'], [ContactController::class, 'index'])->name("{$locale}.contact");
+            Route::post($p['contact'], [ContactController::class, 'store'])->name("{$locale}.contact.store");
+            Route::get($p['privacy'], [PrivacyController::class, 'index'])->name("{$locale}.privacy");
+            Route::get($p['blog_index'], [BlogController::class, 'index'])->name("{$locale}.blog.index");
+            Route::get($p['blog_show'], [BlogController::class, 'show'])->name("{$locale}.blog.show");
         });
+
+        continue;
     }
 
-    $routeGroup->group(function () use ($locale, $p) {
+    Route::middleware(['locale'])->prefix($locale)->group(function () use ($locale, $p) {
+        Route::get('/', [HomeController::class, 'index'])->name("{$locale}.home");
         Route::get($p['offer_index'], [OfferController::class, 'index'])->name("{$locale}.offer.index");
         Route::get($p['offer_dpf'], [OfferController::class, 'dpfMachines'])->name("{$locale}.offer.dpf");
         Route::get($p['offer_workshop_washers'], [OfferController::class, 'workshopWashers'])->name("{$locale}.offer.workshop_washers");
