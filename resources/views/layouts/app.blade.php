@@ -3,8 +3,9 @@
 <head>
     @php
         $isProductionEnv = ! (bool) config('app.debug');
-        $gtagId = config('services.gtag.id') ?: env('GTAG_ID');
-
+        $gtagId = config('services.gtag.id');
+        $metaPixelId = config('services.meta_pixel.id');
+        $hasTracking = filled($gtagId) || filled($metaPixelId);
     @endphp
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -128,8 +129,11 @@
         @yield('content')
     </main>
     @include('partials.footer')
-    @if ($isProductionEnv && filled($gtagId))
-        @include('partials.cookie-consent', ['gtagId' => $gtagId])
+    @if ($isProductionEnv && $hasTracking)
+        @include('partials.cookie-consent', [
+            'gtagId' => $gtagId,
+            'metaPixelId' => $metaPixelId,
+        ])
     @endif
 </body>
 </html>

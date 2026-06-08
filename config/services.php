@@ -39,4 +39,8 @@ return [
         'id' => env('GTAG_ID'),
     ],
 
+    'meta_pixel' => [
+        'id' => env('META_PIXEL_ID'),
+    ],
+
 ];

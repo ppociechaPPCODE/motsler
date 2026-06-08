@@ -5,7 +5,8 @@
 <div
     id="cookie-consent"
     class="fixed inset-x-0 bottom-0 z-[200] hidden translate-y-3 opacity-0 transition-[opacity,transform] duration-300 ease-out"
-    data-gtag-id="{{ $gtagId }}"
+    data-gtag-id="{{ $gtagId ?? '' }}"
+    data-meta-pixel-id="{{ $metaPixelId ?? '' }}"
     role="region"
     aria-label="{{ __('cookies.region_label') }}"
 >
