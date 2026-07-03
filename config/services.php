@@ -35,8 +35,8 @@ return [
         ],
     ],
 
-    'gtag' => [
-        'id' => env('GTAG_ID'),
+    'gtm' => [
+        'id' => env('GTM_ID'),
     ],
 
     'meta_pixel' => [

@@ -3,9 +3,9 @@
 <head>
     @php
         $isProductionEnv = ! (bool) config('app.debug');
-        $gtagId = config('services.gtag.id');
+        $gtmId = config('services.gtm.id');
         $metaPixelId = config('services.meta_pixel.id');
-        $hasTracking = filled($gtagId) || filled($metaPixelId);
+        $hasTracking = filled($gtmId) || filled($metaPixelId);
     @endphp
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -116,6 +116,20 @@
     <meta name="twitter:description" content="{{ $pageDesc }}">
     <meta name="twitter:image" content="{{ $ogImage }}">
     @stack('head')
+    @if ($isProductionEnv && filled($gtmId))
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'wait_for_update': 500
+            });
+        </script>
+        @include('partials.gtm-head', ['gtmId' => $gtmId])
+    @endif
     <script type="application/ld+json">{!! json_encode([
         '@context' => 'https://schema.org',
         '@graph' => $ldGraph,
@@ -123,6 +137,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="min-h-screen bg-background font-sans text-primary antialiased">
+    @if ($isProductionEnv && filled($gtmId))
+        @include('partials.gtm-noscript', ['gtmId' => $gtmId])
+    @endif
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:shadow">{{ __('nav.skip') }}</a>
     @include('partials.header')
     <main id="main" class="w-full py-0">
@@ -131,7 +148,7 @@
     @include('partials.footer')
     @if ($isProductionEnv && $hasTracking)
         @include('partials.cookie-consent', [
-            'gtagId' => $gtagId,
+            'gtmId' => $gtmId,
             'metaPixelId' => $metaPixelId,
         ])
     @endif

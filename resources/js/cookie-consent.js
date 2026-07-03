@@ -1,20 +1,27 @@
 const STORAGE_KEY = 'motsler_cookie_consent';
 
-function loadGtag(id) {
-    if (!id || window.__motslerGtagLoaded) {
+function grantGtmConsent() {
+    if (typeof window.gtag !== 'function') {
         return;
     }
-    window.__motslerGtagLoaded = true;
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function gtag() {
-        window.dataLayer.push(arguments);
-    };
-    const s = document.createElement('script');
-    s.async = true;
-    s.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
-    document.head.appendChild(s);
-    window.gtag('js', new Date());
-    window.gtag('config', id);
+    window.gtag('consent', 'update', {
+        ad_storage: 'granted',
+        analytics_storage: 'granted',
+        ad_user_data: 'granted',
+        ad_personalization: 'granted',
+    });
+}
+
+function denyGtmConsent() {
+    if (typeof window.gtag !== 'function') {
+        return;
+    }
+    window.gtag('consent', 'update', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+    });
 }
 
 function loadMetaPixel(id) {
@@ -45,8 +52,10 @@ function loadMetaPixel(id) {
     window.fbq('track', 'PageView');
 }
 
-function loadTrackingScripts(gtagId, metaPixelId) {
-    loadGtag(gtagId);
+function loadTrackingScripts(gtmId, metaPixelId) {
+    if (gtmId) {
+        grantGtmConsent();
+    }
     loadMetaPixel(metaPixelId);
 }
 
@@ -106,9 +115,9 @@ function initCookieConsent() {
     if (!bar) {
         return;
     }
-    const gtagId = (bar.dataset.gtagId || '').trim();
+    const gtmId = (bar.dataset.gtmId || '').trim();
     const metaPixelId = (bar.dataset.metaPixelId || '').trim();
-    if (!gtagId && !metaPixelId) {
+    if (!gtmId && !metaPixelId) {
         return;
     }
 
@@ -152,12 +161,13 @@ function initCookieConsent() {
 
     acceptBtn?.addEventListener('click', () => {
         window.localStorage.setItem(STORAGE_KEY, 'accept');
-        loadTrackingScripts(gtagId, metaPixelId);
+        loadTrackingScripts(gtmId, metaPixelId);
         hideBar();
     });
 
     rejectBtn?.addEventListener('click', () => {
         window.localStorage.setItem(STORAGE_KEY, 'reject');
+        denyGtmConsent();
         clearOptionalAnalyticsCookies();
         clearMetaPixelCookies();
         hideBar();
@@ -171,7 +181,7 @@ function initCookieConsent() {
 
     const stored = window.localStorage.getItem(STORAGE_KEY);
     if (stored === 'accept') {
-        loadTrackingScripts(gtagId, metaPixelId);
+        loadTrackingScripts(gtmId, metaPixelId);
     }
     if (stored !== 'accept' && stored !== 'reject') {
         showBar();
