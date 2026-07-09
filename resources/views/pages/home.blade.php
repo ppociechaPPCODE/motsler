@@ -431,17 +431,19 @@
             <h2 id="home-ce-heading" class="mx-auto max-w-[52rem] text-balance text-center text-2xl font-semibold leading-tight text-primary sm:text-3xl md:text-[2rem] md:leading-[1.25]">{{ __('home.ce_heading') }}</h2>
             <p class="mx-auto mt-5 max-w-[52rem] text-pretty text-center text-base leading-7 text-zinc-600 sm:mt-5 sm:text-lg sm:leading-8">{{ __('home.ce_lead') }}</p>
             <p class="mx-auto mt-4 max-w-[52rem] text-pretty text-center text-base leading-7 text-zinc-600 sm:mt-4 sm:text-lg sm:leading-8">{{ __('home.ce_lead_2') }}</p>
-            @if (session('contact_sent'))
-                <div class="mx-auto mt-6 max-w-2xl rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-center text-sm text-emerald-900">{{ __('form.sent') }}</div>
-            @endif
-            @if (session('contact_error'))
-                <div class="mx-auto mt-6 max-w-2xl rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-center text-sm text-red-900">{{ __('contact.mail_failed') }}</div>
-            @endif
             <div class="mt-10 grid grid-cols-1 gap-10 lg:mt-12 lg:grid-cols-2 lg:items-start lg:gap-12 xl:gap-14">
                 <div>
-                    <form id="home-contact-form" class="rounded-2xl border border-[#e2e8f0] bg-white p-6 shadow-md shadow-black/5 sm:p-8" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}" novalidate data-ce-msg-summary="{{ __('form.validation_summary') }}" data-ce-msg-required="{{ __('form.validation_required_field') }}" data-ce-msg-email-invalid="{{ __('form.validation_email_invalid') }}" data-ce-msg-privacy="{{ __('form.validation_privacy_required') }}" data-ce-msg-message-max="{{ __('form.validation_message_max') }}">
+                    <form id="home-contact-form" class="rounded-2xl border border-[#e2e8f0] bg-white p-6 shadow-md shadow-black/5 sm:p-8" method="post" action="{{ locale_route('contact.store', ['locale' => $l]) }}" novalidate data-ce-msg-summary="{{ __('form.validation_summary') }}" data-ce-msg-required="{{ __('form.validation_required_field') }}" data-ce-msg-email-invalid="{{ __('form.validation_email_invalid') }}" data-ce-msg-privacy="{{ __('form.validation_privacy_required') }}" data-ce-msg-message-max="{{ __('form.validation_message_max') }}" data-ce-msg-sent="{{ __('form.sent') }}" data-ce-msg-error="{{ __('contact.mail_failed') }}">
                         @csrf
                         <input type="hidden" name="form_context" value="home">
+                        @if (session('contact_sent'))
+                            <div class="mb-6 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-center text-sm text-emerald-900" role="status">{{ __('form.sent') }}</div>
+                        @endif
+                        @if (session('contact_error'))
+                            <div class="mb-6 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-center text-sm text-red-900" role="alert">{{ __('contact.mail_failed') }}</div>
+                        @endif
+                        <p id="home-ce-js-success" class="mb-6 hidden rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-center text-sm text-emerald-900" role="status"></p>
+                        <p id="home-ce-js-error" class="mb-6 hidden rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-center text-sm text-red-900" role="alert"></p>
                         <p id="home-ce-js-summary" class="mb-4 hidden rounded-lg border border-red-200 bg-red-50 px-3 py-2.5 text-sm leading-snug text-red-800" role="alert"></p>
                         <label class="sr-only" for="home-ce-name">{{ __('form.name') }}</label>
                         <input class="home-ce-input w-full rounded-lg border border-[#cbd2d9] bg-white px-4 py-3.5 text-sm text-primary outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" id="home-ce-name" name="name" type="text" value="{{ old('name') }}" required autocomplete="name" maxlength="200" placeholder="{{ __('form.name') }}" aria-describedby="home-ce-js-err-name">

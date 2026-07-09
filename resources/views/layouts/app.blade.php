@@ -25,8 +25,24 @@
             $siteUrl = rtrim(request()->getSchemeAndHttpHost(), '/');
         }
         $supportedLocaleCodes = array_keys(config('app.supported_locales', []));
-        $ogLocaleMap = ['pl' => 'pl_PL', 'en' => 'en_US', 'fr' => 'fr_FR'];
-        $pageLangBcp47 = ['pl' => 'pl-PL', 'en' => 'en-US', 'fr' => 'fr-FR'];
+        $ogLocaleMap = [
+            'pl' => 'pl_PL',
+            'en' => 'en_US',
+            'fr' => 'fr_FR',
+            'cz' => 'cs_CZ',
+            'de' => 'de_DE',
+            'sk' => 'sk_SK',
+            'hu' => 'hu_HU',
+        ];
+        $pageLangBcp47 = [
+            'pl' => 'pl-PL',
+            'en' => 'en-US',
+            'fr' => 'fr-FR',
+            'cz' => 'cs-CZ',
+            'de' => 'de-DE',
+            'sk' => 'sk-SK',
+            'hu' => 'hu-HU',
+        ];
         $currentLocaleCode = app()->getLocale();
         $ogLocale = $ogLocaleMap[$currentLocaleCode] ?? str_replace('-', '_', $currentLocaleCode).'_'.strtoupper($currentLocaleCode);
         $ogImage = url(asset('media/wp-uploads/2025/01/cropped-logo_www_2025_ciemne.png'));
@@ -63,7 +79,7 @@
                         'email' => __('contact.email_value'),
                         'contactType' => 'customer support',
                         'areaServed' => ['PL', 'EU'],
-                        'availableLanguage' => ['pl', 'en', 'fr'],
+                        'availableLanguage' => $supportedLocaleCodes,
                     ],
                 ],
             ],
@@ -74,7 +90,7 @@
                 'name' => __('site.name'),
                 'description' => __('site.seo_default_description'),
                 'publisher' => ['@id' => $siteUrl.'#organization'],
-                'inLanguage' => ['pl-PL', 'en-US', 'fr-FR'],
+                'inLanguage' => array_values($pageLangBcp47),
             ],
             [
                 '@type' => 'WebPage',

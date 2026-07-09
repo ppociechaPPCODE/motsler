@@ -75,6 +75,8 @@ const homeContactForm = document.getElementById('home-contact-form');
 if (homeContactForm) {
     const homeCeDs = homeContactForm.dataset;
     const homeCeSummary = document.getElementById('home-ce-js-summary');
+    const homeCeSuccess = document.getElementById('home-ce-js-success');
+    const homeCeError = document.getElementById('home-ce-js-error');
     const homeCeName = document.getElementById('home-ce-name');
     const homeCeEmail = document.getElementById('home-ce-email');
     const homeCeMessage = document.getElementById('home-ce-message');
@@ -83,6 +85,7 @@ if (homeContactForm) {
     const homeCeErrEmail = document.getElementById('home-ce-js-err-email');
     const homeCeErrMessage = document.getElementById('home-ce-js-err-message');
     const homeCeErrPrivacy = document.getElementById('home-ce-js-err-privacy');
+    const homeCeSubmit = homeContactForm.querySelector('[type="submit"]');
     const homeCeInvalid = ['border-red-500', 'ring-2', 'ring-red-500/30'];
 
     const homeCeClearField = (input, errEl) => {
@@ -103,7 +106,40 @@ if (homeContactForm) {
         input.setAttribute('aria-invalid', 'true');
     };
 
-    homeContactForm.addEventListener('submit', (e) => {
+    const homeCeHideStatus = () => {
+        if (homeCeSuccess) {
+            homeCeSuccess.textContent = '';
+            homeCeSuccess.classList.add('hidden');
+        }
+        if (homeCeError) {
+            homeCeError.textContent = '';
+            homeCeError.classList.add('hidden');
+        }
+    };
+
+    const homeCeShowSuccess = (msg) => {
+        homeCeHideStatus();
+        if (homeCeSummary) {
+            homeCeSummary.textContent = '';
+            homeCeSummary.classList.add('hidden');
+        }
+        if (homeCeSuccess) {
+            homeCeSuccess.textContent = msg;
+            homeCeSuccess.classList.remove('hidden');
+            homeCeSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    };
+
+    const homeCeShowError = (msg) => {
+        homeCeHideStatus();
+        if (homeCeError) {
+            homeCeError.textContent = msg;
+            homeCeError.classList.remove('hidden');
+            homeCeError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    };
+
+    const homeCeValidate = () => {
         homeCeClearField(homeCeName, homeCeErrName);
         homeCeClearField(homeCeEmail, homeCeErrEmail);
         homeCeClearField(homeCeMessage, homeCeErrMessage);
@@ -144,16 +180,84 @@ if (homeContactForm) {
             valid = false;
         }
 
-        if (!valid) {
-            e.preventDefault();
-            if (homeCeSummary && homeCeDs.ceMsgSummary) {
-                homeCeSummary.textContent = homeCeDs.ceMsgSummary;
-                homeCeSummary.classList.remove('hidden');
-            }
+        if (!valid && homeCeSummary && homeCeDs.ceMsgSummary) {
+            homeCeSummary.textContent = homeCeDs.ceMsgSummary;
+            homeCeSummary.classList.remove('hidden');
             const firstInv = homeContactForm.querySelector('[aria-invalid="true"]');
             if (firstInv) {
                 firstInv.focus({ preventScroll: true });
                 firstInv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        return valid;
+    };
+
+    const homeCeApplyServerErrors = (errors) => {
+        const fieldMap = {
+            name: [homeCeName, homeCeErrName],
+            email: [homeCeEmail, homeCeErrEmail],
+            message: [homeCeMessage, homeCeErrMessage],
+            privacy_accept: [homeCePrivacy, homeCeErrPrivacy],
+        };
+
+        Object.entries(errors).forEach(([field, messages]) => {
+            const mapping = fieldMap[field];
+            if (mapping && Array.isArray(messages) && messages[0]) {
+                homeCeShowField(mapping[0], mapping[1], messages[0]);
+            }
+        });
+
+        if (homeCeSummary && homeCeDs.ceMsgSummary) {
+            homeCeSummary.textContent = homeCeDs.ceMsgSummary;
+            homeCeSummary.classList.remove('hidden');
+        }
+    };
+
+    homeContactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        homeCeHideStatus();
+
+        if (!homeCeValidate()) {
+            return;
+        }
+
+        if (homeCeSubmit) {
+            homeCeSubmit.disabled = true;
+        }
+
+        try {
+            const response = await fetch(homeContactForm.action, {
+                method: 'POST',
+                body: new FormData(homeContactForm),
+                headers: {
+                    Accept: 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest',
+                },
+            });
+
+            if (response.ok) {
+                const payload = await response.json().catch(() => ({}));
+                homeContactForm.reset();
+                homeCeShowSuccess(payload.message || homeCeDs.ceMsgSent || '');
+                return;
+            }
+
+            if (response.status === 422) {
+                const payload = await response.json().catch(() => ({}));
+                if (payload.errors) {
+                    homeCeApplyServerErrors(payload.errors);
+                }
+                return;
+            }
+
+            const payload = await response.json().catch(() => ({}));
+            homeCeShowError(payload.message || homeCeDs.ceMsgError || '');
+        } catch {
+            homeCeShowError(homeCeDs.ceMsgError || '');
+        } finally {
+            if (homeCeSubmit) {
+                homeCeSubmit.disabled = false;
             }
         }
     });
@@ -162,24 +266,28 @@ if (homeContactForm) {
         homeCeName.addEventListener('input', () => {
             if (homeCeName.getAttribute('aria-invalid') === 'true')
                 homeCeClearField(homeCeName, homeCeErrName);
+            homeCeHideStatus();
         });
     }
     if (homeCeEmail && homeCeErrEmail) {
         homeCeEmail.addEventListener('input', () => {
             if (homeCeEmail.getAttribute('aria-invalid') === 'true')
                 homeCeClearField(homeCeEmail, homeCeErrEmail);
+            homeCeHideStatus();
         });
     }
     if (homeCeMessage && homeCeErrMessage) {
         homeCeMessage.addEventListener('input', () => {
             if (homeCeMessage.getAttribute('aria-invalid') === 'true')
                 homeCeClearField(homeCeMessage, homeCeErrMessage);
+            homeCeHideStatus();
         });
     }
     if (homeCePrivacy && homeCeErrPrivacy) {
         homeCePrivacy.addEventListener('change', () => {
             if (homeCePrivacy.getAttribute('aria-invalid') === 'true')
                 homeCeClearField(homeCePrivacy, homeCeErrPrivacy);
+            homeCeHideStatus();
         });
     }
 }

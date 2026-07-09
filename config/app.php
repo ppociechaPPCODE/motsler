@@ -84,6 +84,10 @@ return [
         'pl' => 'lang.pl',
         'en' => 'lang.en',
         'fr' => 'lang.fr',
+        'cz' => 'lang.cz',
+        'de' => 'lang.de',
+        'sk' => 'lang.sk',
+        'hu' => 'lang.hu',
     ],
 
     'content' => [
@@ -97,6 +101,22 @@ return [
                 'post2' => 'dpf-cleanx-professional-dpf-filter-cleaning',
             ],
             'fr' => [
+                'post1' => 'start-profitable-business-with-motsler',
+                'post2' => 'dpf-cleanx-professional-dpf-filter-cleaning',
+            ],
+            'cz' => [
+                'post1' => 'start-profitable-business-with-motsler',
+                'post2' => 'dpf-cleanx-professional-dpf-filter-cleaning',
+            ],
+            'de' => [
+                'post1' => 'start-profitable-business-with-motsler',
+                'post2' => 'dpf-cleanx-professional-dpf-filter-cleaning',
+            ],
+            'sk' => [
+                'post1' => 'start-profitable-business-with-motsler',
+                'post2' => 'dpf-cleanx-professional-dpf-filter-cleaning',
+            ],
+            'hu' => [
                 'post1' => 'start-profitable-business-with-motsler',
                 'post2' => 'dpf-cleanx-professional-dpf-filter-cleaning',
             ],

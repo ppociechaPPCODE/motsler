@@ -6,12 +6,11 @@
     $flags = [
         'pl' => '🇵🇱',
         'en' => '🇬🇧',
-        'de' => '🇩🇪',
         'fr' => '🇫🇷',
-        'es' => '🇪🇸',
-        'it' => '🇮🇹',
-        'ua' => '🇺🇦',
-        'ru' => '🇷🇺',
+        'cz' => '🇨🇿',
+        'de' => '🇩🇪',
+        'sk' => '🇸🇰',
+        'hu' => '🇭🇺',
     ];
 @endphp
 <details class="relative text-xs font-medium">
