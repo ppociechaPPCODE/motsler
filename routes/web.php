@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CrmOfferController;
 use App\Http\Controllers\Web\AboutController;
 use App\Http\Controllers\Web\BlogController;
 use App\Http\Controllers\Web\ContactController;
@@ -31,6 +32,10 @@ Route::get('/robots.txt', function (): \Illuminate\Http\Response {
 
 Route::get('sitemap.xml', SitemapController::class);
 Route::get('llms.txt', LlmsTxtController::class);
+
+Route::get('/offer/{token}', [CrmOfferController::class, 'show'])
+    ->where('token', '[a-f0-9]{64}')
+    ->name('crm.offer.show');
 
 foreach ($supportedLocales as $locale) {
     $p = $paths[$locale] ?? [];
