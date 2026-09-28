@@ -40,13 +40,18 @@ final class CrmApiClient
     /**
      * @return array{html: string, locale: string, token: string, view_count: int, first_view: bool}
      */
-    public function getOffer(string $token): array
+    public function getOffer(string $token, bool $preview = false): array
     {
         if (!self::isValidOfferToken($token)) {
             throw new CrmApiException('Nieprawidłowy token oferty.', 'invalid_token', 400);
         }
 
-        return $this->request('GET', '/api/v1/offers/'.$token);
+        $path = '/api/v1/offers/'.$token;
+        if ($preview) {
+            $path .= '?preview=1';
+        }
+
+        return $this->request('GET', $path);
     }
 
     public static function isValidOfferToken(string $token): bool

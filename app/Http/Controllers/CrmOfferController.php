@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use App\Exceptions\CrmApiException;
 use App\Services\Crm\CrmApiClient;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 final class CrmOfferController extends Controller
@@ -16,14 +17,14 @@ final class CrmOfferController extends Controller
     ) {
     }
 
-    public function show(string $token): View|Response
+    public function show(string $token, Request $request): View|Response
     {
         if (!CrmApiClient::isValidOfferToken($token)) {
             abort(404);
         }
 
         try {
-            $offer = $this->crmApi->getOffer($token);
+            $offer = $this->crmApi->getOffer($token, $request->query->boolean('preview'));
         } catch (CrmApiException $e) {
             if ($e->isNotFound()) {
                 abort(404);
