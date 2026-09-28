@@ -24,7 +24,7 @@ final class CrmOfferController extends Controller
         }
 
         try {
-            $offer = $this->crmApi->getOffer($token, $request->query->boolean('preview'));
+            $offer = $this->crmApi->getOffer($token, $request->query->getBoolean('preview'));
         } catch (CrmApiException $e) {
             if ($e->isNotFound()) {
                 abort(404);
